@@ -1,0 +1,166 @@
+{
+	"_meta": {
+		"sources": [
+			{
+				"json": "FlundersHomebrew",
+				"abbreviation": "FHB",
+				"full": "Flunders Homebrew",
+				"url": "",
+				"authors": [
+					"Florian Rose"
+				],
+				"convertedBy": []
+			}
+		],
+		"dateAdded": 1610805975,
+		"dateLastModified": 1610805975
+	},
+	"monster": [
+		{
+			"name": "Mizutsune",
+			"isNamedCreature": true,
+			"source": "FlundersHomebrew",
+			"page": 198,
+			"size": "H",
+			"type": "monstrosity",
+			"alignment": [
+				"N"
+			],
+			"ac": [
+				17
+			],
+			"hp": {
+				"formula": "17d12 + 85",
+				"average": 195
+			},
+			"speed": {
+				"walk": 50,
+				"swim": 40
+			},
+			"str": 17,
+			"dex": 23,
+			"con": 21,
+			"int": 12,
+			"wis": 15,
+			"cha": 10,
+			"save": {
+				"wis": "+6",
+				"dex": "+10"
+			},
+			"skill": {
+				"acrobatics": "+10",
+				"perception": "+6"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 16,
+			"conditionImmune": [
+				{
+					"special": "Slick (disadv. Dex Sav, Half Speed, Disadv. grapp, adv. escape grapp, action to wipe off)"
+				}
+			],
+			"cr": "12",
+			"trait": [
+				{
+					"name": "Oiled Body",
+					"entries": [
+						"The mizutsune has advantage on Dexterity (acrobatics) checks."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"The mizutsune makes three attacks: one with its bite and two with its tail. It can't attack the bite target with its tail."
+					]
+				},
+				{
+					"name": "Tail",
+					"entries": [
+						"{@atk mw} {@hit 10} to hit, reach 10 ft., one target. {@h}25 ({@damage 3d12 + 6}) bludgeoning damage. On hit, the creature becomes SLICK."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 10} to hit, reach 5 ft., one target. {@h}19 ({@damage 3d8 + 6}) bludgeoning damage. If the target is a large or smaller creature, it is {@condition grappled} (escape {@dc 14}). Until the grapple ends, the mizutsune can't bite another target."
+					]
+				},
+				{
+					"name": "Bubble Prison",
+					"entries": [
+						"{@atk rw} {@hit 10} to hit, range 80/320 ft., one large or smaller creature. {@h}The creature is Slick and enclosed in a bubble of shimmering force for 1 minute or until the bubble is destroyed. Nothing, not physical Objects, energy, or other spell effects, can pass through the bubble, in or out, though a creature in the Sphere can breathe there. A creature inside of the bubble has disadvantage on attacks due to its slippery nature. The bubble has AC 15, 30 hit points, resistance to bludgeoning damage, immunity to poison and psychic damage, but vulnerable to piercing damage. At the end of the mizutsune's turn all bubbles rise 10 feet higher into the air."
+					]
+				},
+				{
+					"name": "Hydropump",
+					"entries": [
+						"The mizutsune releases a high pressure stream of water in a 60-foot line that is 5 feet wide. Each creature in that line must make a {@dc 18} Dexterity saving throw, taking 55 ({@damage 10d10}) cold damage on a failed save, or half as much damage on a successful one."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Tail Sweep",
+					"entries": [
+						"When a creature is slick and starts its turn within 10 feet of the mizutsune. The mizutsune can use its reaction to sweep its tail, hitting the creature's legs. The creature must then succeed on a {@dc 18} Dexterity saving throw or be knocked {@condition prone}."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Water Spout(Costs 3 Actions)",
+					"entries": [
+						"The mizutsune releases a high pressure stream of water at 2 creatures within range (30/60). {@hit 10} to hit, {@damage 2d6 + 6} bludgeoning damage."
+					]
+				},
+				{
+					"name": "Acrobatic Movement",
+					"entries": [
+						"The leviathan moves up to half it's speed without provoking opportunity attacks."
+					]
+				},
+				{
+					"name": "Bubble Prison (Costs 2 Actions)",
+					"entries": [
+						"The mizutsune uses its Bubble Prison attack."
+					]
+				}
+			],
+			"fluff": {
+				"images": [
+					{
+						"type": "image",
+						"href": {
+							"type": "external",
+							"url": "https://i.imgur.com/lu4boo3.png"
+						}
+					}
+				]
+			},
+			"tokenUrl": "https://i.imgur.com/lu4boo3.png",
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"B",
+				"C"
+			],
+			"miscTags": [
+				"AOE",
+				"MW",
+				"RCH",
+				"RW"
+			],
+			"conditionInflict": [
+				"grappled",
+				"prone"
+			]
+		}
+	]
+}
