@@ -12,8 +12,8 @@
 				"convertedBy": []
 			}
 		],
-		"dateAdded": 1610812635,
-		"dateLastModified": 1610812635
+		"dateAdded": 1611418188,
+		"dateLastModified": 1611418188
 	},
 	"monster": [
 		{
@@ -3473,6 +3473,384 @@
 				"RCH",
 				"RNG",
 				"RW"
+			]
+		},
+		{
+			"name": "Basarios",
+			"source": "FlundersHomebrew",
+			"page": 169,
+			"size": "H",
+			"type": "monstrosity",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				18
+			],
+			"hp": {
+				"formula": "13d12 + 52",
+				"average": 136
+			},
+			"speed": {
+				"walk": 40,
+				"burrow": 30
+			},
+			"str": 24,
+			"dex": 9,
+			"con": 19,
+			"int": 3,
+			"wis": 11,
+			"cha": 6,
+			"passive": 10,
+			"resist": [
+				"fire"
+			],
+			"cr": "8",
+			"trait": [
+				{
+					"name": "Trampling Charge",
+					"entries": [
+						"If the basarios moves at least 20 feet straight toward a creature and then hits it with a ram attack on the same turn , that target must succeed on a {@dc 18} Strength saving throw or be knocked {@condition prone}. If the target is {@condition prone}, the basarios can make one body slam attack against it as a bonus action."
+					]
+				},
+				{
+					"name": "False Appearance",
+					"entries": [
+						"While the basarios remains partially submerged in the ground and motionless, it is indistinguishable from a normal boulder."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Body Slam",
+					"entries": [
+						"{@atk mw} {@hit 10} to hit, reach 5 ft., one target. {@h}29 ({@damage 4d10 + 7}) bludgeoning damage."
+					]
+				},
+				{
+					"name": "Ram",
+					"entries": [
+						"Melee Weapon Attack. {@hit 10} to hit, reach 5 ft., one target. {@h}25 ({@damage 4d8 + 7}) bludgeoning damage."
+					]
+				},
+				{
+					"name": "Sleep Gas {@recharge 5}",
+					"entries": [
+						"The basarios releases a sleeping gas from its underside in a 15-foot radius around it. Each creature in that area must make a {@dc 15} Constitution saving throw or, they fall {@condition unconscious} for 1 minute, until the sleeper takes damage, or until someone uses an action to shake or slap the sleeper awake."
+					]
+				}
+			],
+			"tokenUrl": "https://i.imgur.com/SHD3cpf.png",
+			"traitTags": [
+				"False Appearance"
+			],
+			"damageTags": [
+				"B"
+			],
+			"miscTags": [
+				"AOE",
+				"MW"
+			],
+			"conditionInflict": [
+				"prone"
+			]
+		},
+		{
+			"name": "Conga",
+			"source": "FlundersHomebrew",
+			"page": 169,
+			"size": "M",
+			"type": "beast",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				12
+			],
+			"hp": {
+				"formula": "3d8 + 6",
+				"average": 19
+			},
+			"speed": {
+				"walk": 30,
+				"fly": 0,
+				"canHover": false,
+				"climb": 30
+			},
+			"str": 16,
+			"dex": 14,
+			"con": 14,
+			"int": 6,
+			"wis": 12,
+			"cha": 7,
+			"skill": {
+				"acrobatics": "+4",
+				"perception": "+3"
+			},
+			"passive": 13,
+			"cr": "1",
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"The conga makes two fist attacks."
+					]
+				},
+				{
+					"name": "First",
+					"entries": [
+						"{@atk mw} {@hit 5} to hit, reach 5 ft., one target. {@h}6 ({@damage 1d6 + 3}) bludgeoning damage."
+					]
+				},
+				{
+					"name": "Fart",
+					"entries": [
+						"The conga release a noxious odor from its behind at a target within 5 feet of it. The target must make a {@dc 13} Constitution saving throw or have disadvantage on Constitution saving throws to maintain concentration for 1 minute."
+					]
+				}
+			],
+			"tokenUrl": "https://i.imgur.com/xzVZeBU.png",
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"B"
+			],
+			"miscTags": [
+				"MW"
+			]
+		},
+		{
+			"name": "Congala",
+			"source": "FlundersHomebrew",
+			"page": 164,
+			"size": "L",
+			"type": "beast",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				13
+			],
+			"hp": {
+				"formula": "15d10 + 60",
+				"average": 142
+			},
+			"speed": {
+				"walk": 40,
+				"fly": {
+					"number": 0,
+					"condition": "(hover)"
+				},
+				"canHover": true,
+				"climb": 40
+			},
+			"str": 21,
+			"dex": 14,
+			"con": 18,
+			"int": 12,
+			"wis": 14,
+			"cha": 7,
+			"skill": {
+				"acrobatics": "+5",
+				"perception": "+5"
+			},
+			"passive": 15,
+			"cr": "6",
+			"trait": [
+				{
+					"name": "Mushroom Eater",
+					"entries": [
+						"All congalala love to eat mushrooms, so much so that they always carry one around their tail. Roll {@dice 1d6}, the number determines the element of the mushroom the congalala has with it. On a 1, fire; On a 2, poison; On a 3, lightning; On a 4, cold; On a 5, acid; On a 6, necrotic."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"The congalala makes two fist attacks."
+					]
+				},
+				{
+					"name": "Fist",
+					"entries": [
+						"{@atk mw} {@hit 8} to hit, reach 5 ft., one target. {@h}14 ({@damage 2d8 + 5}) bludgeoning damage."
+					]
+				},
+				{
+					"name": "Belly Thrust",
+					"entries": [
+						"{@atk mw} {@hit 8} to hit, reach 5 ft., one target. {@h}16 ({@damage 2d10 + 5}) bludgeoning damage."
+					]
+				},
+				{
+					"name": "Chow Down {@recharge}",
+					"entries": [
+						"The congalala eats part of its mushroom then breaths a noxious gas at its prey in a-15 foot cone. Each creature in that area must make a {@dc 15} Dexterity saving throw, taking 28 ({@damage 8d6}) damage of the mushroom's type on a failed save or half as much on a successful one."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Belly Thrust",
+					"entries": [
+						"When the congalala is hit by a melee attack, it can use its reaction to make a belly thrust attack against the creature."
+					]
+				},
+				{
+					"name": "Fart",
+					"entries": [
+						"When the congalala is hit by a melee weapon attack, it can use its reaction to release a noxious fart at the attacker. If the attacker is concentrating on a spell or spell-like ability, they must succeed on a {@dc 15} Constitution saving throw, to maintain concentration on it."
+					]
+				}
+			],
+			"tokenUrl": "https://i.imgur.com/zdXc3VD.png",
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"B"
+			],
+			"miscTags": [
+				"MW"
+			]
+		},
+		{
+			"name": "Nerscylla",
+			"source": "FlundersHomebrew",
+			"page": 169,
+			"size": "L",
+			"type": "monstrosity",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				11
+			],
+			"hp": {
+				"formula": "3d10 + 6",
+				"average": 22
+			},
+			"speed": {
+				"walk": 30,
+				"climb": 30
+			},
+			"str": 17,
+			"dex": 17,
+			"con": 14,
+			"int": 6,
+			"wis": 12,
+			"cha": 6,
+			"skill": {
+				"perception": "+4",
+				"stealth": "+6"
+			},
+			"passive": 14,
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"poisoned"
+			],
+			"cr": "7",
+			"trait": [
+				{
+					"name": "Reel In",
+					"entries": [
+						"As a bonus action, the nerscylla can pull a webbed target up to 15 feet towards it. If the webbed creature is pulled within 5 feet of the nerscylla, it can make a stinger attack against it."
+					]
+				},
+				{
+					"name": "Spider Climb",
+					"entries": [
+						"The nerscylla can climb difficult surfaces, including upside down on ceilings, without needing to make an ability check."
+					]
+				},
+				{
+					"name": "Standing Leap",
+					"entries": [
+						"The nerscylla's long jump is up to 30 feet and its high jump is up to 15 feet, with or without a running start."
+					]
+				},
+				{
+					"name": "Web Sense",
+					"entries": [
+						"While in contact with a web, the nerscylla knows the exact location of any other creature in contact with the same web."
+					]
+				},
+				{
+					"name": "Web Swing",
+					"entries": [
+						"As a bonus action the nerscylla can fire a string of webbing as thick as a rope towards an object or terrain that is above it and is within 60 feet of it. It can then use the webbing to pull itself up to 30 feet in the direction of the object or terrain."
+					]
+				},
+				{
+					"name": "Web Walker",
+					"entries": [
+						"The nerscylla ignores movement restrictions caused by webbing."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"The nerscylla makes three attacks: one with its poisonous maw and two with its claws."
+					]
+				},
+				{
+					"name": "Poisonous Maw",
+					"entries": [
+						"{@atk mw} {@hit 6} to hit, reach 10 ft., one target. {@h}8 ({@damage 2d4 + 3}) piercing damage + 13 ({@damage 3d8}) poison damage."
+					]
+				},
+				{
+					"name": "Claw",
+					"entries": [
+						"{@atk mw} {@hit 6} to hit, reach 5 ft., one target. {@h}10 ({@damage 2d6 + 3}) slashing damage. On hit, the target is {@condition grappled} (escape {@dc 14})."
+					]
+				},
+				{
+					"name": "Stinger",
+					"entries": [
+						"The nerscylla impales a webbed creature within 5 feet of it with its stinger. That creature must make a {@dc 15} Constitution saving throw, taking 28 ({@damage 8d6}) poison damage on a failed save, or half as much on a successful one. If the saving throw fails by 5 or more, the target falls {@condition unconscious} for 1 hour, or until it takes damage or another creature uses an action to shake it awake. ",
+						"If the poison damage reduces the target to 0 hit points, the target is stable but {@condition poisoned} for 1 hour, even after regaining hit points, and is {@condition paralyzed} while {@condition poisoned} in this way."
+					]
+				},
+				{
+					"name": "Webbing Shot {@recharge 5}",
+					"entries": [
+						"{@atk rw} {@hit 6} to hit, range 30/90 ft. , one Large or smaller creature. {@h}The creature is {@condition restrained} by webbing. As an action, the {@condition restrained} creature can make a {@dc 15} Strength check, escaping from the webbing on a success. The creature is no longer {@condition restrained} if the webbing is destroyed. The webbing has AC 12, 10 hit points, resistance to bludgeoning damage, and immunity to poison and psychic damage."
+					]
+				}
+			],
+			"tokenUrl": "https://i.imgur.com/JOwnb80.png",
+			"traitTags": [
+				"Spider Climb",
+				"Web Sense",
+				"Web Walker"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"I",
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"MW",
+				"RCH",
+				"RW"
+			],
+			"conditionInflict": [
+				"grappled",
+				"paralyzed",
+				"poisoned",
+				"restrained",
+				"unconscious"
 			]
 		}
 	]
