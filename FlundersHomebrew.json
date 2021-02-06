@@ -12,8 +12,8 @@
 				"convertedBy": []
 			}
 		],
-		"dateAdded": 1611418188,
-		"dateLastModified": 1611418188
+		"dateAdded": 1612616061,
+		"dateLastModified": 1612616061
 	},
 	"monster": [
 		{
@@ -3851,6 +3851,585 @@
 				"poisoned",
 				"restrained",
 				"unconscious"
+			]
+		},
+		{
+			"name": "Great Thunderbug",
+			"source": "FlundersHomebrew",
+			"page": 169,
+			"size": "S",
+			"type": "monstrosity",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				13
+			],
+			"hp": {
+				"formula": "3d6",
+				"average": 10
+			},
+			"speed": {
+				"walk": 0,
+				"fly": 30,
+				"canHover": false
+			},
+			"str": 6,
+			"dex": 15,
+			"con": 10,
+			"int": 3,
+			"wis": 14,
+			"cha": 5,
+			"skill": {
+				"perception": "+4"
+			},
+			"passive": 14,
+			"cr": "1/4",
+			"action": [
+				{
+					"name": "Shock",
+					"entries": [
+						"Melee Weapon Attack. {@hit 4} to hit, reach 5 ft., one target. {@h}1 piercing damage plus 5 ({@damage 2d4}) lightning damage. On hit target must make a {@dc 10} Constitution saving throw, or become {@condition paralyzed} for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the paralysis on itself on a success."
+					]
+				}
+			],
+			"damageTags": [
+				"L",
+				"P"
+			],
+			"conditionInflict": [
+				"paralyzed"
+			]
+		},
+		{
+			"name": "Gobul",
+			"isNamedCreature": true,
+			"source": "FlundersHomebrew",
+			"page": 169,
+			"size": "L",
+			"type": "monstrosity",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				14
+			],
+			"hp": {
+				"formula": "14d10 + 56",
+				"average": 133
+			},
+			"speed": {
+				"walk": 30,
+				"swim": 40
+			},
+			"str": 19,
+			"dex": 15,
+			"con": 18,
+			"int": 7,
+			"wis": 12,
+			"cha": 14,
+			"skill": {
+				"perception": "+4",
+				"stealth": "+5"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 14,
+			"conditionImmune": [
+				"paralyzed",
+				"poisoned"
+			],
+			"cr": "7",
+			"trait": [
+				{
+					"name": "Lure",
+					"entries": [
+						"While hidden, the gobul can use the lure on its head to create a mesmerizing flash of lights. Any creature that can see the lure, must make a {@dc 13} Wisdom saving throw or be {@condition charmed} for 1 minute by the gobul or until the gobul something harmful to the creature. While {@condition charmed} in this way, the creature may only use its turn to move towards the lure."
+					]
+				},
+				{
+					"name": "Natural Camouflage",
+					"entries": [
+						"While the gobul remains motionless on river bed, lake bottom, or sea floor, it is indistinguishable from common water plants."
+					]
+				},
+				{
+					"name": "Amphibious",
+					"entries": [
+						"The gobul can breathe air and water."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"The gobul makes two attacks: one with its bite and one with its tail. It can't make both attacks against the same target."
+					]
+				},
+				{
+					"name": "Tail",
+					"entries": [
+						"Melee Weapon Attack. {@hit 7} to hit, reach 10 ft., one target. {@h}15 ({@damage 2d10 + 4}) piercing damage, or 20 ({@damage 3d10 + 4}) piercing damage while enlarged. On hit, the target must make a {@dc 15} Constitution saving throw or become {@condition poisoned} for 1 minute. While {@condition poisoned} in this way, the target is {@condition paralyzed}. The target can repeat the saving throw at the end of each of its turns , ending the effect on itself on a success."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"Melee Weapon Attack. {@hit 7} to hit, reach 5 ft., one target. {@h}13 ({@damage 2d8 + 4}) piercing damage, or 17 ({@damage 3d8 + 4}) piercing damage while enlarged."
+					]
+				},
+				{
+					"name": "Enlarge (Recharges after a Short or Long Rest)",
+					"entries": [
+						"For 1 minute, the gobul magically increases in size, along with anything it is wearing or carrying. While enlarged, the gobul is Huge, rolls one additional weapon damage die on Strength-based weapon attacks (included in the attacks), and makes Strength checks and Strength saving throws with advantage. If the gobul lacks the room to become Large, it attains the maximum size possible in the space available."
+					]
+				},
+				{
+					"name": "Swallow",
+					"entries": [
+						"The gobul makes one bite attack against a Medium or smaller creature that is {@condition paralyzed} or {@condition charmed}. If the attack hits, the target takes the bite's damage and the target is swallowed. While swallowed, the creature is {@condition blinded} and {@condition restrained}, it has total cover against attacks and other effects outside the gobul, and it takes 10 ({@damage 3d6}) acid damage at the start of each of the gobul's turns. The gobul can swallow 3 creatures while enlarged, or 2 when not enlarged. ",
+						"If the gobul takes 19 damage or more on a single turn from a creature inside it, the gobul must succeed on a {@dc 17} Constitution saving throw at the end of that turn or regurgitate all swallowed creatures, which fall {@condition prone} in a space within 10 feet of the gobul. If the gobul dies, a swallowed creature is no longer {@condition restrained} by it and can escape from the corpse by using 10 feet of movement, exiting {@condition prone}."
+					]
+				},
+				{
+					"name": "Vortex {@recharge 5}",
+					"entries": [
+						"While underwater, the gobul opens its mouth swallowing everything in a 30-foot cone. Each creature in that area must make a {@dc 15} Strength saving throw. On a fail, the gobul swallows that creature without making a bite attack, even if the creature is not {@condition paralyzed} or {@condition charmed}. If the gobul cannot swallow all the creatures, it swallows the closest ones first and may use a bonus action to bite one additional creature that failed the saving throw."
+					]
+				},
+				{
+					"name": "Blinding Flash",
+					"entries": [
+						"The gobuls bioluminescent lure emits blinding flashes of light in a 30-foot radius. Each creature in the area, must make a {@dc 15} Constitution saving throw or become blind until the end of their next turn."
+					]
+				}
+			],
+			"legendaryActions": 1,
+			"legendary": [
+				{
+					"name": "Blind",
+					"entries": [
+						"The gobul uses Blinding Flash."
+					]
+				},
+				{
+					"name": "Devour",
+					"entries": [
+						"The gobul uses its bite attack; or Swallow on a {@condition paralyzed} or {@condition charmed} creature."
+					]
+				},
+				{
+					"name": "Roll (Must be Enlarged)",
+					"entries": [
+						"The gobul extends its retractable spines on its back. It then can move up to half its movement speed, without provoking an attack of opportunity, by rolling over and impaling anything in its path. Each creature in that area must make a {@dc 13} Dexterity saving throw, taking 11 ({@damage 2d6 + 4}) piercing damage and are {@condition paralyzed} for 1 minute on a failed save. On a successful save the creature takes half damage and is not {@condition paralyzed}. A creature can make a {@dc 15} Constitution saving throw at the end of each of its turns, ending the effect on itself on a success."
+					]
+				}
+			],
+			"tokenUrl": "https://5e.tools/img/DMG/Giant Fly.png?v=1.121.2",
+			"traitTags": [
+				"Amphibious"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack",
+				"Swallow"
+			],
+			"damageTags": [
+				"A",
+				"P"
+			],
+			"miscTags": [
+				"AOE",
+				"RCH"
+			],
+			"conditionInflict": [
+				"blinded",
+				"charmed",
+				"paralyzed",
+				"poisoned",
+				"restrained"
+			]
+		},
+		{
+			"name": "Zamtrios",
+			"source": "FlundersHomebrew",
+			"page": 169,
+			"size": "H",
+			"type": "monstrosity",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				15,
+				{
+					"ac": 20,
+					"condition": "when Ice Armor is active"
+				}
+			],
+			"hp": {
+				"formula": "13d12 + 52",
+				"average": 136
+			},
+			"speed": {
+				"walk": 40,
+				"burrow": 40,
+				"swim": 40
+			},
+			"str": 17,
+			"dex": 12,
+			"con": 18,
+			"int": 6,
+			"wis": 10,
+			"cha": 5,
+			"skill": {
+				"stealth": "+4",
+				"perception": "+3"
+			},
+			"senses": [
+				"darkvision 60 ft.",
+				"tremorsense 60 ft."
+			],
+			"passive": 13,
+			"immune": [
+				"cold"
+			],
+			"cr": "5",
+			"trait": [
+				{
+					"name": "Amphibious",
+					"entries": [
+						"The zamtrios can breathe air and water."
+					]
+				},
+				{
+					"name": "Expand (2/day)",
+					"entries": [
+						"The zamtrios can use a bonus action to greatly expand its belly for 1 minute. This increases its size to Gargantuan and gains resistance to bludgeoning damage. This action also remove Ice Armor if it is active. As a bonus action, the zamtrios can end this effect and revert back to its original size."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"The zamtrios makes two bite attacks."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"Melee Weapon Attack. {@hit 6} to hit, reach 10 ft., one target. {@h}16 ({@damage 3d8 + 3}) piercing damage."
+					]
+				},
+				{
+					"name": "Ice Armor",
+					"entries": [
+						"The zamtrios coats its body in ice, increasing its AC by 5, but reducing its movement speed by 10 ft. for 1 minute."
+					]
+				},
+				{
+					"name": "Ice Drill",
+					"entries": [
+						"If the zamtrios ice armor is active and the zamtrios is underground it can then use this action to unburrow in a space occupied by another creature. The creature is pushed 5 feet out of the zamtrios space and must succeed on a {@dc 14} Dexterity throw or be knocked {@condition prone} and take 13 ({@damage 3d6 + 3}) slashing damage plus 13 ({@damage 3d6 + 3}) piercing damage. On a successful save, the creature takes only half the damage, and isn't knocked {@condition prone}."
+					]
+				},
+				{
+					"name": "Water Torrent",
+					"entries": [
+						"The zamtrios shoots a beam of water from its stomach across a 30-foot cone. Each creature in that area must make a {@dc 14} Dexterity saving throw, taking 24 ({@damage 7d6}) cold damage on a failed save, or half as much damage on a successful one."
+					]
+				}
+			],
+			"tokenUrl": "https://i.imgur.com/9HDdqrw.png",
+			"traitTags": [
+				"Amphibious"
+			],
+			"senseTags": [
+				"D",
+				"T"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"C",
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"AOE",
+				"RCH"
+			],
+			"conditionInflict": [
+				"prone"
+			]
+		},
+		{
+			"name": "Gobul",
+			"isNamedCreature": true,
+			"source": "FlundersHomebrew",
+			"page": 169,
+			"size": "L",
+			"type": "monstrosity",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				14
+			],
+			"hp": {
+				"formula": "14d10 + 56",
+				"average": 133
+			},
+			"speed": {
+				"walk": 30,
+				"swim": 40
+			},
+			"str": 19,
+			"dex": 15,
+			"con": 18,
+			"int": 7,
+			"wis": 12,
+			"cha": 14,
+			"skill": {
+				"perception": "+4",
+				"stealth": "+5"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 14,
+			"conditionImmune": [
+				"paralyzed",
+				"poisoned"
+			],
+			"cr": "7",
+			"trait": [
+				{
+					"name": "Lure",
+					"entries": [
+						"While hidden, the gobul can use the lure on its head to create a mesmerizing flash of lights. Any creature that can see the lure, must make a {@dc 13} Wisdom saving throw or be {@condition charmed} for 1 minute by the gobul or until the gobul something harmful to the creature. While {@condition charmed} in this way, the creature may only use its turn to move towards the lure."
+					]
+				},
+				{
+					"name": "Natural Camouflage",
+					"entries": [
+						"While the gobul remains motionless on river bed, lake bottom, or sea floor, it is indistinguishable from common water plants."
+					]
+				},
+				{
+					"name": "Amphibious",
+					"entries": [
+						"The gobul can breathe air and water."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"The gobul makes two attacks: one with its bite and one with its tail. It can't make both attacks against the same target."
+					]
+				},
+				{
+					"name": "Tail",
+					"entries": [
+						"Melee Weapon Attack. {@hit 7} to hit, reach 10 ft., one target. {@h}15 ({@damage 2d10 + 4}) piercing damage, or 20 ({@damage 3d10 + 4}) piercing damage while enlarged. On hit, the target must make a {@dc 15} Constitution saving throw or become {@condition poisoned} for 1 minute. While {@condition poisoned} in this way, the target is {@condition paralyzed}. The target can repeat the saving throw at the end of each of its turns , ending the effect on itself on a success."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"Melee Weapon Attack. {@hit 7} to hit, reach 5 ft., one target. {@h}13 ({@damage 2d8 + 4}) piercing damage, or 17 ({@damage 3d8 + 4}) piercing damage while enlarged."
+					]
+				},
+				{
+					"name": "Enlarge (Recharges after a Short or Long Rest)",
+					"entries": [
+						"For 1 minute, the gobul magically increases in size, along with anything it is wearing or carrying. While enlarged, the gobul is Huge, rolls one additional weapon damage die on Strength-based weapon attacks (included in the attacks), and makes Strength checks and Strength saving throws with advantage. If the gobul lacks the room to become Large, it attains the maximum size possible in the space available."
+					]
+				},
+				{
+					"name": "Swallow",
+					"entries": [
+						"The gobul makes one bite attack against a Medium or smaller creature that is {@condition paralyzed} or {@condition charmed}. If the attack hits, the target takes the bite's damage and the target is swallowed. While swallowed, the creature is {@condition blinded} and {@condition restrained}, it has total cover against attacks and other effects outside the gobul, and it takes 10 ({@damage 3d6}) acid damage at the start of each of the gobul's turns. The gobul can swallow 3 creatures while enlarged, or 2 when not enlarged. ",
+						"If the gobul takes 19 damage or more on a single turn from a creature inside it, the gobul must succeed on a {@dc 17} Constitution saving throw at the end of that turn or regurgitate all swallowed creatures, which fall {@condition prone} in a space within 10 feet of the gobul. If the gobul dies, a swallowed creature is no longer {@condition restrained} by it and can escape from the corpse by using 10 feet of movement, exiting {@condition prone}."
+					]
+				},
+				{
+					"name": "Vortex {@recharge 5}",
+					"entries": [
+						"While underwater, the gobul opens its mouth swallowing everything in a 30-foot cone. Each creature in that area must make a {@dc 15} Strength saving throw. On a fail, the gobul swallows that creature without making a bite attack, even if the creature is not {@condition paralyzed} or {@condition charmed}. If the gobul cannot swallow all the creatures, it swallows the closest ones first and may use a bonus action to bite one additional creature that failed the saving throw."
+					]
+				},
+				{
+					"name": "Blinding Flash",
+					"entries": [
+						"The gobuls bioluminescent lure emits blinding flashes of light in a 30-foot radius. Each creature in the area, must make a {@dc 15} Constitution saving throw or become blind until the end of their next turn."
+					]
+				}
+			],
+			"legendaryActions": 1,
+			"legendary": [
+				{
+					"name": "Blind",
+					"entries": [
+						"The gobul uses Blinding Flash."
+					]
+				},
+				{
+					"name": "Devour",
+					"entries": [
+						"The gobul uses its bite attack; or Swallow on a {@condition paralyzed} or {@condition charmed} creature."
+					]
+				},
+				{
+					"name": "Roll (Must be Enlarged)",
+					"entries": [
+						"The gobul extends its retractable spines on its back. It then can move up to half its movement speed, without provoking an attack of opportunity, by rolling over and impaling anything in its path. Each creature in that area must make a {@dc 13} Dexterity saving throw, taking 11 ({@damage 2d6 + 4}) piercing damage and are {@condition paralyzed} for 1 minute on a failed save. On a successful save the creature takes half damage and is not {@condition paralyzed}. A creature can make a {@dc 15} Constitution saving throw at the end of each of its turns, ending the effect on itself on a success."
+					]
+				}
+			],
+			"tokenUrl": "https://i.imgur.com/Zj10Rnd.png",
+			"traitTags": [
+				"Amphibious"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack",
+				"Swallow"
+			],
+			"damageTags": [
+				"A",
+				"P"
+			],
+			"miscTags": [
+				"AOE",
+				"RCH"
+			],
+			"conditionInflict": [
+				"blinded",
+				"charmed",
+				"paralyzed",
+				"poisoned",
+				"restrained"
+			]
+		},
+		{
+			"name": "Daimyo Hermitaur",
+			"source": "FlundersHomebrew",
+			"page": 169,
+			"size": "H",
+			"type": "monstrosity",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				19
+			],
+			"hp": {
+				"formula": "16d12 + 64",
+				"average": 168
+			},
+			"speed": {
+				"walk": 30,
+				"burrow": 20
+			},
+			"str": 18,
+			"dex": 16,
+			"con": 18,
+			"int": 13,
+			"wis": 14,
+			"cha": 16,
+			"senses": [
+				"darkvision 60 ft.",
+				"tremorsense 60 ft."
+			],
+			"passive": 12,
+			"resist": [
+				"piercing",
+				"slashing"
+			],
+			"vulnerable": [
+				"lightning"
+			],
+			"cr": "9",
+			"trait": [
+				{
+					"name": "Amphibious",
+					"entries": [
+						"The hermitaur can breathe air and water."
+					]
+				},
+				{
+					"name": "Scuttle",
+					"entries": [
+						"As a bonus action, the hermitaur can moves up to its speed in a straight line."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"The hermitaur makes two claw attacks."
+					]
+				},
+				{
+					"name": "Claw",
+					"entries": [
+						"{@atk mw} {@hit 8} to hit, reach 5 ft., one target. {@h}20 ({@damage 3d10 + 4}) slashing damage."
+					]
+				},
+				{
+					"name": "Water Beam",
+					"entries": [
+						"Range Weapon Attack. {@hit 8} to hit, reach 30/120 ft., one target. {@h}22 ({@damage 4d8 + 4}) cold damage. On a hit, the target must make a {@dc 16} Constitution saving throw or be {@condition poisoned} with waterblight for 1 minute."
+					]
+				},
+				{
+					"name": "Crush {@recharge 5}",
+					"entries": [
+						"If the hermitaur jumps at least 15 feet as part of its movement, it can then use this action to land on its feet in a space that contains one or more other creatures. Each of those creatures must succeed on a {@dc 18} Strength or Dexterity saving throw (target's choice) or be knocked {@condition prone} and take 22 ({@damage 4d8 + 4}) bludgeoning damage. On a successful save, the creature takes only half the damage, isn't knocked {@condition prone}, and is pushed 5 feet out of the hermitaur's space into an unoccupied space of the creature's choice. If no unoccupied space is within range, the creature instead falls {@condition prone} in the hermitaur's space."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Retreat",
+					"entries": [
+						"After being hit by an attack, the daimyo hermitaur can take the dodge action until the start of its next turn by retreating into its shell and using its shield-like claws to protect its head."
+					]
+				}
+			],
+			"tokenUrl": "https://i.imgur.com/NmwMMdO.png",
+			"traitTags": [
+				"Amphibious"
+			],
+			"senseTags": [
+				"D",
+				"T"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"B",
+				"C",
+				"S"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflict": [
+				"poisoned",
+				"prone"
 			]
 		}
 	]
