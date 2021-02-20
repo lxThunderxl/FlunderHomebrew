@@ -12,8 +12,8 @@
 				"convertedBy": []
 			}
 		],
-		"dateAdded": 1612616061,
-		"dateLastModified": 1612616061
+		"dateAdded": 1613825672,
+		"dateLastModified": 1613825672
 	},
 	"monster": [
 		{
@@ -4431,6 +4431,164 @@
 				"poisoned",
 				"prone"
 			]
+		},
+		{
+			"name": "Fiendish Yestabrod",
+			"isNpc": true,
+			"source": "FlundersHomebrew",
+			"page": 233,
+			"size": "L",
+			"type": "fiend",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"formula": "20d10 + 60",
+				"average": 170
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 18,
+			"dex": 16,
+			"con": 16,
+			"int": 13,
+			"wis": 15,
+			"cha": 10,
+			"save": {
+				"str": "+8",
+				"con": "+7"
+			},
+			"skill": {
+				"athletics": "+8",
+				"intimidation": "+4",
+				"perception": "+6"
+			},
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 16,
+			"resist": [
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from non magical attacks"
+				},
+				{
+					"resist": [
+						"cold",
+						"fire"
+					]
+				}
+			],
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"charmed",
+				"frightened",
+				"poisoned"
+			],
+			"languages": [
+				"Abyssal",
+				"telepathy 60 ft."
+			],
+			"cr": "11",
+			"trait": [
+				{
+					"name": "Legendary Resistance (2/Day)",
+					"entries": [
+						"If Yestabrod fails a saving throw, it can choose to succeed instead."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Slam",
+					"entries": [
+						"{@atk mw} {@hit 8} to hit, reach 5 ft., one target. {@h}18 ({@damage 3d8 + 4}) bludgeoning damage plus 11 ({@damage 2d8 + 2}) poison damage."
+					]
+				},
+				{
+					"name": "Caustic Spores (2/Day)",
+					"entries": [
+						"Yestabrod releases spores in a 30-foot cone. Each creature in that area must succeed on a {@dc 15} Dexterity saving throw or take {@damage 1d8} acid damage at the start of each of Yestabrod's turns. A creature can repeat the saving throw at the end of each of its turn, ending the effect on itself on a success."
+					]
+				},
+				{
+					"name": "Infestation Spores (2/Day)",
+					"entries": [
+						"Yestabrod releases spores that burst out in a cloud that fills a 15-foot-radius sphere centered on it, and the cloud lingers for 1 minute. Any flesh-and-blood creature in the cloud when it appears, or that enters it later, must make a {@dc 15} Constitution saving throw. On a successful save, the creature can't be infected by these spores for 24 hours. On a failed save, the creature is infected with a disease called the spores of Zuggtmoy and also gains a random form of indefinite madness (determined by rolling on the Madness of Zuggtmoy table in appendix D) that lasts until the creature is cured of the disease or dies. While infected in this way, the creature can't be reinfected, and it must be repeat the saving throw at the end of every 24 hours, ending the infection on a success. On a failure, the infected creature's body is slowly taken over by fungal growth, and after three such failed saves, the creature dies and is reanimated as a spore servant if it's a type of creature that can be (see the Myconids entry in the Monster Manual)."
+					]
+				}
+			],
+			"legendaryActions": 2,
+			"legendary": [
+				{
+					"name": "Corpse Burst",
+					"entries": [
+						"Gore, offal, and acid erupt from a corpse within 20 feet of Yestabrod. Creatures within 10 feet of the corpse must succeed on a {@dc 15} Dexterity saving throw or take 14 ({@damage 4d6}) acid damage."
+					]
+				},
+				{
+					"name": "Foul Absorption",
+					"entries": [
+						"Yestabrod absorbs putrescence from a corpse within 5 feet of it, regaining {@dice 1d10 + 2} hit points"
+					]
+				},
+				{
+					"name": "Myconid Assault",
+					"entries": [
+						"Yestabrod sends some of its spores towards a corpse it can see within 30ft. of it. The corpse rises as a Myconid, charges up to 15ft. towards a creature and makes a single fist attack({@hit +5} to hit, {@damage 2d4} bludgeoning damage and {@damage 2d4} poison damage) against it, before falling to the ground again."
+					]
+				}
+			],
+			"fluff": {
+				"name": "Yestabrod",
+				"source": "OotA",
+				"images": [
+					{
+						"type": "image",
+						"href": {
+							"type": "internal",
+							"path": "bestiary/OotA/Yestabrod.jpg"
+						}
+					}
+				]
+			},
+			"tokenUrl": "https://5e.tools/img/OotA/Yestabrod.png?v=1.122.8",
+			"traitTags": [
+				"Legendary Resistances"
+			],
+			"senseTags": [
+				"SD"
+			],
+			"languageTags": [
+				"AB",
+				"TP"
+			],
+			"damageTags": [
+				"A",
+				"B",
+				"I"
+			],
+			"miscTags": [
+				"AOE",
+				"MW"
+			],
+			"hasFluffImages": true
 		}
 	]
 }
