@@ -12,8 +12,8 @@
 				"convertedBy": []
 			}
 		],
-		"dateAdded": 1613825672,
-		"dateLastModified": 1613825672
+		"dateAdded": 1616253284,
+		"dateLastModified": 1616253284
 	},
 	"monster": [
 		{
@@ -3253,11 +3253,11 @@
 				"N"
 			],
 			"ac": [
-				17
+				18
 			],
 			"hp": {
-				"formula": "17d12 + 85",
-				"average": 195
+				"formula": "25d12 + 125",
+				"average": 287
 			},
 			"speed": {
 				"walk": 50,
@@ -3270,28 +3270,43 @@
 			"wis": 15,
 			"cha": 10,
 			"save": {
-				"wis": "+6",
-				"dex": "+10"
+				"wis": "+7",
+				"dex": "+11"
 			},
 			"skill": {
-				"acrobatics": "+10",
-				"perception": "+6"
+				"acrobatics": "+11",
+				"perception": "+7"
 			},
 			"senses": [
 				"darkvision 60 ft."
 			],
-			"passive": 16,
+			"passive": 17,
+			"immune": [
+				"acid"
+			],
 			"conditionImmune": [
+				"frightened",
+				"prone",
 				{
 					"special": "Slick (disadv. Dex Sav, Half Speed, Disadv. grapp, adv. escape grapp, action to wipe off)"
 				}
 			],
-			"cr": "12",
+			"languages": [
+				"Draconic",
+				"Common"
+			],
+			"cr": "14",
 			"trait": [
 				{
 					"name": "Oiled Body",
 					"entries": [
 						"The mizutsune has advantage on Dexterity (acrobatics) checks."
+					]
+				},
+				{
+					"name": "Legendary Resistance (1/day)",
+					"entries": [
+						"When the mizutsune fails a saving throw, it can choose to succeed instead."
 					]
 				}
 			],
@@ -3305,25 +3320,25 @@
 				{
 					"name": "Tail",
 					"entries": [
-						"{@atk mw} {@hit 10} to hit, reach 10 ft., one target. {@h}25 ({@damage 3d12 + 6}) bludgeoning damage. On hit, the creature becomes SLICK."
+						"{@atk mw} {@hit 11} to hit, reach 10 ft., one target. {@h}25 ({@damage 3d12 + 6}) bludgeoning damage. On hit, the creature becomes {@condition slick}."
 					]
 				},
 				{
 					"name": "Bite",
 					"entries": [
-						"{@atk mw} {@hit 10} to hit, reach 5 ft., one target. {@h}19 ({@damage 3d8 + 6}) bludgeoning damage. If the target is a large or smaller creature, it is {@condition grappled} (escape {@dc 14}). Until the grapple ends, the mizutsune can't bite another target."
+						"{@atk mw} {@hit 11} to hit, reach 5 ft., one target. {@h}19 ({@damage 3d8 + 6}) bludgeoning damage. If the target is a large or smaller creature, it is {@condition grappled} (escape {@dc 14}). Until the grapple ends, the mizutsune can't bite another target."
 					]
 				},
 				{
 					"name": "Bubble Prison",
 					"entries": [
-						"{@atk rw} {@hit 10} to hit, range 80/320 ft., one large or smaller creature. {@h}The creature is Slick and enclosed in a bubble of shimmering force for 1 minute or until the bubble is destroyed. Nothing, not physical Objects, energy, or other spell effects, can pass through the bubble, in or out, though a creature in the Sphere can breathe there. A creature inside of the bubble has disadvantage on attacks due to its slippery nature. The bubble has AC 15, 30 hit points, resistance to bludgeoning damage, immunity to poison and psychic damage, but vulnerable to piercing damage. At the end of the mizutsune's turn all bubbles rise 10 feet higher into the air."
+						"{@atk rw} {@hit 11} to hit, range 80/320 ft., one large or smaller creature. {@h}The creature is {@condition slick} and enclosed in a bubble of shimmering force for 1 minute or until the bubble is destroyed. A creature inside of the bubble has disadvantage on attack rolls due to its slippery nature. Additionally the bubble prevents all attacks and spell effects from passing through, causing them to affect the bubble instead. The bubble has AC 15, 30 hit points, resistance to bludgeoning damage, immunity to acid (alkaline), poison and psychic damage, but vulnerable to piercing and acid (acidic) damage. At the end of the mizutsune's turn all bubbles rise 10 feet higher into the air."
 					]
 				},
 				{
-					"name": "Hydropump",
+					"name": "Hydropump {@recharge 5}",
 					"entries": [
-						"The mizutsune releases a high pressure stream of water in a 60-foot line that is 5 feet wide. Each creature in that line must make a {@dc 18} Dexterity saving throw, taking 55 ({@damage 10d10}) cold damage on a failed save, or half as much damage on a successful one."
+						"The mizutsune releases a high pressure stream of water in a 60-foot line that is 5 feet wide. Each creature in that line must make a {@dc 18} Dexterity saving throw, taking {@damage 5d8} bludgeoning and {@damage 5d8} acid damage on a failed save, or half as much damage on a successful one. A creature that takes damage from this becomes {@condition slick}"
 					]
 				}
 			],
@@ -3331,21 +3346,21 @@
 				{
 					"name": "Tail Sweep",
 					"entries": [
-						"When a creature is slick and starts its turn within 10 feet of the mizutsune. The mizutsune can use its reaction to sweep its tail, hitting the creature's legs. The creature must then succeed on a {@dc 18} Dexterity saving throw or be knocked {@condition prone}."
+						"When a creature is {@condition slick} and starts its turn within 10 feet of the mizutsune or enters a space within 10 feet of the mizutsune for the first time on its turn, the mizutsune can use its reaction to sweep its tail, hitting the creature's legs. The creature must then succeed on a {@dc 18} Dexterity saving throw or take {@damage 1d6 + 6} bludgeoning damage and be knocked {@condition prone}."
 					]
 				}
 			],
 			"legendary": [
 				{
-					"name": "Water Spout(Costs 3 Actions)",
+					"name": "Water Spout",
 					"entries": [
-						"The mizutsune releases a high pressure stream of water at 2 creatures within range (30/60). {@hit 10} to hit, {@damage 2d6 + 6} bludgeoning damage."
+						"The mizutsune releases up to two a high pressure stream of water at creatures within range (30/60). {@hit 10} to hit, {@damage 1d6 + 6} piercing damage and {@damage 1d6} acid damage. It can't attack the same target twice."
 					]
 				},
 				{
 					"name": "Acrobatic Movement",
 					"entries": [
-						"The leviathan moves up to half it's speed without provoking opportunity attacks."
+						"The mizutsune moves up to half it's speed without provoking opportunity attacks."
 					]
 				},
 				{
@@ -3353,8 +3368,18 @@
 					"entries": [
 						"The mizutsune uses its Bubble Prison attack."
 					]
+				},
+				{
+					"name": "Detect",
+					"entries": [
+						"The mizutsune makes a Perception check."
+					]
 				}
 			],
+			"legendaryGroup": {
+				"name": "Mizutsune",
+				"source": "FlundersHomebrew"
+			},
 			"fluff": {
 				"images": [
 					{
@@ -3367,15 +3392,21 @@
 				]
 			},
 			"tokenUrl": "https://i.imgur.com/lu4boo3.png",
+			"traitTags": [
+				"Legendary Resistances"
+			],
 			"senseTags": [
 				"D"
 			],
 			"actionTags": [
 				"Multiattack"
 			],
+			"languageTags": [
+				"C",
+				"DR"
+			],
 			"damageTags": [
-				"B",
-				"C"
+				"B"
 			],
 			"miscTags": [
 				"AOE",
@@ -3385,7 +3416,8 @@
 			],
 			"conditionInflict": [
 				"grappled",
-				"prone"
+				"prone",
+				"slick"
 			]
 		},
 		{
@@ -4452,24 +4484,24 @@
 				}
 			],
 			"hp": {
-				"formula": "20d10 + 60",
-				"average": 170
+				"formula": "20d10 + 80",
+				"average": 190
 			},
 			"speed": {
 				"walk": 40
 			},
-			"str": 18,
+			"str": 20,
 			"dex": 16,
-			"con": 16,
+			"con": 18,
 			"int": 13,
 			"wis": 15,
 			"cha": 10,
 			"save": {
-				"str": "+8",
-				"con": "+7"
+				"str": "+9",
+				"con": "+8"
 			},
 			"skill": {
-				"athletics": "+8",
+				"athletics": "+9",
 				"intimidation": "+4",
 				"perception": "+6"
 			},
@@ -4494,6 +4526,7 @@
 				}
 			],
 			"immune": [
+				"acid",
 				"poison"
 			],
 			"conditionImmune": [
@@ -4512,25 +4545,31 @@
 					"entries": [
 						"If Yestabrod fails a saving throw, it can choose to succeed instead."
 					]
+				},
+				{
+					"name": "Infestation Spores (2/Day)",
+					"entries": [
+						"This trait activates if the Yestabrod takes at least 30 damage in a single turn. The Yestabrod releases spores that burst out in a cloud that fills a 15-foot-radius sphere centered on it, and the cloud lingers for 1 minute. Any flesh-and-blood creature in the cloud when it appears, or that enters it later, must make a {@dc 15} Constitution saving throw. On a successful save, the creature can't be infected by these spores for 24 hours. On a failed save, the creature is {@condition poisoned} for 1 minute and infected with a disease called the spores of Zuggtmoy and also gains a random form of indefinite madness (determined by rolling on the Madness of Zuggtmoy table in appendix D) that lasts until the creature is cured of the disease or dies. While infected in this way, the creature can't be reinfected, and it must be repeat the saving throw at the end of every 24 hours, ending the infection on a success. On a failure, the infected creature's body is slowly taken over by fungal growth, and after three such failed saves, the creature dies and is reanimated as a spore servant if it's a type of creature that can be (see the Myconids entry in the Monster Manual)."
+					]
 				}
 			],
 			"action": [
 				{
+					"name": "Multiattack",
+					"entries": [
+						"The Yestabrod makes one Slam attack against a target creature and uses it's Caustic Spores if possible."
+					]
+				},
+				{
 					"name": "Slam",
 					"entries": [
-						"{@atk mw} {@hit 8} to hit, reach 5 ft., one target. {@h}18 ({@damage 3d8 + 4}) bludgeoning damage plus 11 ({@damage 2d8 + 2}) poison damage."
+						"{@atk mw} {@hit 9} to hit, reach 5 ft., one target. {@h}19 ({@damage 3d8 + 5}) bludgeoning damage plus 11 ({@damage 2d8 + 2}) poison damage."
 					]
 				},
 				{
 					"name": "Caustic Spores (2/Day)",
 					"entries": [
-						"Yestabrod releases spores in a 30-foot cone. Each creature in that area must succeed on a {@dc 15} Dexterity saving throw or take {@damage 1d8} acid damage at the start of each of Yestabrod's turns. A creature can repeat the saving throw at the end of each of its turn, ending the effect on itself on a success."
-					]
-				},
-				{
-					"name": "Infestation Spores (2/Day)",
-					"entries": [
-						"Yestabrod releases spores that burst out in a cloud that fills a 15-foot-radius sphere centered on it, and the cloud lingers for 1 minute. Any flesh-and-blood creature in the cloud when it appears, or that enters it later, must make a {@dc 15} Constitution saving throw. On a successful save, the creature can't be infected by these spores for 24 hours. On a failed save, the creature is infected with a disease called the spores of Zuggtmoy and also gains a random form of indefinite madness (determined by rolling on the Madness of Zuggtmoy table in appendix D) that lasts until the creature is cured of the disease or dies. While infected in this way, the creature can't be reinfected, and it must be repeat the saving throw at the end of every 24 hours, ending the infection on a success. On a failure, the infected creature's body is slowly taken over by fungal growth, and after three such failed saves, the creature dies and is reanimated as a spore servant if it's a type of creature that can be (see the Myconids entry in the Monster Manual)."
+						"Yestabrod releases spores in a 30-foot cone. Each creature in that area must succeed on a {@dc 15} Dexterity saving throw or take {@damage 4d6} acid damage and is infected by the spores. A creature infected with the Caustic Spores takes {@damage 1d8} acid damage at the start of each of Yestabrod's turns. A creature can make a {@dc 15} Constitution saving throw at the end of each of its turn, ending the effect on itself on a success."
 					]
 				}
 			],
@@ -4551,7 +4590,7 @@
 				{
 					"name": "Myconid Assault",
 					"entries": [
-						"Yestabrod sends some of its spores towards a corpse it can see within 30ft. of it. The corpse rises as a Myconid, charges up to 15ft. towards a creature and makes a single fist attack({@hit +5} to hit, {@damage 2d4} bludgeoning damage and {@damage 2d4} poison damage) against it, before falling to the ground again."
+						"Yestabrod sends some of its spores towards a corpse it can see within 30ft. of it. The corpse rises as a Myconid, charges up to 15ft. towards a creature and makes a single fist attack({@hit +6} to hit, {@damage 2d4} bludgeoning damage and {@damage 2d4} poison damage) against it, before falling to the ground again."
 					]
 				}
 			],
@@ -4575,6 +4614,9 @@
 			"senseTags": [
 				"SD"
 			],
+			"actionTags": [
+				"Multiattack"
+			],
 			"languageTags": [
 				"AB",
 				"TP"
@@ -4588,6 +4630,153 @@
 				"AOE",
 				"MW"
 			],
+			"conditionInflict": [
+				"poisoned"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "Undead Cavalier",
+			"source": "FlundersHomebrew",
+			"page": 47,
+			"size": "M",
+			"type": "undead",
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 18,
+					"from": [
+						"{@item plate armor|phb}"
+					]
+				}
+			],
+			"hp": {
+				"formula": "11d8 + 33",
+				"average": 82
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 18,
+			"dex": 10,
+			"con": 16,
+			"int": 12,
+			"wis": 10,
+			"cha": 14,
+			"save": {
+				"str": "+7",
+				"con": "+6"
+			},
+			"skill": {
+				"history": "+4",
+				"persuasion": "+5"
+			},
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 10,
+			"resist": [],
+			"immune": [
+				"necrotic",
+				"poison"
+			],
+			"conditionImmune": [
+				"exhaustion",
+				"frightened",
+				"poisoned"
+			],
+			"languages": [
+				"Abyssal",
+				"Common"
+			],
+			"cr": "6",
+			"trait": [
+				{
+					"name": "Action Surge (Recharges after Short or Long Rest)",
+					"entries": [
+						"The cavalier can take one additional action on top of its regular action and possible bonus action."
+					]
+				},
+				{
+					"name": "Threatening",
+					"entries": [
+						"Creatures provoke an opportunity attack from the cavalier when they move 5 feet or more while within the cavalier's reach, and if the cavalier hits a creature with an opportunity attack, the target's speed is reduced to 0 until the end of the current turn."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"The cavalier makes three longsword attacks."
+					]
+				},
+				{
+					"name": "Longsword+1",
+					"entries": [
+						"{@atk mw} {@hit 8} to hit, reach 5 ft., one target. {@h}9 ({@damage 1d8 + 5}) slashing, plus 5 ({@damage 1d8}) necrotic damage."
+					]
+				},
+				{
+					"name": "Coordinated Attack (2/Day)",
+					"entries": [
+						"The cavaliers mount can use its reaction to move up to half its speed and make one melee weapon attack."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Punish the Marked (1/Turn)",
+					"entries": [
+						"As a bonus action, the cavalier can make a melee weapon attack against a creature marked by it if the creature dealt damage to anyone other than the cavalier during the last turn. The cavalier's melee weapon attack has advantage on the attack roll, and if it hits, the attack's weapon deals an extra 5 damage to the target."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Warding Manuever (3/Day)",
+					"entries": [
+						"If the cavalier or a creature it can see within 5 feet of it is hit by an attack, it can roll a {@dice d8} and add it to the target's AC against that attack. If the attack still hits, the target has resistance against the attack's damage."
+					]
+				}
+			],
+			"fluff": {
+				"images": [
+					{
+						"type": "image",
+						"href": {
+							"type": "external",
+							"url": "https://i.imgur.com/sW99JuG.png"
+						}
+					}
+				]
+			},
+			"tokenUrl": "https://i.imgur.com/sW99JuG.png",
+			"senseTags": [
+				"SD"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"AB",
+				"C"
+			],
+			"damageTags": [
+				"N"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflictSpell": [
+				"incapacitated",
+				"paralyzed",
+				"prone"
+			],
+			"hasFluff": true,
 			"hasFluffImages": true
 		}
 	]
