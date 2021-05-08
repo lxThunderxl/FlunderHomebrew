@@ -1,4 +1,5 @@
 {
+	"siteVersion": "1.127.5",
 	"_meta": {
 		"sources": [
 			{
@@ -12,8 +13,8 @@
 				"convertedBy": []
 			}
 		],
-		"dateAdded": 1616253467,
-		"dateLastModified": 1616253467
+		"dateAdded": 1620478523,
+		"dateLastModified": 1620478523
 	},
 	"monster": [
 		{
@@ -1565,17 +1566,16 @@
 			"wis": 14,
 			"cha": 10,
 			"save": {
-				"con": "+8",
-				"wis": "+6",
-				"str": "+9"
+				"wis": "+7",
+				"str": "+10"
 			},
 			"skill": {
-				"perception": "+6"
+				"perception": "+7"
 			},
 			"senses": [
 				"darkvision 60 ft."
 			],
-			"passive": 16,
+			"passive": 17,
 			"resist": [
 				{
 					"resist": [
@@ -1603,18 +1603,55 @@
 				"Infernal",
 				"Abyssal"
 			],
-			"cr": "10",
+			"cr": "15",
 			"trait": [
 				{
-					"name": "Spell Turning",
+					"name": "Spell Turning (Lion)",
 					"entries": [
-						"The angel has advantage on a saving throw against any spell that targets only the angel (not an area). If the chimera's saving throw is successful and the spell is of 4th level or lower, the spell has no effect on the chimera and instead targets the caster."
+						"The angel has advantage on a saving throw against any spell that targets only the angel (not an area). If the angel's saving throw is successful and the spell is of 4th level or lower, the spell has no effect on the angel and instead targets the caster."
 					]
 				},
 				{
-					"name": "Legendary Resistance (3/Day)",
+					"name": "Legendary Resistance (2/Day)",
 					"entries": [
 						"If Cherub fails a saving throw, he can choose to succeed instead."
+					]
+				},
+				{
+					"name": "Multiheaded",
+					"entries": [
+						"If the angel were to subjected to an effect that would render it {@condition stunned} or {@condition incapacitated}, a random head (Cow, Lion, Crow or Aasimar) instead becomes subjected to that effect. Only if all heads are {@condition stunned}, the body itself can be subjected to such effects."
+					]
+				},
+				{
+					"name": "Heated Body",
+					"entries": [
+						"A creature that touches the angel or hits it with a melee attack while within 5 feet of it takes 5 ({@damage 1d8}) fire damage."
+					]
+				},
+				{
+					"name": "Regeneration (Cow)",
+					"entries": [
+						"The angel regains 10 hit points at the start of its turn. If the angel takes radiant damage or damage from a magic weapon, this trait doesn't function at the start of the angel's next turn. The angel dies only if it starts its turn with 0 hit points and doesn't regenerate."
+					]
+				},
+				{
+					"name": "Magic Resistance (Crow)",
+					"entries": [
+						"The angel has advantage on saving throws against spells and other magical effects."
+					]
+				},
+				{
+					"name": "Weave Absorption",
+					"entries": [
+						"Any spell of 1st level or higher cast within 120ft. of the angel consumes an additional spell slot of the level used to cast the spell, or of one level lower if no appropriate slot is available.",
+						"Replace this Trait with the Wind Aura Trait, if the angels mythic trait is active."
+					]
+				},
+				{
+					"name": "Wind Aura (Mythic)",
+					"entries": [
+						"Heavy winds surround the angel. Any ranged weapon attack within 120ft. of the angel is made with disadvantage. Additionally any creature that starts its turn within that area must succeed on a DStrength saving throw {@dc 15} or spend an additional foot of movement for each foot moved inside the aura."
 					]
 				}
 			],
@@ -1628,47 +1665,59 @@
 				{
 					"name": "Sword of ten fists",
 					"entries": [
-						"{@atk mw} {@hit 10} to hit, reach 5 ft., one target. {@h}10 ({@damage 1d8 + 5}) slashing damage plus 5 ({@damage 1d8}) fire damage. This is a magic weapon attack."
+						"{@atk mw} {@hit 10} to hit, reach 5 ft., one target. {@h}14 ({@damage 2d8 + 5}) slashing damage plus 9 ({@damage 2d8}) fire damage. This is a magic weapon attack."
 					]
 				},
 				{
 					"name": "Forcebolt",
 					"entries": [
-						"{@atk rs} {@hit 6} to hit, range 30ft., one target. {@h}7 ({@damage 2d6}) force damage."
+						"{@atk rs} {@hit 7} to hit, range 60ft., one target. {@h}11 ({@damage 3d6}) force damage."
 					]
 				},
 				{
-					"name": "Breath Weapon {@recharge 5}",
+					"name": "Breath Weapon {@recharge 5} (Aasimar)",
 					"entries": [
 						"Cherubs Aasimar head exhales fire in a 15-foot cone. Each creature in that area must make a {@dc 16} Dexterity saving throw, taking 33 ({@damage 6d10}) fire damage on a failed save, or half as much damage on a successful one."
 					]
 				}
 			],
-			"legendaryActions": 1,
+			"legendaryActions": 2,
 			"legendary": [
 				{
 					"name": "Wing Attack",
 					"entries": [
-						"The angel beats its wings. Each creature within 10 feet of the deep crow must succeed on a {@dc 15} Dexterity saving throw or take 7 ({@damage 2d6}) bludgeoning damage and be knocked {@condition prone}. The angel can then fly up to half its flying speed."
+						"The angel beats its wings. Each creature within 10 feet of the deep crow must succeed on a {@dc 17} Dexterity saving throw or take 10 ({@damage 3d6}) bludgeoning damage and be knocked {@condition prone}. The angel can then fly up to half its flying speed."
 					]
 				},
 				{
-					"name": "Lion Head {@recharge}",
+					"name": "Lion Head {@recharge 4}",
 					"entries": [
-						"Cherubs Lion Head lets out a deafening roar. Every creature within 30ft of the angel makes a Wisdom saving throw {@dc 15} or becomes {@condition frightened} of the angel until the end of their next turn"
+						"Cherubs Lion Head lets out a deafening roar. Every creature within 30ft of the angel makes a Wisdom saving throw {@dc 17} or becomes {@condition frightened} of the angel until the end of their next turn"
 					]
 				},
 				{
-					"name": "Hawk Head {@recharge}",
+					"name": "Crow Head {@recharge 4}",
 					"entries": [
-						"Cherubs Hawk Head releases an ear-splitting caw. Each creature within 60 feet of the angel and able to hear it must make a {@dc 15} Constitution saving throw. On a failure, a creature takes 10 ({@damage 3d6}) psychic damage."
+						"Cherubs Crow Head releases an ear-splitting caw. Each creature within 60 feet of the angel and able to hear it must make a {@dc 17} Constitution saving throw. On a failure, a creature takes 21 ({@damage 6d6}) psychic damage. On a success it takes half damage."
 					]
 				},
 				{
-					"name": "Goat Head {@recharge}",
+					"name": "Cow Head {@recharge 4}",
 					"entries": [
-						"Cherubs Goat Head peers into the eyes of its foes. Up to 2 creatures within 30ft of the angel make a {@dc 15} Charisma saving throw.",
+						"Cherubs Cow Head peers into the eyes of its foes. Up to 2 creatures within 30ft of the angel make a {@dc 17} Charisma saving throw.",
 						"On a failed saving throw, the creature can't take reactions until the start of its next turn and rolls a {@dice d8} to determine what it does during that turn. On a 1 to 4, the creature does nothing. On a 5 or 6, the creature takes no action but uses all its movement to move in a random direction. On a 7 or 8, the creature makes one melee attack against a random creature, or it does nothing if no creature is within reach."
+					]
+				}
+			],
+			"mythicHeader": [
+				"The angels mythic trait activates, if it starts its turn with 0 Hit Points and does not regenerate. Instead it uses the absorbed magical energy absorbed by spells cast around it.",
+				"It regains hitpoints equal to rolls of its hit dice times twice the level of all spells previously cast in the range of its Weave Absorption (Cantrips count as 1; minimum of 10)."
+			],
+			"mythic": [
+				{
+					"name": "Mythic Action 1",
+					"entries": [
+						"lore ipsum dolor"
 					]
 				}
 			],
@@ -1923,7 +1972,10 @@
 			},
 			"tokenUrl": "https://i.imgur.com/GFzwcsF.png",
 			"traitTags": [
-				"Legendary Resistances"
+				"Damage Absorption",
+				"Legendary Resistances",
+				"Magic Resistance",
+				"Regeneration"
 			],
 			"senseTags": [
 				"D"
@@ -3278,7 +3330,7 @@
 				"perception": "+7"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"darkvision 120 ft."
 			],
 			"passive": 17,
 			"immune": [
@@ -3304,7 +3356,7 @@
 					]
 				},
 				{
-					"name": "Legendary Resistance (1/day)",
+					"name": "Legendary Resistance (3/day)",
 					"entries": [
 						"When the mizutsune fails a saving throw, it can choose to succeed instead."
 					]
@@ -3396,7 +3448,7 @@
 				"Legendary Resistances"
 			],
 			"senseTags": [
-				"D"
+				"SD"
 			],
 			"actionTags": [
 				"Multiattack"
@@ -4778,6 +4830,588 @@
 			],
 			"hasFluff": true,
 			"hasFluffImages": true
+		},
+		{
+			"name": "Tempered Alatreon",
+			"source": "FlundersHomebrew",
+			"page": 169,
+			"size": "G",
+			"type": "dragon",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 24,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"formula": "39d20 + 390",
+				"average": 820
+			},
+			"speed": {
+				"walk": 60,
+				"fly": 120,
+				"canHover": false
+			},
+			"str": 30,
+			"dex": 12,
+			"con": 30,
+			"int": 14,
+			"wis": 23,
+			"cha": 24,
+			"save": {
+				"dex": "+10",
+				"con": "+19"
+			},
+			"skill": {
+				"athletics": "+19",
+				"perception": "+15"
+			},
+			"senses": [
+				"blindsight 120 ft.",
+				"darkvision 240 ft."
+			],
+			"passive": 25,
+			"resist": [
+				{
+					"resist": [
+						"lightning"
+					]
+				},
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from weapons that aren't adamantine"
+				}
+			],
+			"conditionImmune": [
+				"charmed",
+				"frightened",
+				"poisoned",
+				{
+					"special": "any disease"
+				}
+			],
+			"languages": [
+				"Draconic"
+			],
+			"cr": "30",
+			"trait": [
+				{
+					"name": "Active State (Mythic Trait)",
+					"entries": [
+						"The alatreon has three states it can take. They are the dragon state, fire state, and the ice state. Each state provides benefits and detriments depending on which state it is in, as shown below.",
+						"The alatreon begins combat in either the fire state or ice state. When it begins combat in the fire state, the order of the states it changes into is: fire, dragon, ice, dragon and then repeats. When it starts in the ice stage, the order is: ice, dragon, fire, dragon and then repeats.",
+						"Whenever the alatreon hit points are reduced by 100 in its current active state it changes its state to the next one in the order and uses a special reaction to use its element burst. This special reaction can be used even if the alatreon has already used its reaction this round.",
+						{
+							"type": "list",
+							"items": [
+								"Fire State. While in the fire state, the alatreon is immune to fire damage, but vulnerable to cold damage.",
+								"Dragon State. While in the dragon state, the alatreon is resistant to all damage except for necrotic, poison, and psychic damage.",
+								"Ice State. While in the ice state, the alatreon is immune to cold damage, but vulnerable to fire damage."
+							]
+						}
+					]
+				},
+				{
+					"name": "Elemental Overload",
+					"entries": [
+						"The alatreon gains 1 charge for every 10 elemental damage (fire, cold, lightning) it takes from a single attack or spell. The charges reset to 0 after the alatreon uses its escaton judgement."
+					]
+				},
+				{
+					"name": "Horns",
+					"entries": [
+						"The alatreon has two horns, each which can be attacked and broken (AC 30; 200 hit points; resistant to bludgeoning, piercing, slashing damage that do not deal siege damage; immunity to poison, psychic, and the damage immunity alatreon gains from its current active state). Dealing damage to the horn deals no damage to the alatreon. When a horn is broken the alatreon reverts back to its previous active state."
+					]
+				},
+				{
+					"name": "Legendary Limit",
+					"entries": [
+						"The alatreon can only use each legendary action once per round."
+					]
+				},
+				{
+					"name": "Legendary Resistance (3/Day).",
+					"entries": [
+						"If the alatreon fails a saving throw, it can choose to succeed instead."
+					]
+				},
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"The alatreon has advantage on saving throws against spells and other magical effects."
+					]
+				},
+				{
+					"name": "Magic Weapons",
+					"entries": [
+						"The alatreon's weapon attacks count as magical for the purpose of overcoming resistance and immunity to nonmagical attacks and damage."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"The alatreon makes three attacks: two with its claws and one with its bite or tail."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"Melee Weapon Attack. {@hit 19} to hit, reach 15 ft., one target. {@h}28 ({@damage 4d8 + 10}) piercing damage plus 3 ({@damage 1d6}) necrotic damage and the target must make a {@dc 27} Constitution saving throw or be afflicted with dragonblight for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the dragonblight on itself on a success."
+					]
+				},
+				{
+					"name": "Claws",
+					"entries": [
+						"Melee Weapon Attack. {@hit 19} to hit, reach 10ft., one target. {@h}17 ({@damage 2d6 + 10}) slashing damage plus 3 ({@damage 1d6}) necrotic damage and the target must make a {@dc 27} Constitution saving throw or be afflicted with dragonblight for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the dragonblight on itself on a success."
+					]
+				},
+				{
+					"name": "Tail",
+					"entries": [
+						"Melee Weapon Attack. {@hit 19} to hit, reach 20ft., one target. {@h}32 ({@damage 4d10 + 10}) bludgeoning damage and the target must make a {@dc 27} Strength saving throw or knocked {@condition prone}."
+					]
+				},
+				{
+					"name": "Elemental Breath {@recharge 5}",
+					"entries": [
+						"Roll a {@dice d4} each time you use this action to determine what element the alatreon exhales. On a 1, fire damage; On a 2, cold damage; On a 3, necrotic; On a 4, lightning. The alatreon exhales the rolled element in a 120-foot line that is 10 feet wide. Each creature in that line must make a {@dc 27} Dexterity (fire and lightning) or Constitution (cold and necrotic) saving throw or take 63 ({@dice 18d6}) (of the rolled elemental) damage on a failed save, or half as much damage on a successful one."
+					]
+				},
+				{
+					"name": "Escaton Judgement (Once during the second dragon state, each time the active state order repeats).",
+					"entries": [
+						"The alatreon swoops down from the sky (without provoking opportunity attacks) if it is not already on the ground and begins gathering energy until the start of its next turn. While charging the alatreon is immune to the {@condition incapacitated}, {@condition stunned}, {@condition paralyzed}, and {@condition unconscious} conditions.",
+						"On its next turn, the alatreon can use its action to release the energy it has gathered in a 600-foot-radius-sphere around it. All terrain above ground level in that area is obliterated and each creature in that area must make a {@dc 30} Dexterity saving throw or take 210 ({@damage 60d6}) force damage on a failed save, or half as much damage on a successful one.",
+						"The number of damage dice this action deals can be reduced by {@dice 10d6} for each horn broken and by an additional #{@dice d6} where # is equal to the number of charges its elemental overload has."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Element Burst",
+					"entries": [
+						"When the alatreon changes active states it can use this special reaction to release elemental energy into the area around it. Each creature in a 30-foot radius-sphere around the alatreon must make a {@dc 27} Dexterity saving throw, taking 24 ({@damage 7d6}) damage on a failed save or half as much damage on a successful one. The damage type is determined by the active state the alatreon changes into: fire damage for fire state, necrotic damage for dragon state, and cold damage for ice state."
+					]
+				}
+			],
+			"legendaryHeader": [
+				"The alatreon can take 3 legendary actions, choosing from the options below. Only one legendary action option can be used at a time and only at the end of another creature's turn. The alatreon regains spent legendary actions at the start of its turn."
+			],
+			"legendary": [
+				{
+					"name": "Fly",
+					"entries": [
+						"The alatreon flies up to half its fly speed without provoking opportunity attacks."
+					]
+				},
+				{
+					"name": "Detect",
+					"entries": [
+						"The alatreon makes a Wisdom (Perception) check."
+					]
+				},
+				{
+					"name": "Water Breath",
+					"entries": [
+						"The alatreon fires 5 water globules, each at a different point within a 150-foot cone in front of it. Each creature within a 5-foot radius of a point must make a {@dc 27} Dexterity saving throw or take 14 ({@damage 4d6}) cold damage and be afflicted with waterblight for 1 minute on a failed save, or half as much damage and is not afflicted with waterblight on a successful one.",
+						"A creature in the area of more than one globule, makes their saving throw at disadvantage, but does not take any additional damage. A creature can repeat the saving throw at the end of each of its turns, ending the waterblight on itself on a success."
+					]
+				},
+				{
+					"name": "Arc Lightning",
+					"entries": [
+						"The alatreon magically causes lightning to strike, within 120 feet of it, along a 45-foot long line, that is 5 feet wide. It then causes lightning to strike along another 45-foot long, 5-foot-wide line, but this line must begin in a 5-foot space of the original lightning strikes or pass through it at one point in the line. Each creature in a line, must make a {@dc 27} Dexterity saving throw or take 22 ({@damage 5d8}) lightning damage and be afflicted with thunderblight for 1 minute on a failed save, or half as much damage and is not afflicted with thunderblight on a successful one.",
+						"A creature in the area of more than one line, makes their saving throw at disadvantage, but does not take any additional damage. A creature can repeat the saving throw at the end of each of its turns, ending the thunderblight on itself on a success."
+					]
+				},
+				{
+					"name": "Lightning Storm",
+					"entries": [
+						"Numerous bolts of lightning strike the ground in a 120-foot radius around the alatreon. Choose three creatures, each of which must make a {@dc 27} Dexterity saving throw, taking 22 ({@damage 4d10}) lightning damage and be afflicted with thunderblight for 1 minute on a failed save, or half as much damage and is not afflicted with thunderblight on a successful one. A creature can repeat the saving throw at the end of each of its turns, ending the thunderblight on itself on a success."
+					]
+				}
+			],
+			"mythicHeader": [
+				"The alatreon can use the options below as legendary actions depending on which state it is currently in, as determined by its mythic trait:"
+			],
+			"mythic": [
+				{
+					"name": "Dragon State",
+					"entries": [
+						{
+							"type": "list",
+							"items": [
+								"Multiattack. The alatreon uses its multiattack.",
+								"Dragon Rush. The alatreon moves up to half its fly speed in a straight line, during this move it may move through other creatures without provoking attacks of opportunity. Each creature or object the alatreon moves through must succeed on a {@dc 27} Dexterity saving throw, taking 17 ({@damage 2d6 + 10}) slashing damage plus 10 ({@damage 3d6}) necrotic damage and be knocked {@condition prone} on a failed save, or half as much damage and isn't knocked {@condition prone} on a successful one."
+							]
+						}
+					]
+				},
+				{
+					"name": "Fire State",
+					"entries": [
+						{
+							"type": "list",
+							"items": [
+								"Fireball. The alatreon exhales a fireball to a point within 120 feet of it. Each creature in a 15-foot radius sphere centered on that point must make a {@dc 27} Dexterity saving throw, taking 28 ({@damage 8d6}) fire damage on a failed save, or half as much damage on a successful one.",
+								"Fire Breath Y. The alatreon exhales fire in a 45-foot line that is 5 feet wide and then splits into a two more lines forming a 'Y' shape that are 30 feet long and wide 5 feet. Each creature in a line must make a {@dc 27} Dexterity saving throw, taking 35 ({@damage 10d6}) fire damage on a failed save, or half as much damage on a successful one.",
+								"Scorched Earth. The alatreon rises 30 feet into the air, without provoking opportunity attacks, and exhales flames that covers the ground in a 30-foot radius centered on a point directly below it. The ground continues to burn until the start of the alatreon's next turn. Flammable objects in the area that aren't being worn or carried ignite. A creature that starts its turn in the area or enters it for the first time on a turn takes 10 ({@damage 3d6}) fire damage and ignites. Until a creature takes an action to douse the fire, the burning creature takes 7 ({@damage 2d6}) fire damage at the start of each of its turns. When a creature moves into or within the area, it takes 7 ({@damage 2d6}) fire damage for every 5 feet it travels."
+							]
+						}
+					]
+				},
+				{
+					"name": "Ice State",
+					"entries": [
+						{
+							"type": "list",
+							"items": [
+								"Frost Breath. The alatreon rises 30 feet into the air, without provoking opportunity attacks, and exhales frost that covers the ground in a 30-foot radius centered on a point directly below it. The frost remains until the start of the alatreon's next turn and Each creature that starts its turn in that area must make a {@dc 27} Constitution saving throw or take 17 ({@damage 5d6}) cold damage and be afflicted with iceblight for 1 minute on a failed save, or half as much damage and is not afflicted with iceblight on a successful one. When a creature moves into or within the area, it takes 7 ({@damage 2d6}) cold damage for every 5 feet it travels.",
+								"Ice Shards. The alatreon freezes the air around it creating ice shards that fill a 5-foot-cube in the air above each creature in a 90-foot radius around it, before they plummet to the ground. Each creature in that area must make a {@dc 27} Dexterity saving throw. On a failed save the creature takes 13 ({@damage 3d8}) cold damage plus 18 ({@damage 4d8}) bludgeoning damage, is pushed 5 feet into an unoccupied space, and is knocked {@condition prone}. On a successful save, the creature takes half as much damage, is pushed 5 feet into an unoccupied space, but isn't knocked {@condition prone}. If there are no unoccupied spaces around the creature, it fails its saving throw and is knocked {@condition prone} under the ice chunk until it melts, is destroyed, or it succeeds on a {@dc 20} Athletics check.     The ice shards remain in the spaces they land in until they melt at the start of the alatreon's next turn. The ice shards can be attacked and destroyed (AC 10; 10 hit points; vulnerable to fire damage; immune to cold, poison, and psychic damage). If the ice shard takes necrotic damage, it instead explodes in a 15-foot radius dealing 4 ({@damage 1d8}) piercing damage to each creature in that area."
+							]
+						}
+					]
+				}
+			],
+			"fluff": {
+				"images": [
+					{
+						"type": "image",
+						"href": {
+							"type": "external",
+							"url": "https://www.monsterhunter.com/world-iceborne/topics/alatreon/images/img01.png"
+						}
+					}
+				]
+			},
+			"tokenUrl": "https://i.imgur.com/vyfkFBM.png",
+			"traitTags": [
+				"Magic Resistance",
+				"Magic Weapons"
+			],
+			"senseTags": [
+				"B",
+				"SD"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"DR"
+			],
+			"damageTags": [
+				"B",
+				"C",
+				"F",
+				"L",
+				"N",
+				"O",
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"AOE",
+				"RCH"
+			],
+			"conditionInflict": [
+				"prone"
+			]
+		},
+		{
+			"name": "Girros",
+			"source": "FlundersHomebrew",
+			"page": 169,
+			"size": "M",
+			"type": "monstrosity",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				14
+			],
+			"hp": {
+				"formula": "8d6 + 16",
+				"average": 44
+			},
+			"speed": {
+				"walk": 40,
+				"fly": 0,
+				"canHover": false
+			},
+			"str": 15,
+			"dex": 10,
+			"con": 14,
+			"int": 2,
+			"wis": 12,
+			"cha": 7,
+			"skill": {
+				"perception": "+3"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 13,
+			"conditionImmune": [
+				"paralyzed"
+			],
+			"cr": "1",
+			"trait": [
+				{
+					"name": "Pack Tactics",
+					"entries": [
+						"The girros has advantage on an attack roll against a creature if at least one of the girros's allies is within 5 feet of the creature and the ally isn't {@condition incapacitated}."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"The girros makes two bite attacks."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 4} to hit, reach 5 ft., one target. {@h}7 ({@damage 1d6 + 2}) piercing damage and the target must make a {@dc 11} Constitution saving throw, taking 9 ({@damage 2d8}) poison damage on a failed save, or half as much damage on a successful one. If the poison damage reduces the target to 0 hit points, the target is stable but {@condition poisoned} for 1 hour, even after regaining hit points, and is {@condition paralyzed} while {@condition poisoned} in this way."
+					]
+				}
+			],
+			"tokenUrl": "https://i.imgur.com/Uu2Q89t.png",
+			"traitTags": [
+				"Pack Tactics"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"I",
+				"P"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflict": [
+				"paralyzed",
+				"poisoned"
+			]
+		},
+		{
+			"name": "Great Girros",
+			"source": "FlundersHomebrew",
+			"page": 169,
+			"size": "L",
+			"type": "monstrosity",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				15
+			],
+			"hp": {
+				"formula": "13d10 + 52",
+				"average": 123
+			},
+			"speed": {
+				"walk": 40,
+				"fly": 0,
+				"canHover": false
+			},
+			"str": 19,
+			"dex": 11,
+			"con": 19,
+			"int": 3,
+			"wis": 14,
+			"cha": 10,
+			"save": {
+				"con": "+7"
+			},
+			"skill": {
+				"perception": "+5"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 15,
+			"conditionImmune": [
+				"paralyzed"
+			],
+			"cr": "6",
+			"trait": [
+				{
+					"name": "Charge",
+					"entries": [
+						"If the great girros moves at least 20 feet straight toward a target and then hits it with its bite on the same turn, the target takes an extra 7 ({@damage 2d6}) piercing damage. If the target is a creature, it must succeed on a {@dc 15} Strength saving throw or be knocked {@condition prone}."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"The girros makes three bite attacks."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 7} to hit, reach 5 ft., one target. {@h}7 ({@damage 2d6 + 4}) piercing damage and the target must make a {@dc 15} Constitution saving throw, taking 9 ({@damage 2d8}) poison damage on a failed save, or half as much damage on a successful one. If the poison damage reduces the target to 0 hit points, the target is stable but {@condition poisoned} for 1 hour, even after regaining hit points, and is {@condition paralyzed} while {@condition poisoned} in this way."
+					]
+				},
+				{
+					"name": "Paralyzing Spit",
+					"entries": [
+						"{@atk rw} {@hit 7} to hit, range 30/120, one target. {@h}The creature is {@condition poisoned} for 1 minute. While {@condition poisoned} in this way the target is {@condition paralyzed}. A creature can make a {@dc 15} Constitution saving throw at the end of each of its turns, ending the effect on itself on a success."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Alpha Call (1/day)",
+					"entries": [
+						"The great girros calls out for help and 2 ({@dice 1d4}) girros appear to assist it."
+					]
+				}
+			],
+			"tokenUrl": "https://i.imgur.com/CTm7DuN.png",
+			"traitTags": [
+				"Charge"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"I",
+				"P"
+			],
+			"miscTags": [
+				"MW",
+				"RW"
+			],
+			"conditionInflict": [
+				"paralyzed",
+				"poisoned",
+				"prone"
+			]
+		},
+		{
+			"name": "Odogaron",
+			"source": "FlundersHomebrew",
+			"page": 169,
+			"size": "L",
+			"type": "monstrosity",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				16
+			],
+			"hp": {
+				"formula": "17d10 + 68",
+				"average": 161
+			},
+			"speed": {
+				"walk": 50,
+				"climb": 30
+			},
+			"str": 18,
+			"dex": 15,
+			"con": 18,
+			"int": 11,
+			"wis": 12,
+			"cha": 14,
+			"save": {
+				"con": "+7",
+				"wis": "+4",
+				"cha": "+5"
+			},
+			"skill": {
+				"acrobatics": "+5",
+				"athletics": "+7",
+				"perception": "+4"
+			},
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 14,
+			"resist": [
+				"fire"
+			],
+			"cr": "8",
+			"trait": [
+				{
+					"name": "Rampage",
+					"entries": [
+						"When the odogaron reduces a creature to 0 hit points with a melee attack on its turn, the odogaron can take a bonus action to move up to half its speed and make a claw attack."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"The odogaron makes three attacks: one with its bite and two with its claw."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 7} to hit, reach 5 ft., one target. {@h}13 ({@damage 2d8 + 4}) piercing damage and the target is {@condition grappled} (escape {@dc 14})."
+					]
+				},
+				{
+					"name": "Claw",
+					"entries": [
+						"{@atk mw} {@hit 7} to hit, reach 10 ft., one target. Hit 11 ({@damage 2d6 + 4}) slashing damage. If the target is a creature other than an undead or a construct, it must succeed on a {@dc 15} Constitution saving throw or lose 5 ({@dice 1d10}) hit points at the start of each of its turns due to an bloody wound. Each time the odogaron hits the wounded target with this attack, the damage dealt by the wound increases by 5 ({@dice 1d10}). Any creature can take an action to stanch the wound with a successful {@dc 12} Wisdom (Medicine) check. The wound also closes if the target receives magical healing."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Uncanny Dodge",
+					"entries": [
+						"The Odogaron halves the damage that it takes from an attack that hits it. The odogaron must be able to see the attacker."
+					]
+				}
+			],
+			"tokenUrl": "https://i.imgur.com/xiq8Ezo.png",
+			"traitTags": [
+				"Rampage"
+			],
+			"senseTags": [
+				"SD"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"MW",
+				"RCH"
+			],
+			"conditionInflict": [
+				"grappled"
+			]
 		}
 	]
 }
