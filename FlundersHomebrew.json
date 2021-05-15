@@ -13,8 +13,8 @@
 				"convertedBy": []
 			}
 		],
-		"dateAdded": 1620478523,
-		"dateLastModified": 1620478523
+		"dateAdded": 1621085950,
+		"dateLastModified": 1621085950
 	},
 	"monster": [
 		{
@@ -122,7 +122,7 @@
 			]
 		},
 		{
-			"name": "Barba Riccia (CR11)",
+			"name": "Barba Riccia (Berserker Armour)",
 			"group": "Brennender Abgrund",
 			"isNpc": true,
 			"source": "FlundersHomebrew",
@@ -490,7 +490,7 @@
 			]
 		},
 		{
-			"name": "Alichino Harlequin (CR3)",
+			"name": "Alichino Harlequin (Dragon Lair)",
 			"group": "Brennender Abgrund",
 			"isNpc": true,
 			"source": "FlundersHomebrew",
@@ -515,54 +515,58 @@
 				}
 			],
 			"hp": {
-				"formula": "14d8 + 14",
-				"average": 77
+				"formula": "14d8 + 28",
+				"average": 140
 			},
 			"speed": {
 				"walk": 30
 			},
 			"str": 10,
 			"dex": 16,
-			"con": 12,
-			"int": 15,
+			"con": 14,
+			"int": 16,
 			"wis": 13,
 			"cha": 15,
+			"save": {
+				"dex": "+5",
+				"int": "+5"
+			},
 			"skill": {
 				"sleight of hand": "+7",
 				"stealth": "+5",
 				"deception": "+4",
-				"acrobatics": "+5"
+				"acrobatics": "+5",
+				"perception": "+3"
 			},
 			"senses": [
-				"Darkvision 30ft"
+				"Darkvision 60ft."
 			],
-			"passive": 11,
+			"passive": 13,
 			"languages": [
 				"Common",
 				"Elf",
 				"Abyssal",
 				"Thieves Cant"
 			],
-			"cr": "3",
+			"cr": "4",
 			"spellcasting": [
 				{
 					"name": "Spellcasting",
 					"headerEntries": [
-						"Alichino is a 4th-level spellcaster. Its spellcasting ability is Intelligence (spell save {@dc 12}, +2 to hit with spell attacks). It has the following wizard spells prepared."
+						"Alichino is a 8th-level spellcaster. Its spellcasting ability is Intelligence (spell save {@dc 13}, +5 to hit with spell attacks). It has the following wizard spells prepared."
 					],
 					"spells": {
 						"0": {
 							"spells": [
+								"{@spell fire bolt}",
 								"{@spell mage hand}",
-								"{@spell prestidigitation}",
-								"{@spell shocking grasp}"
+								"{@spell prestidigitation}"
 							]
 						},
 						"1": {
 							"spells": [
 								"{@spell charm person}",
 								"{@spell disguise self}",
-								"{@spell silent image}",
 								"{@spell sleep}"
 							],
 							"slots": 4
@@ -570,10 +574,10 @@
 						"2": {
 							"spells": [
 								"{@spell invisibility}",
-								"{@spell rope trick}",
-								"{@spell suggestion}"
+								"{@spell phantasmal force}",
+								"{@spell rope trick}"
 							],
-							"slots": 3
+							"slots": 2
 						}
 					},
 					"ability": "int",
@@ -591,17 +595,29 @@
 					]
 				},
 				{
-					"name": "Sneak Attack (Assassin)",
+					"name": "Sneak Attack (1/turn)",
 					"entries": [
-						"Once per turn, Alichino deals an extra 10 ({@damage 3d6}) damage when it hits a target with a weapon attack and has advantage on the attack roll, or when the target is within 5 feet of an ally of the alichino harlequin that isn't {@condition incapacitated} and Alichino doesn't have disadvantage on the attack roll."
+						"Once per turn, Alichino deals an extra 10 ({@damage 4d6}) damage when it hits a target with a weapon attack and has advantage on the attack roll, or when the target is within 5 feet of an ally of Alichino that isn't {@condition incapacitated} and Alichino doesn't have disadvantage on the attack roll."
+					]
+				},
+				{
+					"name": "Uncanny Action",
+					"entries": [
+						"On each of its turns, the arcane trickster can use a bonus action to take the Dash, Disengage, or Hide action."
+					]
+				},
+				{
+					"name": "Evasion",
+					"entries": [
+						"If the arcane trickster is subjected to an effect that allows it to make a Dexterity saving throw to take only half damage, the arcane trickster instead takes no damage if it succeeds on the saving throw, and only half damage if it fails."
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Dagger",
+					"name": "Rapier",
 					"entries": [
-						"{@atk mw,rw} {@hit 5} to hit, reach 5 ft., range 20/60, one target. {@h}5 ({@damage 1d4 + 3}) piercing damage."
+						"{@atk mw,rw} {@hit 5} to hit, reach 5 ft., one target. {@h}8 ({@damage 1d8 + 3}) piercing damage."
 					]
 				},
 				{
@@ -616,7 +632,10 @@
 					"Dieb des Brennenden Abgrunds"
 				]
 			},
-			"tokenUrl": "https://i.imgur.com/kD6ytc9.png",
+			"tokenUrl": "https://i.imgur.com/1s9f4GY.png",
+			"traitTags": [
+				"Sneak Attack"
+			],
 			"senseTags": [
 				"D"
 			],
@@ -633,8 +652,7 @@
 			"miscTags": [
 				"MW",
 				"RNG",
-				"RW",
-				"THW"
+				"RW"
 			],
 			"conditionInflict": [
 				"incapacitated"
@@ -3986,159 +4004,6 @@
 			]
 		},
 		{
-			"name": "Gobul",
-			"isNamedCreature": true,
-			"source": "FlundersHomebrew",
-			"page": 169,
-			"size": "L",
-			"type": "monstrosity",
-			"alignment": [
-				"U"
-			],
-			"ac": [
-				14
-			],
-			"hp": {
-				"formula": "14d10 + 56",
-				"average": 133
-			},
-			"speed": {
-				"walk": 30,
-				"swim": 40
-			},
-			"str": 19,
-			"dex": 15,
-			"con": 18,
-			"int": 7,
-			"wis": 12,
-			"cha": 14,
-			"skill": {
-				"perception": "+4",
-				"stealth": "+5"
-			},
-			"senses": [
-				"darkvision 60 ft."
-			],
-			"passive": 14,
-			"conditionImmune": [
-				"paralyzed",
-				"poisoned"
-			],
-			"cr": "7",
-			"trait": [
-				{
-					"name": "Lure",
-					"entries": [
-						"While hidden, the gobul can use the lure on its head to create a mesmerizing flash of lights. Any creature that can see the lure, must make a {@dc 13} Wisdom saving throw or be {@condition charmed} for 1 minute by the gobul or until the gobul something harmful to the creature. While {@condition charmed} in this way, the creature may only use its turn to move towards the lure."
-					]
-				},
-				{
-					"name": "Natural Camouflage",
-					"entries": [
-						"While the gobul remains motionless on river bed, lake bottom, or sea floor, it is indistinguishable from common water plants."
-					]
-				},
-				{
-					"name": "Amphibious",
-					"entries": [
-						"The gobul can breathe air and water."
-					]
-				}
-			],
-			"action": [
-				{
-					"name": "Multiattack",
-					"entries": [
-						"The gobul makes two attacks: one with its bite and one with its tail. It can't make both attacks against the same target."
-					]
-				},
-				{
-					"name": "Tail",
-					"entries": [
-						"Melee Weapon Attack. {@hit 7} to hit, reach 10 ft., one target. {@h}15 ({@damage 2d10 + 4}) piercing damage, or 20 ({@damage 3d10 + 4}) piercing damage while enlarged. On hit, the target must make a {@dc 15} Constitution saving throw or become {@condition poisoned} for 1 minute. While {@condition poisoned} in this way, the target is {@condition paralyzed}. The target can repeat the saving throw at the end of each of its turns , ending the effect on itself on a success."
-					]
-				},
-				{
-					"name": "Bite",
-					"entries": [
-						"Melee Weapon Attack. {@hit 7} to hit, reach 5 ft., one target. {@h}13 ({@damage 2d8 + 4}) piercing damage, or 17 ({@damage 3d8 + 4}) piercing damage while enlarged."
-					]
-				},
-				{
-					"name": "Enlarge (Recharges after a Short or Long Rest)",
-					"entries": [
-						"For 1 minute, the gobul magically increases in size, along with anything it is wearing or carrying. While enlarged, the gobul is Huge, rolls one additional weapon damage die on Strength-based weapon attacks (included in the attacks), and makes Strength checks and Strength saving throws with advantage. If the gobul lacks the room to become Large, it attains the maximum size possible in the space available."
-					]
-				},
-				{
-					"name": "Swallow",
-					"entries": [
-						"The gobul makes one bite attack against a Medium or smaller creature that is {@condition paralyzed} or {@condition charmed}. If the attack hits, the target takes the bite's damage and the target is swallowed. While swallowed, the creature is {@condition blinded} and {@condition restrained}, it has total cover against attacks and other effects outside the gobul, and it takes 10 ({@damage 3d6}) acid damage at the start of each of the gobul's turns. The gobul can swallow 3 creatures while enlarged, or 2 when not enlarged. ",
-						"If the gobul takes 19 damage or more on a single turn from a creature inside it, the gobul must succeed on a {@dc 17} Constitution saving throw at the end of that turn or regurgitate all swallowed creatures, which fall {@condition prone} in a space within 10 feet of the gobul. If the gobul dies, a swallowed creature is no longer {@condition restrained} by it and can escape from the corpse by using 10 feet of movement, exiting {@condition prone}."
-					]
-				},
-				{
-					"name": "Vortex {@recharge 5}",
-					"entries": [
-						"While underwater, the gobul opens its mouth swallowing everything in a 30-foot cone. Each creature in that area must make a {@dc 15} Strength saving throw. On a fail, the gobul swallows that creature without making a bite attack, even if the creature is not {@condition paralyzed} or {@condition charmed}. If the gobul cannot swallow all the creatures, it swallows the closest ones first and may use a bonus action to bite one additional creature that failed the saving throw."
-					]
-				},
-				{
-					"name": "Blinding Flash",
-					"entries": [
-						"The gobuls bioluminescent lure emits blinding flashes of light in a 30-foot radius. Each creature in the area, must make a {@dc 15} Constitution saving throw or become blind until the end of their next turn."
-					]
-				}
-			],
-			"legendaryActions": 1,
-			"legendary": [
-				{
-					"name": "Blind",
-					"entries": [
-						"The gobul uses Blinding Flash."
-					]
-				},
-				{
-					"name": "Devour",
-					"entries": [
-						"The gobul uses its bite attack; or Swallow on a {@condition paralyzed} or {@condition charmed} creature."
-					]
-				},
-				{
-					"name": "Roll (Must be Enlarged)",
-					"entries": [
-						"The gobul extends its retractable spines on its back. It then can move up to half its movement speed, without provoking an attack of opportunity, by rolling over and impaling anything in its path. Each creature in that area must make a {@dc 13} Dexterity saving throw, taking 11 ({@damage 2d6 + 4}) piercing damage and are {@condition paralyzed} for 1 minute on a failed save. On a successful save the creature takes half damage and is not {@condition paralyzed}. A creature can make a {@dc 15} Constitution saving throw at the end of each of its turns, ending the effect on itself on a success."
-					]
-				}
-			],
-			"tokenUrl": "https://5e.tools/img/DMG/Giant Fly.png?v=1.121.2",
-			"traitTags": [
-				"Amphibious"
-			],
-			"senseTags": [
-				"D"
-			],
-			"actionTags": [
-				"Multiattack",
-				"Swallow"
-			],
-			"damageTags": [
-				"A",
-				"P"
-			],
-			"miscTags": [
-				"AOE",
-				"RCH"
-			],
-			"conditionInflict": [
-				"blinded",
-				"charmed",
-				"paralyzed",
-				"poisoned",
-				"restrained"
-			]
-		},
-		{
 			"name": "Zamtrios",
 			"source": "FlundersHomebrew",
 			"page": 169,
@@ -5411,6 +5276,437 @@
 			],
 			"conditionInflict": [
 				"grappled"
+			]
+		},
+		{
+			"name": "Lord of the Jungle",
+			"source": "FlundersHomebrew",
+			"page": 169,
+			"size": "L",
+			"type": {
+				"type": "celestial",
+				"tags": [
+					"Kirin"
+				]
+			},
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				17
+			],
+			"hp": {
+				"formula": "15d10 + 45",
+				"average": 195
+			},
+			"speed": {
+				"walk": 60
+			},
+			"str": 21,
+			"dex": 16,
+			"con": 16,
+			"int": 19,
+			"wis": 20,
+			"cha": 20,
+			"skill": {
+				"perception": "+10",
+				"insight": "+10",
+				"religion": "+9"
+			},
+			"senses": [
+				"blindsight 30 ft.",
+				"darkvision 120 ft."
+			],
+			"passive": 20,
+			"conditionImmune": [
+				"stunned"
+			],
+			"cr": "13",
+			"spellcasting": [
+				{
+					"name": "Innate Spellcasting",
+					"headerEntries": [
+						"The kirin's innate spellcasting ability is Wisdom. It can innately cast the following spells (spell save {@dc 18}, +10 to hit with spell attacks), requiring no material components:"
+					],
+					"will": [
+						"{@spell control weather}",
+						"{@spell expeditious retreat}",
+						"{@spell gust of wind}",
+						"{@spell see invisibility}"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell light}",
+								"{@spell stomping tantrum|FlundersHomebrew}",
+								"{@spell thaumaturgy}",
+								"{@spell vine grasp|FlundersHomebrew}"
+							]
+						},
+						"5": {
+							"spells": [
+								"{@spell crystal storm|FlundersHomebrew}",
+								"{@spell destructive wave}",
+								"{@spell earthen bane|FlundersHomebrew}",
+								"{@spell earthen spike|FlundersHomebrew}",
+								"{@spell fissure|FlundersHomebrew}",
+								"{@spell quake|FlundersHomebrew}",
+								"{@spell shattering leap|FlundersHomebrew}"
+							],
+							"slots": 4,
+							"lower": 1
+						}
+					},
+					"ability": "wis",
+					"type": "spellcasting"
+				}
+			],
+			"trait": [
+				{
+					"name": "One with Nature",
+					"entries": [
+						"The kirin can choose any location within 30 feet of it as the starting location of the Earthen Spike spell, as long as its on the ground or plant."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"The kirin makes three attacks: two with its hooves and one with its horn."
+					]
+				},
+				{
+					"name": "Hooves",
+					"entries": [
+						"Melee Weapon Attack. {@hit 10} to hit, reach 10 ft., one target. {@h}10 ({@damage 2d4 + 5}) bludgeoning damage."
+					]
+				},
+				{
+					"name": "Horn",
+					"entries": [
+						"Melee Weapon Attack. {@hit 10} to hit, reach 5 ft., one target. {@h}14 ({@damage 2d8 + 5}) piercing damage."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Detect",
+					"entries": [
+						"The kirin makes a Wisdom (Perception) Check."
+					]
+				},
+				{
+					"name": "Smite",
+					"entries": [
+						"The kirin makes a hoof attack or casts {@spell stomping tantrum|FlundersHomebrew}."
+					]
+				},
+				{
+					"name": "Move",
+					"entries": [
+						"The kirin moves up to its half speed without provoking opportunity attacks."
+					]
+				}
+			],
+			"legendaryGroup": {
+				"name": "Generic Tenon Jungle Group",
+				"source": "FlundersHomebrew"
+			},
+			"tokenUrl": "https://i.imgur.com/pySvOda.png",
+			"senseTags": [
+				"B",
+				"SD"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"B",
+				"P"
+			],
+			"spellcastingTags": [
+				"I"
+			],
+			"miscTags": [
+				"RCH"
+			]
+		},
+		{
+			"name": "Lagiacrus",
+			"source": "FlundersHomebrew",
+			"page": 169,
+			"size": "H",
+			"type": "dragon",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				18
+			],
+			"hp": {
+				"formula": "24d12 + 48",
+				"average": 336
+			},
+			"speed": {
+				"walk": 30,
+				"swim": 50
+			},
+			"str": 16,
+			"dex": 18,
+			"con": 14,
+			"int": 10,
+			"wis": 11,
+			"cha": 7,
+			"save": {
+				"wis": "+5",
+				"cha": "+3",
+				"con": "+7"
+			},
+			"skill": {
+				"perception": "+5"
+			},
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 15,
+			"immune": [
+				"lightning"
+			],
+			"cr": "14",
+			"trait": [
+				{
+					"name": "Hold Breath",
+					"entries": [
+						"The lagiacrus can hold its breath for 12 hours."
+					]
+				},
+				{
+					"name": "Lightning aura",
+					"entries": [
+						"Lightning sparks off of the lagiacrus into the surrounding area. Any creature that ends its turn within 5 feet of the lagiacrus takes 3 ({@damage 1d6}) lightning damage."
+					]
+				},
+				{
+					"name": "Legendary Resistance (2/Day)",
+					"entries": [
+						"If the lagiacrus fails a saving throw, it can choose to succeed instead."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"The lagiacrus makes two attacks: one with its bite and one with its claws."
+					]
+				},
+				{
+					"name": "Claws",
+					"entries": [
+						"{@atk mw} {@hit 8} to hit, reach 5 ft., one target. {@h}13 ({@damage 3d6 + 3}) slashing damage."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 8} to hit, reach 5 ft., one target. {@h}16 ({@damage 3d8 + 3}) piercing damage + 3 ({@damage 1d6}) lightning damage."
+					]
+				},
+				{
+					"name": "Lightning ball {@recharge 5}",
+					"entries": [
+						"The lagiacrus exhales a ball of lightning to a location with 60 feet of it. Each creature within a 10-foot radius of the location must make a {@dc 17} Dexterity saving throw, taking 60 ({@damage 11d10}) lightning damage on a failed save or half as much on a successful one."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Detect",
+					"entries": [
+						"The lagiacrus makes a Wisdom (Perception) Check."
+					]
+				},
+				{
+					"name": "Claw Attack",
+					"entries": [
+						"The lagiacrus makes a claw attack."
+					]
+				},
+				{
+					"name": "Lightning Charge (Costs 2 Actions)",
+					"entries": [
+						"The lagiacrus moves up to its speed, without provoking attacks of opportunity, during this move it may move through other creatures. Any creature the lagiacrus moves through must succeed on a {@dc 17} Dexterity saving throw or take 13 ({@damage 3d6 + 3}) lightning damage and is {@condition paralyzed} until the end of their next turn."
+					]
+				}
+			],
+			"tokenUrl": "https://i.imgur.com/dUHDRYD.png",
+			"traitTags": [
+				"Hold Breath",
+				"Legendary Resistances"
+			],
+			"senseTags": [
+				"SD"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"L",
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"AOE",
+				"MW"
+			],
+			"conditionInflict": [
+				"paralyzed"
+			]
+		},
+		{
+			"name": "Barba Riccia (Dragon Lair)",
+			"group": "Brennender Abgrund",
+			"isNpc": true,
+			"source": "FlundersHomebrew",
+			"page": 0,
+			"size": "M",
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"Half Orc"
+				]
+			},
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"Halfplate +1"
+					]
+				}
+			],
+			"hp": {
+				"formula": "14d8 + 36",
+				"average": 148
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 16,
+			"dex": 12,
+			"con": 17,
+			"int": 9,
+			"wis": 11,
+			"cha": 9,
+			"skill": {
+				"athletics": "+7",
+				"perception": "+4"
+			},
+			"senses": [
+				"Darkvision 60ft"
+			],
+			"passive": 14,
+			"resist": [
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from non magical weapons"
+				},
+				{
+					"resist": [
+						"necrotic",
+						"radiant"
+					]
+				}
+			],
+			"languages": [
+				"Common",
+				"Orc",
+				"Abyssal"
+			],
+			"cr": "10",
+			"trait": [
+				{
+					"name": "Reckless",
+					"entries": [
+						"At the start of its turn, the barbarian can gain advantage on all melee weapon attack rolls during that turn, but attack rolls against it have advantage until the start of its next turn."
+					]
+				},
+				{
+					"name": "Beyond Death (2/Day)",
+					"entries": [
+						"When Barba is reduced to 0 hit points by an attack that isn't a critical hit, and is not killed outright, it can choose to fall to 1 hit point instead."
+					]
+				},
+				{
+					"name": "Legendary Resistance (3/Day)",
+					"entries": [
+						"When Barba fails a saving throw, it can choose to succeed instead."
+					]
+				},
+				{
+					"name": "Relentless Endurance",
+					"entries": [
+						"When Barba is reduced to 0 hit points by an attack and is not killed outright, it can choose to fall to 1 hit point instead."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Barba makes two attacks with Dusk Blade"
+					]
+				},
+				{
+					"name": "Dusk Blade",
+					"entries": [
+						"{@atk mw} {@hit 7} to hit, reach 5 ft., one target. {@h}10({@damage 2d6 + 3}) slashing damage, plus {@h}7({@damage 2d6}) necrotic damage. Additionally, if the target is a creature it must succeed on a DC10 Charisma saving throw or begin glooming in purple light (dim light, 10ft.). The light grants advantage on attack rolls agains the target, and it lasts until the start of the target's next turn. "
+					]
+				}
+			],
+			"fluff": {
+				"entries": [
+					"Bodyguard von Farfa"
+				],
+				"images": [
+					{
+						"type": "image",
+						"href": {
+							"type": "external",
+							"url": "https://i.pinimg.com/564x/54/e6/92/54e692904063930b5f81c113523cac13.jpg"
+						}
+					}
+				]
+			},
+			"tokenUrl": "https://i.imgur.com/UhCoNMH.png",
+			"traitTags": [
+				"Legendary Resistances",
+				"Reckless"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"AB",
+				"C",
+				"O"
+			],
+			"damageTags": [
+				"S"
+			],
+			"miscTags": [
+				"MW"
 			]
 		}
 	]
