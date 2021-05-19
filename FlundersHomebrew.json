@@ -1,5 +1,5 @@
 {
-	"siteVersion": "1.127.5",
+	"siteVersion": "1.128.0",
 	"_meta": {
 		"sources": [
 			{
@@ -13,8 +13,8 @@
 				"convertedBy": []
 			}
 		],
-		"dateAdded": 1621085950,
-		"dateLastModified": 1621085950
+		"dateAdded": 1621437967,
+		"dateLastModified": 1621437967
 	},
 	"monster": [
 		{
@@ -5706,6 +5706,636 @@
 				"S"
 			],
 			"miscTags": [
+				"MW"
+			]
+		},
+		{
+			"name": "Laboratory Horror",
+			"source": "FlundersHomebrew",
+			"page": 169,
+			"size": "L",
+			"type": "monstrosity",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				15
+			],
+			"hp": {
+				"formula": "12d10 + 90",
+				"average": 210
+			},
+			"speed": {
+				"walk": 50
+			},
+			"str": 20,
+			"dex": 16,
+			"con": 22,
+			"int": 14,
+			"wis": 14,
+			"cha": 6,
+			"save": {
+				"con": "+10",
+				"str": "+9",
+				"wis": "+6"
+			},
+			"skill": {
+				"athletics": "+9",
+				"perception": "+6",
+				"stealth": "+7",
+				"survival": "+6"
+			},
+			"senses": [
+				"blindsight 120 ft."
+			],
+			"passive": 16,
+			"resist": [],
+			"immune": [
+				"acid"
+			],
+			"conditionImmune": [
+				"charmed",
+				"frightened"
+			],
+			"cr": "12",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"The laboratory horror can cast the following Spells innately requiring no components. Constitution is its spellcasting ability (save {@dc 18}, +10 to hit)."
+					],
+					"will": [
+						"{@spell chaos bolt|XGE} 2d8+3d6",
+						"{@spell shocking grasp} 2d8",
+						"{@spell Tasha's caustic brew|TCE} 6d4"
+					],
+					"daily": {
+						"1e": [
+							"{@spell fear}"
+						],
+						"2e": [
+							"{@spell hold person} 2 targets",
+							"{@spell vampiric touch} 4d6"
+						]
+					},
+					"ability": "con",
+					"type": "spellcasting"
+				}
+			],
+			"trait": [
+				{
+					"name": "Spider Climb",
+					"entries": [
+						"The laboratory horror can climb difficult surfaces, including upside down on ceilings, without needing to make an ability check."
+					]
+				},
+				{
+					"name": "Unstable Mutation",
+					"entries": [
+						"On initiative count 20 and whenever it is subjected to a saving throw the laboratory horror rolls on the following list of mutations. They instantly take effects and last for {@dice 1d4} rounds.",
+						{
+							"type": "list",
+							"items": [
+								"Unstable Form. No reactions",
+								"Formless. Disadvantage on Dexterity saves.",
+								"Unresponsive Legs. Speed reduced by 10.",
+								"Chitinous Shell. +2 AC, -10 feet speed",
+								"Fleshy WIngs. Flying speed equal to current  speed.",
+								"Reformation. Immune to grappling and {@condition restrained}.",
+								"Regenerative Tissue. At the beginning of its turn, regain hit points equal to Constitution modifier. Disabled on the next turn if it takes fire damage.",
+								"Hyper Regeneration. Any Healing is increased by an amount equal to Constitution modifier.",
+								"Savage Predator. Crits deal an additional {@damage 6d6} damage. Creatures within 30 feet must make a Wisdom Save or become {@condition frightened} for 1 minute. Can repeat save at end of their turns.",
+								"Metamorphosis.The laboratory horror gains an additional legendary resistance"
+							]
+						}
+					]
+				},
+				{
+					"name": "Legendary Resistance (1/Day)",
+					"entries": [
+						"If the laboratory horror fails a saving throw, it can choose to succeed instead."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Breath Weapon {@recharge}",
+					"entries": [
+						"The laboratory horror leans back revealing a humanoid face on its  chest. The face wreathes as it is covered shimmering scales according to its damage type. The face then shoots out a liquid in a 40-foot line thats 5 feet wide and 15 feet high. Each creature in the the line must make a {@dc 16} Constitution saving throw or take {@damage 8d8} damage of a type chosen by the laboratory horror from its resistances and immunities.",
+						"It then looses all resistances gained by its Adaptability."
+					]
+				},
+				{
+					"name": "Multiattack",
+					"entries": [
+						"The laboratory horror makes 3 attacks."
+					]
+				},
+				{
+					"name": "Razor Barb",
+					"entries": [
+						"{@atk rw} {@hit 9} to hit, reach 30 ft., one target. {@h}14 ({@damage 2d8 + 5}) piercing damage."
+					]
+				},
+				{
+					"name": "Bone Strike",
+					"entries": [
+						"{@atk mw} {@hit 9} to hit, reach 10 ft., one target. {@h}14 ({@damage 2d8 + 5}) bludgeoning damage and if the same attack roll would hit another creature within 5 feet of the original target, the second creature takes 9({@damage 1d8 + 5}) bludgeoning damage."
+					]
+				},
+				{
+					"name": "Hooked Talon",
+					"entries": [
+						"{@atk mw} {@hit 9} to hit, reach 5 ft., one target. {@h}14 ({@damage 2d8 + 5}) slashing damage and must make a Constitution saving throw. On a failed save the target begins to bleed for 1 minute and can't regain hitpoints except by spending hit dice or completing a long rest. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself upon a success."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Spiked Carapace (hit by melee attack)",
+					"entries": [
+						"The laboratory horror grows sharp boney protrusions all around its body dealing {@damage 2d8} piercing damage to the attacker. In addition any creature that hits the laboratory horror with a melee attack until the end of its next turn takes {@damage 2d8} piercing damage. "
+					]
+				},
+				{
+					"name": "Adaptability (took damage except bludgeoning, piercing or slashing)",
+					"entries": [
+						"The laboratory horror gainst resistance to the triggering damage type. Once it has absorbed more than 30 damage this way it immediately regains and uses its breath weapon."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Spellcasting (Cost: Cantrip - 1 Action; 2/day - 2 Actions; 1/day - 3 Actions)",
+					"entries": [
+						"The laboratory horror casts a spell."
+					]
+				},
+				{
+					"name": "Reactive Mutation(Costs 2 Actions)",
+					"entries": [
+						"The laboratory horror grows additional limbs as its body begins to bubble under its skin. It can take an additional reaction this round."
+					]
+				},
+				{
+					"name": "Attack",
+					"entries": [
+						"The laboratory horror makes one attack."
+					]
+				}
+			],
+			"tokenUrl": "https://i.imgur.com/YbIJkKV.png",
+			"traitTags": [
+				"Legendary Resistances",
+				"Spider Climb"
+			],
+			"senseTags": [
+				"B"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"B",
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"AOE",
+				"MW",
+				"RCH",
+				"RW"
+			]
+		},
+		{
+			"name": "Blackspawn Stalker",
+			"source": "FlundersHomebrew",
+			"page": 169,
+			"size": "L",
+			"type": "dragon",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				16
+			],
+			"hp": {
+				"formula": "10d10 + 40",
+				"average": 140
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 17,
+			"dex": 18,
+			"con": 18,
+			"int": 5,
+			"wis": 12,
+			"cha": 8,
+			"skill": {
+				"perception": "+4",
+				"stealth": "+7"
+			},
+			"senses": [
+				"blindsight 10 ft.",
+				"darkvision 60 ft"
+			],
+			"passive": 14,
+			"immune": [
+				"acid"
+			],
+			"languages": [
+				"understands Draconic but can't speak"
+			],
+			"cr": "5",
+			"trait": [
+				{
+					"name": "Spider Climb",
+					"entries": [
+						"The blackspawn stalker can climb difficult surfaces, including upside down on ceilings, without needing to make an ability check."
+					]
+				},
+				{
+					"name": "Stealthy",
+					"entries": [
+						"On each of its turns, the blackspawn stalker can use a bonus action to take the {@action Hide} action."
+					]
+				},
+				{
+					"name": "Web Sense",
+					"entries": [
+						"While in contact with a web, the blackspawn stalker knows the exact location of any other creature in contact with the same web."
+					]
+				},
+				{
+					"name": "Web Walker",
+					"entries": [
+						"The blackspawn stalker ignores movement restrictions caused by webbing."
+					]
+				},
+				{
+					"name": "Slay Foe (1/Turn)",
+					"entries": [
+						"The blackspawn stalker deals an extra 13 ({@damage 3d8}) damage with its weapon attack if it hits a creature that doesn't have all its hit points."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"The blackspawn stalker makes three attacks: one with its bite and two with its tails."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 7} to hit, reach 5 ft., one target. {@h}13 ({@damage 2d8 + 4}) piercing damage plus 4 ({@damage 1d8}) acid damage and 4 ({@damage 1d8}) poison damage. The target must succeed on a {@dc 15} Constitution saving throw or be {@condition poisoned} for 1 minute. The creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+					]
+				},
+				{
+					"name": "Tail",
+					"entries": [
+						"{@atk mw} {@hit 7} to hit, reach 5 ft., one target. {@h}8 ({@damage 1d8 + 4}) bludgeoning damage."
+					]
+				},
+				{
+					"name": "Acid Web Spray {@recharge 5}",
+					"entries": [
+						"The blackspawn stalker spits webbing in a line that is 30 feet long and 10 feet wide. Each creature in that line must succeed on a {@dc 15} Dexterity saving throw or take 18 ({@damage 4d8}) acid damage and be {@condition restrained} by webbing. A creature that starts its turn {@condition restrained} takes 4 ({@damage 1d8}) acid damage. As an action, the {@condition restrained} creature can make a {@dc 15} Strength check, escaping from the webbing on a success. The effect ends if the webbing is destroyed. The webbing has AC 10, 5 hit points, resistance to bludgeoning damage, and immunity to poison and psychic damage."
+					]
+				}
+			],
+			"tokenUrl": "https://i.imgur.com/VerNWHf.png",
+			"traitTags": [
+				"Spider Climb",
+				"Web Sense",
+				"Web Walker"
+			],
+			"senseTags": [
+				"B",
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"CS",
+				"DR"
+			],
+			"damageTags": [
+				"A",
+				"B",
+				"I",
+				"P"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflict": [
+				"poisoned",
+				"restrained"
+			]
+		},
+		{
+			"name": "Redspawn Firebelcher",
+			"source": "FlundersHomebrew",
+			"page": 169,
+			"size": "L",
+			"type": "dragon",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				16
+			],
+			"hp": {
+				"formula": "10d10 + 50",
+				"average": 150
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 22,
+			"dex": 9,
+			"con": 20,
+			"int": 5,
+			"wis": 12,
+			"cha": 8,
+			"skill": {
+				"perception": "+4",
+				"stealth": "+2"
+			},
+			"senses": [
+				"blindsight 10 ft.",
+				"darkvision 60 ft."
+			],
+			"passive": 14,
+			"immune": [
+				"fire"
+			],
+			"cr": "6",
+			"trait": [
+				{
+					"name": "Hold Breath (Crocodile)",
+					"entries": [
+						"The redspawn firebelcher can hold its breath for 30 minutes."
+					]
+				},
+				{
+					"name": "Lava Camouflage",
+					"entries": [
+						"The redspawn firebelcher has advantage on Dexterity ({@skill Stealth}) checks made to hide in lava or firery terrain."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 9} to hit, reach 5 ft., one target. {@h}15 ({@damage 2d8 + 6}) piercing damage plus 9 ({@damage 2d8}) fire damage."
+					]
+				},
+				{
+					"name": "Belch Fire (Recharges 4-6)",
+					"entries": [
+						"{@atk rw} {@hit 9} to hit, range 30/60 ft., one target. hit: 42 ({@damage 12d6}) fire damage. All other creatures within 5 feet of the target must make a {@dc 15} Dexterity saving throw, taking 21 ({@damage 6d6}) fire damage on a failed save, or half as much on a successful one."
+					]
+				}
+			],
+			"tokenUrl": "https://i.imgur.com/tXwakZj.png",
+			"traitTags": [
+				"Hold Breath"
+			],
+			"senseTags": [
+				"B",
+				"D"
+			],
+			"damageTags": [
+				"F",
+				"P"
+			],
+			"miscTags": [
+				"MW",
+				"RW"
+			]
+		},
+		{
+			"name": "Blackspawn Crawler",
+			"source": "FlundersHomebrew",
+			"page": 169,
+			"size": "L",
+			"type": "dragon",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				16
+			],
+			"hp": {
+				"formula": "12d10 + 48",
+				"average": 168
+			},
+			"speed": {
+				"walk": 40,
+				"climb": 40
+			},
+			"str": 18,
+			"dex": 14,
+			"con": 18,
+			"int": 4,
+			"wis": 12,
+			"cha": 7,
+			"skill": {
+				"perception": "+4"
+			},
+			"senses": [
+				"blindsight 10 ft.",
+				"darkvision 60 ft"
+			],
+			"passive": 14,
+			"immune": [
+				"acid"
+			],
+			"vulnerable": [],
+			"languages": [
+				"understands Draconic but can't speak"
+			],
+			"cr": "6",
+			"trait": [
+				{
+					"name": "Keen Smell",
+					"entries": [
+						"The blackspawn crawler has advantage on Wisdom ({@skill Perception}) checks that rely on smell."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"The blackspawn crawler makes two attacks: one with its bite and one to constrict."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 7} to hit, reach 5 ft., one creature. {@h}13 ({@damage 2d8 + 4}) piercing damage, and the target must succeed on a {@dc 15} Constitution saving throw, taking 10 ({@damage 3d6}) acid damage and 10 ({@damage 3d6}) poison damage on a failed save, or half as much damage on a successful one."
+					]
+				},
+				{
+					"name": "Constrict",
+					"entries": [
+						"{@atk mw} {@hit 7} to hit, reach 5 ft., one Large or smaller creature. {@h}13 ({@damage 2d8 + 4}) bludgeoning damage. The target is {@condition grappled} (escape {@dc 14}) if the blackspawn crawler isn't already constricting a creature, and the target is {@condition restrained} until this grapple ends."
+					]
+				},
+				{
+					"name": "Acid Breath {@recharge 5}",
+					"entries": [
+						"The blackspawn crawler exhales acid in a 30-feet long that is 5 feet wide. Each creature in that line must succeed on a {@dc 15} Dexterity saving throw, taking 35 ({@damage 10d6}) poison damage on a failed save, or half as much damage on a successful one."
+					]
+				}
+			],
+			"tokenUrl": "https://i.imgur.com/4GBvXn6.png",
+			"traitTags": [
+				"Keen Senses"
+			],
+			"senseTags": [
+				"B",
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"CS",
+				"DR"
+			],
+			"damageTags": [
+				"A",
+				"B",
+				"I",
+				"P"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflict": [
+				"grappled",
+				"restrained"
+			]
+		},
+		{
+			"name": "Bluespawn Ambusher",
+			"source": "FlundersHomebrew",
+			"page": 169,
+			"size": "L",
+			"type": "dragon",
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				15
+			],
+			"hp": {
+				"formula": "7d8 + 21",
+				"average": 77
+			},
+			"speed": {
+				"walk": 30,
+				"burrow": 20
+			},
+			"str": 17,
+			"dex": 16,
+			"con": 16,
+			"int": 5,
+			"wis": 12,
+			"cha": 8,
+			"skill": {
+				"perception": "+3",
+				"stealth": "+7"
+			},
+			"senses": [
+				"blindsight 10 ft.",
+				"darkvision 60 ft."
+			],
+			"passive": 13,
+			"immune": [
+				"lightning"
+			],
+			"languages": [
+				"understands Draconic but can't speak"
+			],
+			"cr": "3",
+			"trait": [
+				{
+					"name": "Ambusher",
+					"entries": [
+						"The bluespawn ambusher has advantage on attack rolls against any creature it has surprised."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"The bluespawn ambusher makes three attacks: one with its bite and two with its claws."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 5} to hit, reach 5 ft., one target. {@h}6 ({@damage 1d6 + 3}) piercing Damage plus 4 ({@damage 1d8}) lightning damage."
+					]
+				},
+				{
+					"name": "Claw",
+					"entries": [
+						"{@atk mw} {@hit 5} to hit, reach 5 ft., one target. {@h}5 ({@damage 1d4 + 3}) slashing damage."
+					]
+				},
+				{
+					"name": "Electricity Burst {@recharge 5}",
+					"entries": [
+						"The bluespawn ambusher discharges a burst of electricity in a 15-foot radius circle centered on itself. Each creature in the area other than the bluespawn ambusher must succeed on a {@dc 13} Constitution saving throw, taking 22 ({@damage 4d10}) lightning damage on a failed save, or half as much damage on a successful one."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Instinctive Electricity Burst",
+					"entries": [
+						"When the bluespawn ambusher takes melee weapon damage and Electricity Burst is available, it uses Electricity Burst."
+					]
+				}
+			],
+			"tokenUrl": "https://i.imgur.com/SrTXHMR.png",
+			"traitTags": [
+				"Ambusher"
+			],
+			"senseTags": [
+				"B",
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"CS",
+				"DR"
+			],
+			"damageTags": [
+				"L",
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"AOE",
 				"MW"
 			]
 		}
