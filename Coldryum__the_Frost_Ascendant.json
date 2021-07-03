@@ -1,0 +1,298 @@
+{
+	"siteVersion": "1.131.6",
+	"_meta": {
+		"sources": [
+			{
+				"json": "FlundersHomebrew",
+				"abbreviation": "FHB",
+				"full": "Flunders Homebrew",
+				"url": "",
+				"authors": [
+					"Florian Rose"
+				],
+				"convertedBy": []
+			}
+		],
+		"dateAdded": 1625318966,
+		"dateLastModified": 1625318966
+	},
+	"monster": [
+		{
+			"name": "Coldryum, the Frost Ascendant",
+			"source": "FlundersHomebrew",
+			"page": 169,
+			"size": "G",
+			"type": "dragon",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 21,
+					"condition": "(natural armor)"
+				}
+			],
+			"hp": {
+				"special": "360"
+			},
+			"speed": {
+				"walk": 40,
+				"fly": 80,
+				"burrow": 40,
+				"climb": 60,
+				"canHover": false
+			},
+			"str": 27,
+			"dex": 13,
+			"con": 27,
+			"int": 21,
+			"wis": 25,
+			"cha": 23,
+			"senses": [
+				"blindsight 60ft",
+				"darkvision 120ft"
+			],
+			"passive": 25,
+			"senseTags": [
+				"B",
+				"D"
+			],
+			"tokenUrl": "https://i.imgur.com/xCdRzoH.png",
+			"cr": "26",
+			"languages": [
+				"Common",
+				"Draconic"
+			],
+			"languageTags": [
+				"C",
+				"DR"
+			],
+			"save": {
+				"str": "+16",
+				"con": "+16",
+				"wis": "+15"
+			},
+			"skill": {
+				"athletics": "+16",
+				"intimidation": "+14",
+				"perception": "+15"
+			},
+			"immune": [
+				"cold",
+				"radiant"
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"paralyzed"
+			],
+			"resist": [
+				{
+					"resist": [
+						"fire"
+					]
+				},
+				{
+					"resist": [
+						"lightning"
+					],
+					"preNote": "Orb of Dragonkind:"
+				}
+			],
+			"spellcasting": [
+				{
+					"name": "Ring of Winter",
+					"headerEntries": [
+						"The Ring of Winter defies attempts to magically locate it. Neither the ring nor its wearer can be targeted by any divination magic or perceived through magical scrying sensors.",
+						"The Ring has 12 charges and regains all its expended charges daily at dawn, which can be used to cast the following spells (save {@dc 17}):"
+					],
+					"will": [
+						"{@spell Bigby's hand} (2 charges); immune to cold, deals bludgeoning damage",
+						"{@spell cone of cold} (2 charges)",
+						"{@spell flesh to stone} (3 charges) turns to ice",
+						"{@spell ice storm} (2 charges)",
+						"{@spell Otiluke's freezing sphere} (3 charges)",
+						"{@spell sleet storm} (1 charge)",
+						"{@spell spike growth} (1 charge)",
+						"{@spell wall of ice} (2 charges)"
+					],
+					"type": "spellcasting"
+				},
+				{
+					"name": "Orb of Dragonkind",
+					"headerEntries": [
+						"The orb has 7 charges and regains 1d4 + 3 expended charges daily at dawn. If you control the orb, you can use an action and expend 1 or more charges to cast one of the following spells (save {@dc 18}) from it:"
+					],
+					"will": [
+						"{@spell cure wounds} (3 charges) at 5th level",
+						"{@spell daylight} (1 charge)",
+						"{@spell death ward} (2 charges)",
+						"{@spell detect magic} (without expending a charge)",
+						"{@spell scrying} (3 charges)"
+					],
+					"daily": {
+						"1": [
+							"{@spell beacon of hope} (roll a d6, on a 1-5 you can't cast this spell again until the next dawn)"
+						]
+					},
+					"type": "spellcasting"
+				}
+			],
+			"trait": [
+				{
+					"name": "Frozen Armor (Mythic Trait; Recharges after a short or long rest)",
+					"entries": [
+						"If Coldryum is reduced to 0 hit points, he doesn't die or fall {@condition unconscious}. Instead, he regains 360 hit points. In addition, Coldryum casts the {@spell armor of agathys} spell on himself, as a 9th level spell. Finally, while he has at least 1 hit point, each creature within 10 feet of him takes 15 cold damage at the start of each of his turns."
+					]
+				},
+				{
+					"name": "Mirror Reflection",
+					"entries": [
+						"While Coldryum is under direct sunlight, creatures that can see him have disadvantage on attack rolls against him."
+					]
+				},
+				{
+					"name": "Crystal Reflection",
+					"entries": [
+						"Once per round, whenever Coldryum would take at least 10 radiant damage, he takes no damage. Instead, all creatures within 30 feet of him must make a {@dc 24} Constitution saving throw, taking 42 (12d6) radiant damage and being {@condition blinded} on a failed save. On a successful save, they take half as much damage and aren't {@condition blinded}. A {@condition blinded} creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+					]
+				},
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"Coldryum has advantage on saving throws against spells and other magical effects."
+					]
+				},
+				{
+					"name": "Legendary Resistance (4/Day)",
+					"entries": [
+						"If Coldryum fails a saving throw, he can choose to succeed instead."
+					]
+				},
+				{
+					"name": "Immutable Form",
+					"entries": [
+						"Coldryum is immune to any spell or effect that would alter its form."
+					]
+				}
+			],
+			"damageTags": [
+				"C",
+				"R"
+			],
+			"miscTags": [
+				"MW",
+				"RCH",
+				"AOE"
+			],
+			"traitTags": [
+				"Immutable Form",
+				"Legendary Resistances",
+				"Magic Resistance"
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Coldryum can use his Frightful Presence. He then makes three attacks: one with its bite and two with its claws."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 16} to hit, reach 15 ft., one target. {@h}30 (4d10 + 8) piercing damage plus 18 (4d8) cold damage."
+					]
+				},
+				{
+					"name": "Claw",
+					"entries": [
+						"{@atk mw} {@hit 16} to hit, reach 10 ft., one target. {@h}22 (4d6 + 8) slashing damage."
+					]
+				},
+				{
+					"name": "Tail",
+					"entries": [
+						"{@atk mw} {@hit 16} to hit, reach 20 ft., one target. {@h}17 (2d8 + 8) bludgeoning damage and the target must succeed on a {@dc 24} Strength saving throw or be pushed up to 15 feet away from Coldryum."
+					]
+				},
+				{
+					"name": "Frightful Presence",
+					"entries": [
+						"Each creature of Coldryum's choice that is within 120 feet of him and aware of it must succeed on a {@dc 22} Wisdom saving throw or become {@condition frightened} for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, the creature is immune to Coldryum's Frightful Presence for the next 24 hours."
+					]
+				},
+				{
+					"name": "Cold Breath {@recharge 5}",
+					"entries": [
+						"Coldryum exhales an icy blast in a 90-foot cone. Each creature in that area must make a {@dc 24} Constitution saving throw, taking 84 (24d6) cold damage and having their speed halved until the end of their next turn on a failed save, or half as much damage and not having their speed reduced on a successful one."
+					]
+				},
+				{
+					"name": "Icy Prison {@recharge 5}",
+					"entries": [
+						"Coldryum freezes the air around a creature he can see within 60 feet of him. The target must make a {@dc 24} Constitution saving throw or be imprisoned by a block of ice. A trapped creature is {@condition stunned}, has total cover against attacks and other effects outside the block, and takes 35 (10d6) cold damage at the start of each of its turns. The creature can repeat the saving throw at the end of each of its turns, freeing itself on a success. The creature is also freed if the block is destroyed, which is a Huge object with AC 18, 30 hit points, and immunity to poison and psychic damage."
+					]
+				}
+			],
+			"actionTags": [
+				"Frightful Presence",
+				"Multiattack"
+			],
+			"conditionInflict": [
+				"frightened",
+				"stunned",
+				"prone",
+				"restrained"
+			],
+			"reaction": [
+				{
+					"name": "Frigid Shield",
+					"entries": [
+						"When a creature Coldryum can see targets him with an attack, Coldryum gains 20 temporary hit points. If the attack hits and reduces the temporary hit points to 0, each creature within 5 feet of Coldryum takes 18 (4d8) cold damage."
+					]
+				}
+			],
+			"legendaryHeader": [
+				"Coldryum can take 3 legendary actions, choosing from the options below. Only one legendary action can be used at a time and only at the end of another creature's turn. Coldryum regains spent legendary actions at the start of its turn."
+			],
+			"legendary": [
+				{
+					"name": "Detect",
+					"entries": [
+						"Coldryum makes a Wisdom (Perception) check."
+					]
+				},
+				{
+					"name": "Tail Attack",
+					"entries": [
+						"Coldryum makes a tail attack."
+					]
+				},
+				{
+					"name": "Wing Attack (Costs 2 actions)",
+					"entries": [
+						"Coldryum beats his wings. Each creature within 15 feet of him must succeed on a {@dc 24} Dexterity saving throw or take 15 (2d6 + 8) bludgeoning damage and be knocked {@condition prone}. Coldryum can then fly up to half his flying speed."
+					]
+				}
+			],
+			"mythicHeader": [
+				"If Coldryum's mythic trait is active, he can use the options below as legendary actions for 1 hour after using Frozen Armor."
+			],
+			"mythic": [
+				{
+					"name": "Frozen Impalement (Costs 3 actions)",
+					"entries": [
+						"Coldryum summons ice spikes from the ground. All creatures on the ground of his choice within 120 feet of him must make a {@dc 24} Dexterity saving throw. On a failed save, the creature takes 27 (6d8) piercing damage and is {@condition restrained} by being impaled on the spike. A creature can use an action to remove itself (or a creature it can reach) from the spike, ending the condition."
+					]
+				}
+			],
+			"legendaryGroup": {
+				"name": "Coldryum",
+				"source": "FlundersHomebrew"
+			},
+			"group": "Dragon Ascendant"
+		}
+	]
+}
