@@ -1,5 +1,5 @@
 {
-	"siteVersion": "1.128.0",
+	"siteVersion": "1.132.0",
 	"_meta": {
 		"sources": [
 			{
@@ -13,8 +13,8 @@
 				"convertedBy": []
 			}
 		],
-		"dateAdded": 1621437967,
-		"dateLastModified": 1621437967
+		"dateAdded": 1626528819,
+		"dateLastModified": 1626528819
 	},
 	"monster": [
 		{
@@ -5750,7 +5750,6 @@
 				"blindsight 120 ft."
 			],
 			"passive": 16,
-			"resist": [],
 			"immune": [
 				"acid"
 			],
@@ -5766,9 +5765,9 @@
 						"The laboratory horror can cast the following Spells innately requiring no components. Constitution is its spellcasting ability (save {@dc 18}, +10 to hit)."
 					],
 					"will": [
-						"{@spell chaos bolt|XGE} 2d8+3d6",
+						"{@spell chaos bolt|XGE} 2d8+2d6",
 						"{@spell shocking grasp} 2d8",
-						"{@spell Tasha's caustic brew|TCE} 6d4"
+						"{@spell Tasha's caustic brew|TCE} 4d4"
 					],
 					"daily": {
 						"1e": [
@@ -5797,9 +5796,9 @@
 						{
 							"type": "list",
 							"items": [
-								"Unstable Form. No reactions",
-								"Formless. Disadvantage on Dexterity saves.",
-								"Unresponsive Legs. Speed reduced by 10.",
+								"Unstable Form. Additional legendary action this turn (Attack only)",
+								"Formless. Advantage on the next saving throw",
+								"Additional Legs. Immune to {@condition prone}.",
 								"Chitinous Shell. +2 AC, -10 feet speed",
 								"Fleshy WIngs. Flying speed equal to current  speed.",
 								"Reformation. Immune to grappling and {@condition restrained}.",
@@ -5812,7 +5811,7 @@
 					]
 				},
 				{
-					"name": "Legendary Resistance (1/Day)",
+					"name": "Legendary Resistance (3/Day)",
 					"entries": [
 						"If the laboratory horror fails a saving throw, it can choose to succeed instead."
 					]
@@ -6338,6 +6337,1310 @@
 				"AOE",
 				"MW"
 			]
+		},
+		{
+			"name": "War Devil",
+			"source": "FlundersHomebrew",
+			"page": 74,
+			"size": "L",
+			"type": {
+				"type": "fiend",
+				"tags": [
+					"devil"
+				]
+			},
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 19,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"formula": "20d10 + 100",
+				"average": 210
+			},
+			"speed": {
+				"walk": 20,
+				"fly": 60
+			},
+			"str": 22,
+			"dex": 17,
+			"con": 21,
+			"int": 12,
+			"wis": 16,
+			"cha": 19,
+			"save": {
+				"str": "+11",
+				"dex": "+8",
+				"wis": "+8",
+				"cha": "+9"
+			},
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 13,
+			"resist": [
+				"cold",
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks that aren't silvered",
+					"cond": true
+				}
+			],
+			"immune": [
+				"fire",
+				"poison"
+			],
+			"conditionImmune": [
+				"poisoned"
+			],
+			"languages": [
+				"Infernal",
+				"telepathy 120 ft."
+			],
+			"cr": "15",
+			"spellcasting": [
+				{
+					"name": "Innate Spellcasting",
+					"daily": {
+						"1": [
+							"{@spell programmed illusion}"
+						],
+						"2": [
+							"{@spell Melf's minute meteors|XGE}",
+							"{@spell shadow of moil|XGE}"
+						],
+						"3": [
+							"{@spell dispel magic}",
+							"{@spell magic circle} (against good creatures)"
+						]
+					},
+					"will": [
+						"{@spell darkness}",
+						"{@spell detect magic}"
+					],
+					"type": "spellcasting"
+				}
+			],
+			"trait": [
+				{
+					"name": "Devil's Sight",
+					"entries": [
+						"Magical darkness doesn't impede the devil's darkvision. The devil's innate spellcasting ability is Charisma (DC17, {@hit 9} to hit). It can innately cast the following spells, without providing material components:"
+					]
+				},
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"The devil has advantage on saving throws against spells and other magical effects."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"The devil makes three attacks: two with its spiked chain and one with its tail. It can use its Hurl Flame or Spiked Chain Slam in place of one spiked chain attack."
+					]
+				},
+				{
+					"name": "Spiked Chain",
+					"entries": [
+						"{@atk mw} {@hit 11} to hit, reach 20 ft., one target. {@h}15 (2d8 + 6) slashing damage, and the target is {@condition grappled} (escape {@dc 16}). While a creature is {@condition grappled} this way, the horned devil can't use one of its spiked chain attacks."
+					]
+				},
+				{
+					"name": "Tail",
+					"entries": [
+						"{@atk mw} {@hit 11} to hit, reach 10 ft., one target. Hit:",
+						"10 (1d8 + 6) slashing damage. If the target is a creature other than an undead or a construct, it must succeed on a {@dc 19} Constitution saving throw or lose 10 (3d6) hit points at the start of each of its turns due to an infernal wound. Each time the devil hits the wounded target with this attack, the damage dealt by the wound increases by 10 (3d6). Any creature can take an action to stanch the wound with a successful {@dc 12} Wisdom (Medicine) check. The wound also closes if the target receives magical healing."
+					]
+				},
+				{
+					"name": "Hurl Flame",
+					"entries": [
+						"{@atk rs} {@hit 9} to hit, range 150 ft., one target. {@h}14 ({@damage 4d6}) fire damage. If the target is a flammable object that isn't being worn or carried, it also catches fire."
+					]
+				},
+				{
+					"name": "Spiked Chain Slam",
+					"entries": [
+						"The devil slams a Large or smaller creature {@condition grappled} by its spiked chain into another creature or a solid surface within 20 feet. Both creatures must succeed on a {@dc 19} Strength saving throw or take 17 (2d10 + 6) bludgeoning damage and be {@condition stunned} until the end of its next turn. On a successful save, the target takes half the bludgeoning damage and isn't {@condition stunned}."
+					]
+				},
+				{
+					"name": "Teleport",
+					"entries": [
+						"The devil magically teleports, along with any equipment it is wearing or carrying, up to 60 feet to an unoccupied space it can see."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Move",
+					"entries": [
+						"The devil moves up to half its speed."
+					]
+				},
+				{
+					"name": "Attack",
+					"entries": [
+						"The devil makes one spiked chain, tail or hurl flame attack."
+					]
+				},
+				{
+					"name": "Teleport (Costs 2 Actions)",
+					"entries": [
+						"The devil magically teleports, along with any equipment it is wearing or carrying, up to 60 feet to an unoccupied space it can see."
+					]
+				},
+				{
+					"name": "Cast a Spell (Costs 2 Actions)",
+					"entries": [
+						"The devil casts a spell from its list of innate spells."
+					]
+				}
+			],
+			"fluff": {
+				"entries": [
+					{
+						"type": "entries",
+						"entries": [
+							{
+								"type": "entries",
+								"entries": [
+									"Horned devils are lazy to the point of belligerence and reluctant to put themselves in harm's way. Moreover, they hate and fear any creature stronger than themselves. When they are sufficiently provoked or antagonized, the fury of these fiends can be terrifying.",
+									"A malebranche stands as tall as an ogre and is sheathed in scales as tough as iron. The flying infantry of the hellish legions, horned devils follow orders to the letter. Their huge wings and sweeping horns create an intimidating presence as they drop from the sky and strike with deadly forks and lashing tails."
+								]
+							}
+						]
+					},
+					"Devils personify tyranny, with a totalitarian society dedicated to the domination of mortal life. The shadow of the Nine Hells of Baator extends far across the multiverse, and Asmodeus, the dark lord of Nessus, strives to subjugate the cosmos to satisfy his thirst for power. To do so, he must continually expand his infernal armies, sending his servants to the mortal realm to corrupt the souls from which new devils are spawned.",
+					{
+						"type": "entries",
+						"entries": [
+							{
+								"type": "entries",
+								"entries": [
+									{
+										"type": "entries",
+										"name": "Lords of Tyranny",
+										"entries": [
+											"Devils live to conquer, enslave, and oppress. They take perverse delight in exercising authority over the weak, and any creature that defies the authority of a devil faces swift and cruel punishment. Every interaction is an opportunity for a devil to display its power, and all devils have a keen understanding of how to use and abuse their power.",
+											"Devils understand the failings that plague intelligent mortals, and they use that knowledge to lead mortals into temptation and darkness, turning creatures into slaves to their own corruption. Devils on the Material Plane use their influence to manipulate humanoid rulers, whispering evil thoughts, fomenting paranoia, and eventually driving them to tyrannical actions."
+										]
+									},
+									{
+										"type": "entries",
+										"name": "Obedience and Ambition",
+										"entries": [
+											"In accordance with their lawful alignment, devils obey even when they envy or dislike their superiors, knowing that their obedience will be rewarded. The hierarchy of the Nine Hells depends on this unswerving loyalty, without which that fiendish plane would become as anarchic as the Abyss.",
+											"At the same time, it is in the nature of devils to scheme, creating in some a desire to rule that eclipses their contentment to be ruled. This singular ambition is strongest among the archdevils whom Asmodeus appoints to rule the nine layers of the Nine Hells. These high-ranking fiends are the only devils to ever sample true power, which they crave like the sweetest ambrosia."
+										]
+									},
+									{
+										"type": "entries",
+										"name": "Dark Dealers and Soul Mongers",
+										"entries": [
+											"Devils are confined to the Lower Planes, but they can travel beyond those planes by way of portals or powerful summoning magic. They love to strike bargains with mortals seeking to gain some benefit or prize, but a mortal making such a bargain must be wary. Devils are crafty negotiators and positively ruthless at enforcing the terms of an agreement. Moreover, a contract with even the lowliest devil is enforced by Asmodeus's will. Any mortal creature that breaks such a contract instantly forfeits its soul, which is spirited away to the Nine Hells.",
+											"To own a creature's soul is to have absolute control over that creature, and most devils accept no other currency in exchange for the fiendish power and boons they can provide. A soul is usually forfeited when a mortal dies naturally, for devils are immortal and can wait years for a contract to play out. If a contract allows a devil to claim a mortal's soul before death, it can instantly return to the Nine Hells with the soul in its possession. Only divine intervention can release a soul after a devil has claimed it."
+										]
+									}
+								]
+							}
+						]
+					},
+					{
+						"type": "entries",
+						"name": "The Infernal Hierarchy",
+						"entries": [
+							{
+								"type": "entries",
+								"entries": [
+									"The Nine Hells has a rigid hierarchy that defines every aspect of its society. Asmodeus is the supreme ruler of all devils, and the only creature in the Nine Hells with the powers of a lesser god. Worshiped as such in the Material Plane, Asmodeus inspires the evil humanoid cults that take his name. In the Nine Hells, he commands scores of pit fiend generals, which in turn command legions of subordinates.",
+									"A supreme tyrant, a brilliant deceiver, and a master of subtlety, Asmodeus protects his throne by keeping his friends close and his enemies closer. He delegates most matters of rulership to the pit fiends and lesser archdevils that make up the infernal bureaucracy of the Nine Hells, even as he knows that those powerful devils conspire to usurp the Throne of Baator from which he rules. Asmodeus appoints archdevils, and he can strip any member of the infernal hierarchy of rank and status as he likes.",
+									"If it dies outside the Nine Hells, a devil disappears in a cloud of sulfurous smoke or dissolves into a pool of ichor, instantly returning to its home layer, where it reforms at full strength. Devils that die in the Nine Hells are destroyed forever-a fate that even Asmodeus fears.",
+									{
+										"type": "entries",
+										"name": "Archdevils",
+										"entries": [
+											"The archdevils include all the current and deposed rulers of the Nine Hells (see the Layers and Lords of the Nine Hells table), as well as the dukes and duchesses that make up their courts, attend them as advisers, and hope to supplant them. Every archdevil is a unique being with an appearance that reflects its particular evil nature."
+										]
+									},
+									{
+										"type": "entries",
+										"name": "Greater Devils",
+										"entries": [
+											"The greater devils include the pit fiends, erinyes, horned devils, and ice devils that command lesser devils and attend the archdevils."
+										]
+									},
+									{
+										"type": "entries",
+										"name": "Lesser Devils",
+										"entries": [
+											"The lesser devils include numerous strains of fiends, including imps, chain devils, spined devils, bearded devils, barbed devils, and bone devils."
+										]
+									},
+									{
+										"type": "entries",
+										"name": "Lemures",
+										"entries": [
+											"The lowest form of devil, lemures are the twisted and tormented souls of evil and corrupted mortals. A lemure killed in the Nine Hells is only permanently destroyed if it is killed with a blessed weapon or if its shapeless corpse is splashed with holy water before it can return to life."
+										]
+									},
+									{
+										"type": "entries",
+										"name": "Promotion and Demotion",
+										"entries": [
+											"When the soul of an evil mortal sinks into the Nine Hells, it takes on the physical form of a wretched lemure. Archdevils and greater devils have the power to promote lemures to lesser devils. Archdevils can promote lesser devils to greater devils, and Asmodeus alone can promote a greater devil to archdevil status. This diabolic promotion invokes a brief, painful transformation, with the devil's memories passing intact from one form to the next.",
+											"Low-level promotions are typically based on need, such as when a pit fiend transforms lemures into imps to gain invisible spies under its command. High-level promotions are almost always based on merit, such as when a bone devil that distinguishes itself in battle is transformed into a horned devil by the archdevil it serves. A devil is seldom promoted more than one step at a time in the hierarchy of infernal forms.",
+											"Demotion is the customary punishment for failure or disobedience among the devils. Archdevils or greater devils can demote a lesser devil to a lemure, which loses all memory of its prior existence. An archdevil can demote a greater devil to lesser devil status, but the demoted devil retains its memories-and might seek vengeance if the severity of the demotion is excessive.",
+											"No devil can promote or demote another devil that has not sworn fealty to it, preventing rival archdevils from demoting each other's most powerful servants. Since all devils swear fealty to Asmodeus, he can freely demote any other devil, transforming it into whatever infernal form he desires.",
+											{
+												"type": "table",
+												"caption": "Infernal Hierarchy",
+												"colLabels": [
+													"Rank",
+													"Devil(s)"
+												],
+												"colStyles": [
+													"col-4",
+													"col-8"
+												],
+												"rows": [
+													[
+														"1.",
+														"lemure"
+													],
+													[
+														"2. (Lesser devils)",
+														"imp"
+													],
+													[
+														"3.",
+														"spined devil"
+													],
+													[
+														"4.",
+														"bearded devil"
+													],
+													[
+														"5.",
+														"barbed devil"
+													],
+													[
+														"6.",
+														"chain devil"
+													],
+													[
+														"7.",
+														"bone devil"
+													],
+													[
+														"8. (Greater devils)",
+														"horned devil"
+													],
+													[
+														"9.",
+														"erinyes"
+													],
+													[
+														"10.",
+														"ice devil"
+													],
+													[
+														"11.",
+														"pit fiend"
+													],
+													[
+														"12. (Archdevils)",
+														"duke or duchess"
+													],
+													[
+														"13.",
+														"archduke or archduchess"
+													]
+												]
+											}
+										]
+									}
+								]
+							},
+							{
+								"type": "entries",
+								"name": "The Nine Hells",
+								"entries": [
+									"The Nine Hells are a single plane comprising nine separate layers (see the Layers and Lords of the Nine Hells table). The first eight layers are each ruled by archdevils that answer to the greatest archdevil of all: Asmodeus, the Archduke of Nessus, the ninth layer. To reach the deepest layer of the Nine Hells, one must descend through all eight of the layers above it, in order. The most expeditious means of doing so is the River Styx, which plunges ever deeper as it flows from one layer to the next. Only the most courageous adventurers can withstand the torment and horror of that journey.",
+									{
+										"type": "table",
+										"caption": "Layers and Lords of the Nine Hells Layer",
+										"colLabels": [
+											"Layer",
+											"Layer Name",
+											"Archduke or Archduchess",
+											"Previous Rulers",
+											"Primary Inhabitants"
+										],
+										"colStyles": [
+											"col-1",
+											"col-2",
+											"col-3",
+											"col-3",
+											"col-3"
+										],
+										"rows": [
+											[
+												"1",
+												"Avernus",
+												"Zariel",
+												"Bel, Tiamat",
+												"Erinyes, imps, spined devils"
+											],
+											[
+												"2",
+												"Dis",
+												"Dispater",
+												"—",
+												"Bearded devils, erinyes, imps, spined devils"
+											],
+											[
+												"3",
+												"Minauros",
+												"Mammon",
+												"—",
+												"Bearded devils, chain devils, imps, spined devils"
+											],
+											[
+												"4",
+												"Phlegethos",
+												"Belial and Fierna",
+												"—",
+												"Barbed devils, bone devils, imps, spined devils"
+											],
+											[
+												"5",
+												"Stygia",
+												"Levistus",
+												"Geryon",
+												"Bone devils, erinyes, ice devils, imps"
+											],
+											[
+												"6",
+												"Malbolge",
+												"Glasya",
+												"Malagard, Moloch",
+												"Barbed devils, bone devils, horned devils, imps"
+											],
+											[
+												"7",
+												"Maladomini",
+												"Baalzebul",
+												"—",
+												"Barbed devils, bone devils, horned devils, imps"
+											],
+											[
+												"8",
+												"Cania",
+												"Mephistopheles",
+												"—",
+												"Horned devils, ice devils, imps, pit fiends"
+											],
+											[
+												"9",
+												"Nessus",
+												"Asmodeus",
+												"—",
+												"All devils"
+											]
+										]
+									}
+								]
+							}
+						]
+					},
+					{
+						"type": "inset",
+						"name": "Devil True Names and Talismans",
+						"entries": [
+							"Though devils all have common names, every devil above a lemure in station also has a true name that it keeps secret. A devil can be forced to disclose its true name if {@condition charmed}, and ancient scrolls and tomes are said to exist that list the true names of certain devils.",
+							"A mortal who learns a devil's true name can use powerful summoning magic to call the devil from the Nine Hells and bind it into service. Binding can also be accomplished with the help of a devil talisman. Each of these ancient relics is inscribed with the true name of a devil it controls, and was bathed in the blood of a worthy sacrifice-typically someone the creator loved-when crafted.",
+							"However it is summoned, a devil brought to the Material Plane typically resents being pressed into service. However, the devil seizes every opportunity to corrupt its summoner so that the summoner's soul ends up in the Nine Hells. Only imps are truly content to be summoned, and they easily commit to serving a summoner as a familiar, but they still do their utmost to corrupt those who summon them."
+						]
+					},
+					{
+						"type": "inset",
+						"name": "Variant: Devil Summoning",
+						"entries": [
+							"Some devils can have an action option that allows them to summon other devils.",
+							{
+								"name": "Summon Devil (1/Day)",
+								"entries": [
+									" The devil chooses what to summon and attempts a magical summoning."
+								],
+								"type": "entries"
+							},
+							{
+								"type": "list",
+								"items": [
+									"A barbed devil has a 30 percent chance of summoning one barbed devil.",
+									"A bearded devil has a 30 percent chance of summoning one bearded devil.",
+									"A bone devil has a 40 percent chance of summoning {@dice 2d6} spined devils or one bone devil.",
+									"An erinyes has a 50 percent chance of summoning {@dice 3d6} spined devils, {@dice 1d6} bearded devils, or one erinyes.",
+									"A horned devil has a 30 percent chance of summoning one horned devil.",
+									"An ice devil has a 60 percent chance of summoning one ice devil.",
+									"A pit fiend summons {@dice 2d4} bearded devils, {@dice 1d4} barbed devils, or one erinyes with no chance of failure."
+								]
+							},
+							"A summoned devil appears in an unoccupied space within 60 feet of its summoner, acts as an ally of its summoner, and can't summon other devils. It remains for 1 minute, until it or its summoner dies, or until its summoner dismisses it as an action."
+						]
+					}
+				],
+				"images": [
+					{
+						"type": "image",
+						"href": {
+							"type": "external",
+							"url": "https://i.imgur.com/zQVYKnA.png"
+						}
+					}
+				]
+			},
+			"tokenUrl": "https://i.imgur.com/zQVYKnA.png",
+			"soundClip": {
+				"type": "external",
+				"url": "https://5e.tools/audio/bestiary/horned-devil.mp3?v=1.131.4"
+			},
+			"traitTags": [
+				"Devil's Sight",
+				"Magic Resistance"
+			],
+			"senseTags": [
+				"SD"
+			],
+			"actionTags": [
+				"Multiattack",
+				"Teleport"
+			],
+			"languageTags": [
+				"I",
+				"TP"
+			],
+			"damageTags": [
+				"F"
+			],
+			"spellcastingTags": [
+				"I"
+			],
+			"miscTags": [
+				"MW",
+				"RCH"
+			],
+			"conditionInflict": [
+				"grappled",
+				"stunned"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Coldryum, the Frost Ascendant",
+			"group": "Dragon Ascendant",
+			"source": "FlundersHomebrew",
+			"page": 169,
+			"size": "G",
+			"type": "dragon",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 21,
+					"condition": "(natural armor)"
+				}
+			],
+			"hp": {
+				"special": "360"
+			},
+			"speed": {
+				"walk": 40,
+				"fly": 80,
+				"burrow": 40,
+				"climb": 60,
+				"canHover": false
+			},
+			"str": 27,
+			"dex": 13,
+			"con": 27,
+			"int": 21,
+			"wis": 25,
+			"cha": 23,
+			"save": {
+				"str": "+16",
+				"con": "+16",
+				"wis": "+15"
+			},
+			"skill": {
+				"athletics": "+16",
+				"intimidation": "+14",
+				"perception": "+15"
+			},
+			"senses": [
+				"blindsight 60ft",
+				"darkvision 120ft"
+			],
+			"passive": 25,
+			"resist": [
+				{
+					"resist": [
+						"fire"
+					]
+				},
+				{
+					"resist": [
+						"lightning"
+					],
+					"preNote": "Orb of Dragonkind:"
+				}
+			],
+			"immune": [
+				"cold",
+				"radiant"
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"paralyzed"
+			],
+			"languages": [
+				"Common",
+				"Draconic"
+			],
+			"cr": "26",
+			"spellcasting": [
+				{
+					"name": "Ring of Winter",
+					"headerEntries": [
+						"The Ring of Winter defies attempts to magically locate it. Neither the ring nor its wearer can be targeted by any divination magic or perceived through magical scrying sensors.",
+						"The Ring has 12 charges and regains all its expended charges daily at dawn, which can be used to cast the following spells (save {@dc 17}):"
+					],
+					"will": [
+						"{@spell Bigby's hand} (2 charges); immune to cold, deals bludgeoning damage",
+						"{@spell cone of cold} (2 charges)",
+						"{@spell flesh to stone} (3 charges) turns to ice",
+						"{@spell ice storm} (2 charges)",
+						"{@spell Otiluke's freezing sphere} (3 charges)",
+						"{@spell sleet storm} (1 charge)",
+						"{@spell spike growth} (1 charge)",
+						"{@spell wall of ice} (2 charges)"
+					],
+					"type": "spellcasting"
+				},
+				{
+					"name": "Orb of Dragonkind",
+					"headerEntries": [
+						"The orb has 7 charges and regains 1d4 + 3 expended charges daily at dawn. If you control the orb, you can use an action and expend 1 or more charges to cast one of the following spells (save {@dc 18}) from it:"
+					],
+					"will": [
+						"{@spell cure wounds} (3 charges) at 5th level",
+						"{@spell daylight} (1 charge)",
+						"{@spell death ward} (2 charges)",
+						"{@spell detect magic} (without expending a charge)",
+						"{@spell scrying} (3 charges)"
+					],
+					"daily": {
+						"1": [
+							"{@spell beacon of hope} (roll a d6, on a 1-5 you can't cast this spell again until the next dawn)"
+						]
+					},
+					"type": "spellcasting"
+				}
+			],
+			"trait": [
+				{
+					"name": "Frozen Armor (Mythic Trait; Recharges after a short or long rest)",
+					"entries": [
+						"If Coldryum is reduced to 0 hit points, he doesn't die or fall {@condition unconscious}. Instead, he regains 360 hit points. In addition, Coldryum casts the {@spell armor of agathys} spell on himself, as a 9th level spell. Finally, while he has at least 1 hit point, each creature within 10 feet of him takes 15 cold damage at the start of each of his turns."
+					]
+				},
+				{
+					"name": "Mirror Reflection",
+					"entries": [
+						"While Coldryum is under direct sunlight, creatures that can see him have disadvantage on attack rolls against him."
+					]
+				},
+				{
+					"name": "Crystal Reflection",
+					"entries": [
+						"Once per round, whenever Coldryum would take at least 10 radiant damage, he takes no damage. Instead, all creatures within 30 feet of him must make a {@dc 24} Constitution saving throw, taking 42 (12d6) radiant damage and being {@condition blinded} on a failed save. On a successful save, they take half as much damage and aren't {@condition blinded}. A {@condition blinded} creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+					]
+				},
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"Coldryum has advantage on saving throws against spells and other magical effects."
+					]
+				},
+				{
+					"name": "Legendary Resistance (4/Day)",
+					"entries": [
+						"If Coldryum fails a saving throw, he can choose to succeed instead."
+					]
+				},
+				{
+					"name": "Immutable Form",
+					"entries": [
+						"Coldryum is immune to any spell or effect that would alter its form."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Coldryum can use his Frightful Presence. He then makes three attacks: one with its bite and two with its claws."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 16} to hit, reach 15 ft., one target. {@h}30 (4d10 + 8) piercing damage plus 18 (4d8) cold damage."
+					]
+				},
+				{
+					"name": "Claw",
+					"entries": [
+						"{@atk mw} {@hit 16} to hit, reach 10 ft., one target. {@h}22 (4d6 + 8) slashing damage."
+					]
+				},
+				{
+					"name": "Tail",
+					"entries": [
+						"{@atk mw} {@hit 16} to hit, reach 20 ft., one target. {@h}17 (2d8 + 8) bludgeoning damage and the target must succeed on a {@dc 24} Strength saving throw or be pushed up to 15 feet away from Coldryum."
+					]
+				},
+				{
+					"name": "Frightful Presence",
+					"entries": [
+						"Each creature of Coldryum's choice that is within 120 feet of him and aware of it must succeed on a {@dc 22} Wisdom saving throw or become {@condition frightened} for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, the creature is immune to Coldryum's Frightful Presence for the next 24 hours."
+					]
+				},
+				{
+					"name": "Cold Breath {@recharge 5}",
+					"entries": [
+						"Coldryum exhales an icy blast in a 90-foot cone. Each creature in that area must make a {@dc 24} Constitution saving throw, taking 84 (24d6) cold damage and having their speed halved until the end of their next turn on a failed save, or half as much damage and not having their speed reduced on a successful one."
+					]
+				},
+				{
+					"name": "Icy Prison {@recharge 5}",
+					"entries": [
+						"Coldryum freezes the air around a creature he can see within 60 feet of him. The target must make a {@dc 24} Constitution saving throw or be imprisoned by a block of ice. A trapped creature is {@condition stunned}, has total cover against attacks and other effects outside the block, and takes 35 (10d6) cold damage at the start of each of its turns. The creature can repeat the saving throw at the end of each of its turns, freeing itself on a success. The creature is also freed if the block is destroyed, which is a Huge object with AC 18, 30 hit points, and immunity to poison and psychic damage."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Frigid Shield",
+					"entries": [
+						"When a creature Coldryum can see targets him with an attack, Coldryum gains 20 temporary hit points. If the attack hits and reduces the temporary hit points to 0, each creature within 5 feet of Coldryum takes 18 (4d8) cold damage."
+					]
+				}
+			],
+			"legendaryHeader": [
+				"Coldryum can take 3 legendary actions, choosing from the options below. Only one legendary action can be used at a time and only at the end of another creature's turn. Coldryum regains spent legendary actions at the start of its turn."
+			],
+			"legendary": [
+				{
+					"name": "Detect",
+					"entries": [
+						"Coldryum makes a Wisdom (Perception) check."
+					]
+				},
+				{
+					"name": "Tail Attack",
+					"entries": [
+						"Coldryum makes a tail attack."
+					]
+				},
+				{
+					"name": "Wing Attack (Costs 2 actions)",
+					"entries": [
+						"Coldryum beats his wings. Each creature within 15 feet of him must succeed on a {@dc 24} Dexterity saving throw or take 15 (2d6 + 8) bludgeoning damage and be knocked {@condition prone}. Coldryum can then fly up to half his flying speed."
+					]
+				}
+			],
+			"mythicHeader": [
+				"If Coldryum's mythic trait is active, he can use the options below as legendary actions for 1 hour after using Frozen Armor."
+			],
+			"mythic": [
+				{
+					"name": "Frozen Impalement (Costs 3 actions)",
+					"entries": [
+						"Coldryum summons ice spikes from the ground. All creatures on the ground of his choice within 120 feet of him must make a {@dc 24} Dexterity saving throw. On a failed save, the creature takes 27 (6d8) piercing damage and is {@condition restrained} by being impaled on the spike. A creature can use an action to remove itself (or a creature it can reach) from the spike, ending the condition."
+					]
+				}
+			],
+			"legendaryGroup": {
+				"name": "Coldryum",
+				"source": "FlundersHomebrew"
+			},
+			"tokenUrl": "https://i.imgur.com/xCdRzoH.png",
+			"traitTags": [
+				"Immutable Form",
+				"Legendary Resistances",
+				"Magic Resistance"
+			],
+			"senseTags": [
+				"B",
+				"D"
+			],
+			"actionTags": [
+				"Frightful Presence",
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"DR"
+			],
+			"damageTags": [
+				"C",
+				"R"
+			],
+			"miscTags": [
+				"AOE",
+				"MW",
+				"RCH"
+			],
+			"conditionInflict": [
+				"frightened",
+				"prone",
+				"restrained",
+				"stunned"
+			]
+		},
+		{
+			"name": "Coldryum's Hunt",
+			"source": "FlundersHomebrew",
+			"page": 169,
+			"size": "G",
+			"type": {
+				"type": "elemental",
+				"swarmSize": "M"
+			},
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				13
+			],
+			"hp": {
+				"formula": "20d20 + 40",
+				"average": 250
+			},
+			"speed": {
+				"walk": 50,
+				"fly": 50,
+				"canHover": false
+			},
+			"str": 10,
+			"dex": 20,
+			"con": 14,
+			"int": 10,
+			"wis": 12,
+			"cha": 12,
+			"save": {
+				"str": "+5",
+				"dex": "+10",
+				"con": "+7"
+			},
+			"skill": {
+				"stealth": "+15",
+				"perception": "+11"
+			},
+			"senses": [
+				"blindsight 60 ft."
+			],
+			"passive": 21,
+			"immune": [
+				"cold",
+				"poison"
+			],
+			"vulnerable": [
+				"fire"
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"paralyzed",
+				"petrified",
+				"poisoned"
+			],
+			"languages": [
+				"Primordial",
+				"Draconic"
+			],
+			"cr": "15",
+			"trait": [
+				{
+					"name": "Herald of the Cold",
+					"entries": [
+						"At the start of each of the hunt's turns, each creature within its space must make a {@dc 18} Constitution saving throw, taking 4d8 cold damage on a failed save, or half as much damage on a successful one."
+					]
+				},
+				{
+					"name": "Swarm (Swarm of Bats)",
+					"entries": [
+						"The hunt can occupy another creature's space and vice versa, and the swarm can move through any opening large enough for a medium creature. The swarm can't regain hit points or gain temporary hit points."
+					]
+				},
+				{
+					"name": "Blizzard",
+					"entries": [
+						"Any creature within the hunt's space has disadvantage on ranged weapon attacks and Wisdom (Perception). The wind extinguishes open flames, disperses fog, erases tracks in the snow and makes flying by nonmagical means nearly impossible. A creature falls at the end of its turn if it is flying by nonmagical means and can't hover. ",
+						"A creature inside the hunt's space has its sight reduced to 5 feet and, if it is concentrating on a spell, must succeed on a {@dc 15} Constitution saving throw at the end of its turn or lose concentration on the spell."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"The Hunt can make up to 5 attacks against targets in its space. It cannot attack the same creature more than twice. For every 50 HP missing, the swarm loses one attack. "
+					]
+				},
+				{
+					"name": "Frostbite",
+					"entries": [
+						"{@atk mw} {@hit 10} to hit, reach 5 ft., one target. {@h}15 ({@damage 3d6 + 5}) cold damage."
+					]
+				}
+			],
+			"tokenUrl": "https://5e.tools/img/DMG/Giant Fly.png?v=1.131.6",
+			"senseTags": [
+				"B"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"DR",
+				"P"
+			],
+			"damageTags": [
+				"C"
+			],
+			"miscTags": [
+				"MW"
+			]
+		},
+		{
+			"name": "Troll Berserker",
+			"source": "FlundersHomebrew",
+			"page": 291,
+			"size": "L",
+			"type": "giant",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"formula": "11d10 + 55",
+				"average": 115
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 20,
+			"dex": 13,
+			"con": 20,
+			"int": 7,
+			"wis": 9,
+			"cha": 7,
+			"skill": {
+				"perception": "+2"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 12,
+			"languages": [
+				"Giant"
+			],
+			"cr": "6",
+			"trait": [
+				{
+					"name": "Keen Smell",
+					"entries": [
+						"The troll has advantage on Wisdom ({@skill Perception}) checks that rely on smell."
+					]
+				},
+				{
+					"name": "Regeneration",
+					"entries": [
+						"The troll regains 10 hit points at the start of its turn. If the troll takes acid or fire damage, this trait doesn't function at the start of the troll's next turn. The troll dies only if it starts its turn with 0 hit points and doesn't regenerate."
+					]
+				},
+				{
+					"name": "Reckless",
+					"entries": [
+						"At the start of its turn, the troll berserker can gain advantage on all melee weapon attack rolls it makes during that turn, but attack rolls against it have advantage until the start of its next turn."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"The troll makes three attacks: one with its bite and two with its claws."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 7} to hit, reach 5 ft., one target. {@h}7 ({@damage 1d6 + 5}) piercing damage."
+					]
+				},
+				{
+					"name": "Claw",
+					"entries": [
+						"{@atk mw} {@hit 7} to hit, reach 5 ft., one target. {@h}11 ({@damage 2d6 + 5}) slashing damage."
+					]
+				}
+			],
+			"variant": [
+				{
+					"type": "variant",
+					"name": "Loathsome Limbs",
+					"entries": [
+						"Whenever the troll takes at least 15 slashing damage at one time, roll a {@dice d20} to determine what else happens to it:",
+						{
+							"type": "list",
+							"style": "list-hang-notitle",
+							"items": [
+								{
+									"type": "item",
+									"name": "1–10:",
+									"entry": "Nothing else happens."
+								},
+								{
+									"type": "item",
+									"name": "11–14:",
+									"entry": "One leg is severed from the troll if it has any legs left."
+								},
+								{
+									"type": "item",
+									"name": "15–18:",
+									"entry": "One arm is severed from the troll if it has any arms left."
+								},
+								{
+									"type": "item",
+									"name": "19–20:",
+									"entry": "The troll is decapitated, but the troll dies only if it can't regenerate. If it dies, so does the severed head."
+								}
+							]
+						},
+						"If the troll finishes a short or long rest without reattaching a severed limb or head, the part regrows. At that point, the severed part dies. Until then, a severed part acts on the troll's initiative and has its own action and movement. A severed part has AC 13, 10 hit points, and the troll's Regeneration trait.",
+						"A severed leg is unable to attack and has a speed of 5 feet.",
+						"A severed arm has a speed of 5 feet and can make one claw attack on its turn, with disadvantage on the attack roll unless the troll can see the arm and its target. Each time the troll loses an arm, it loses a claw attack.",
+						"If its head is severed, the troll loses its bite attack and its body is {@condition blinded} unless the head can see it. The severed head has a speed of 0 feet and the troll's Keen Smell trait. It can make a bite attack but only against a target in its space.",
+						"The troll's speed is halved if it's missing a leg. If it loses both legs, it falls {@condition prone}. If it has both arms, it can crawl. With only one arm, it can still crawl, but its speed is halved. With no arms or legs, its speed is 0, and it can't benefit from bonuses to speed."
+					]
+				}
+			],
+			"environment": [
+				"arctic",
+				"forest",
+				"hill",
+				"mountain",
+				"swamp",
+				"underdark"
+			],
+			"fluff": {
+				"name": "Troll",
+				"source": "MM",
+				"entries": [
+					{
+						"type": "entries",
+						"entries": [
+							{
+								"type": "entries",
+								"entries": [
+									"Born with horrific appetites, trolls eat anything they can catch and devour. They have no society to speak of, but they do serve as mercenaries to orcs, ogres, ettins, hags, and giants. As payment, trolls demand food and treasure. Trolls are difficult to control, however, doing as they please even when working with more powerful creatures.",
+									{
+										"name": "Regeneration",
+										"type": "entries",
+										"entries": [
+											"Smashing a troll's bones and slashing through its rubbery hide only makes it angry. A troll's wounds close quickly. If the monster loses an arm, a leg, or even its head, those dismembered parts can sometimes act with a life of their own. A troll can even reattach severed body parts, untroubled by its momentary disability. Only acid and fire can arrest the regenerative properties of a troll's flesh. The trolls, enraged, will attack individuals making acid and fire attacks against them above all other prey."
+										]
+									},
+									{
+										"name": "Troll Freaks",
+										"type": "entries",
+										"entries": [
+											"Their regenerative capabilities make trolls especially susceptible to mutation. Although uncommon, such transformations can result from what the troll has done or what has been done to it. A decapitated troll might grow two heads from the stump of its neck, while a troll that eats a fey creature might gain one or more of that creature's traits."
+										]
+									}
+								]
+							}
+						]
+					}
+				],
+				"images": [
+					{
+						"type": "image",
+						"href": {
+							"type": "internal",
+							"path": "bestiary/MM/Troll.jpg"
+						}
+					}
+				]
+			},
+			"tokenUrl": "https://i.imgur.com/rTGRdfp.png",
+			"soundClip": {
+				"type": "external",
+				"url": "https://5e.tools/audio/bestiary/troll.mp3?v=1.132.0"
+			},
+			"traitTags": [
+				"Keen Senses",
+				"Reckless",
+				"Regeneration"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"GI"
+			],
+			"damageTags": [
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Two-Headed Troll",
+			"source": "FlundersHomebrew",
+			"page": 291,
+			"size": "L",
+			"type": "giant",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"formula": "12d10 + 60",
+				"average": 126
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 22,
+			"dex": 13,
+			"con": 20,
+			"int": 7,
+			"wis": 9,
+			"cha": 7,
+			"skill": {
+				"perception": "+5"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 15,
+			"languages": [
+				"Giant"
+			],
+			"cr": "7",
+			"trait": [
+				{
+					"name": "Keen Smell",
+					"entries": [
+						"The troll has advantage on Wisdom ({@skill Perception}) checks that rely on smell."
+					]
+				},
+				{
+					"name": "Regeneration",
+					"entries": [
+						"The troll regains 10 hit points at the start of its turn. If the troll takes acid or fire damage, this trait doesn't function at the start of the troll's next turn. The troll dies only if it starts its turn with 0 hit points and doesn't regenerate."
+					]
+				},
+				{
+					"name": "Two Heads",
+					"entries": [
+						"The two-headed troll has advantage on Wisdom ({@skill Perception}) checks and on saving throws against being {@condition blinded}, {@condition charmed}, {@condition deafened}, {@condition frightened}, {@condition stunned}, or knocked {@condition unconscious}."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"The troll makes four attacks: two with its bite and two with its claws."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 7} to hit, reach 5 ft., one target. {@h}7 ({@damage 1d6 + 6}) piercing damage."
+					]
+				},
+				{
+					"name": "Claw",
+					"entries": [
+						"{@atk mw} {@hit 7} to hit, reach 5 ft., one target. {@h}11 ({@damage 2d6 + 6}) slashing damage."
+					]
+				}
+			],
+			"variant": [
+				{
+					"type": "variant",
+					"name": "Loathsome Limbs",
+					"entries": [
+						"Whenever the troll takes at least 15 slashing damage at one time, roll a {@dice d20} to determine what else happens to it:",
+						{
+							"type": "list",
+							"style": "list-hang-notitle",
+							"items": [
+								{
+									"type": "item",
+									"name": "1–10:",
+									"entry": "Nothing else happens."
+								},
+								{
+									"type": "item",
+									"name": "11–14:",
+									"entry": "One leg is severed from the troll if it has any legs left."
+								},
+								{
+									"type": "item",
+									"name": "15–18:",
+									"entry": "One arm is severed from the troll if it has any arms left."
+								},
+								{
+									"type": "item",
+									"name": "19–20:",
+									"entry": "The troll is decapitated, but the troll dies only if it can't regenerate. If it dies, so does the severed head."
+								}
+							]
+						},
+						"If the troll finishes a short or long rest without reattaching a severed limb or head, the part regrows. At that point, the severed part dies. Until then, a severed part acts on the troll's initiative and has its own action and movement. A severed part has AC 13, 10 hit points, and the troll's Regeneration trait.",
+						"A severed leg is unable to attack and has a speed of 5 feet.",
+						"A severed arm has a speed of 5 feet and can make one claw attack on its turn, with disadvantage on the attack roll unless the troll can see the arm and its target. Each time the troll loses an arm, it loses a claw attack.",
+						"If its head is severed, the troll loses its bite attack and its body is {@condition blinded} unless the head can see it. The severed head has a speed of 0 feet and the troll's Keen Smell trait. It can make a bite attack but only against a target in its space.",
+						"The troll's speed is halved if it's missing a leg. If it loses both legs, it falls {@condition prone}. If it has both arms, it can crawl. With only one arm, it can still crawl, but its speed is halved. With no arms or legs, its speed is 0, and it can't benefit from bonuses to speed."
+					]
+				}
+			],
+			"environment": [
+				"arctic",
+				"forest",
+				"hill",
+				"mountain",
+				"swamp",
+				"underdark"
+			],
+			"fluff": {
+				"name": "Troll",
+				"source": "MM",
+				"entries": [
+					{
+						"type": "entries",
+						"entries": [
+							{
+								"type": "entries",
+								"entries": [
+									"Born with horrific appetites, trolls eat anything they can catch and devour. They have no society to speak of, but they do serve as mercenaries to orcs, ogres, ettins, hags, and giants. As payment, trolls demand food and treasure. Trolls are difficult to control, however, doing as they please even when working with more powerful creatures.",
+									{
+										"name": "Regeneration",
+										"type": "entries",
+										"entries": [
+											"Smashing a troll's bones and slashing through its rubbery hide only makes it angry. A troll's wounds close quickly. If the monster loses an arm, a leg, or even its head, those dismembered parts can sometimes act with a life of their own. A troll can even reattach severed body parts, untroubled by its momentary disability. Only acid and fire can arrest the regenerative properties of a troll's flesh. The trolls, enraged, will attack individuals making acid and fire attacks against them above all other prey."
+										]
+									},
+									{
+										"name": "Troll Freaks",
+										"type": "entries",
+										"entries": [
+											"Their regenerative capabilities make trolls especially susceptible to mutation. Although uncommon, such transformations can result from what the troll has done or what has been done to it. A decapitated troll might grow two heads from the stump of its neck, while a troll that eats a fey creature might gain one or more of that creature's traits."
+										]
+									}
+								]
+							}
+						]
+					}
+				],
+				"images": [
+					{
+						"type": "image",
+						"href": {
+							"type": "internal",
+							"path": "bestiary/MM/Troll.jpg"
+						}
+					}
+				]
+			},
+			"tokenUrl": "https://i.imgur.com/9ZLtGqx.png",
+			"soundClip": {
+				"type": "external",
+				"url": "https://5e.tools/audio/bestiary/troll.mp3?v=1.132.0"
+			},
+			"traitTags": [
+				"Keen Senses",
+				"Regeneration"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"GI"
+			],
+			"damageTags": [
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
 		}
 	]
 }
