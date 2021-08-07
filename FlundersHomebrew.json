@@ -1,5 +1,5 @@
 {
-	"siteVersion": "1.132.0",
+	"siteVersion": "1.133.2",
 	"_meta": {
 		"sources": [
 			{
@@ -13,8 +13,8 @@
 				"convertedBy": []
 			}
 		],
-		"dateAdded": 1626528819,
-		"dateLastModified": 1626528819
+		"dateAdded": 1628349350,
+		"dateLastModified": 1628349350
 	},
 	"monster": [
 		{
@@ -7641,6 +7641,218 @@
 			],
 			"hasFluff": true,
 			"hasFluffImages": true
+		},
+		{
+			"name": "Sea Spawn Shocker",
+			"source": "FlundersHomebrew",
+			"page": 169,
+			"size": "M",
+			"type": "humanoid",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				13,
+				{
+					"ac": 17,
+					"condition": "when completly submerged",
+					"braces": true
+				}
+			],
+			"hp": {
+				"formula": "9d10 + 27",
+				"average": 76
+			},
+			"speed": {
+				"walk": 20,
+				"swim": 40
+			},
+			"str": 16,
+			"dex": 12,
+			"con": 16,
+			"int": 5,
+			"wis": 10,
+			"cha": 8,
+			"skill": {
+				"stealth": "+4"
+			},
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 10,
+			"immune": [
+				"lightning"
+			],
+			"languages": [
+				"understands Aquan and Common but can't speak"
+			],
+			"cr": "5",
+			"trait": [
+				{
+					"name": "Limited Amphibiousness (Sahuagin)",
+					"entries": [
+						"The sea spawn can breathe air and water, but it needs to be submerged at least once a day for 1 minute to avoid suffocating."
+					]
+				},
+				{
+					"name": "Underwater Superiority",
+					"entries": [
+						"While completly submerged in water, the sea spawn does not provoke opportunity attacks when swimming out of an enemies reach. Additionally it gains a +8 bonus to its Dexterity and can use Dexterity in place of Strength for its weapon attacks."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"The sea spawn makes four tentacle attacks. It can replace one tentacle attack with a sword spear attack."
+					]
+				},
+				{
+					"name": "Tentacle",
+					"entries": [
+						"{@atk mw} {@hit 6} to hit (+8 underwater), reach 10 ft., one target. {@h}5 (1d4 + 3) bludgeoning damage or 7 (1d4 + 5) if underwater, and the target is {@condition grappled} (escape {@dc 13}) if it is a Large or smaller creature. Until the grapple ends, the sea spawn can't use this tentacle on another target."
+					]
+				},
+				{
+					"name": "Spear",
+					"entries": [
+						"Meelee or Ranged Weapon Attack: {@hit 6} to hit (+8 underwater), reach 5 ft. (thrown 20/60), one target. {@h}6 (1d6+3) piercing damage or 8 (1d6+5) if underwater plus 3 (1d6) lightning damage. "
+					]
+				},
+				{
+					"name": "Lightning Discharge {@recharge 4}",
+					"entries": [
+						"The sea spawn discharges electricity that shocks targets around it. Each creature within 10 feet of the sea spawn must succeed on a {@dc 13} Constitution saving throw. On a failed save, the target takes 27 (6d8) lightning damage and is {@condition stunned} until the end of its next turn. On a successful save, the target takes half as much damage and isn't {@condition stunned}. Underwater the range is doubled and any target standing within 10 feet of the sea spawn makes their save with disadvantage."
+					]
+				}
+			],
+			"tokenUrl": "https://i.imgur.com/UQYEQYS.png",
+			"senseTags": [
+				"SD"
+			],
+			"actionTags": [
+				"Multiattack",
+				"Tentacles"
+			],
+			"languageTags": [
+				"AQ",
+				"C",
+				"CS"
+			],
+			"miscTags": [
+				"AOE",
+				"MW",
+				"RCH"
+			],
+			"conditionInflict": [
+				"grappled",
+				"stunned"
+			]
+		},
+		{
+			"name": "Sea Spawn Stinger",
+			"source": "FlundersHomebrew",
+			"page": 169,
+			"size": "M",
+			"type": "humanoid",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				12,
+				{
+					"ac": 16,
+					"condition": "when completly submerged",
+					"braces": true
+				}
+			],
+			"hp": {
+				"formula": "7d10 + 21",
+				"average": 59
+			},
+			"speed": {
+				"walk": 20,
+				"swim": 40
+			},
+			"str": 15,
+			"dex": 10,
+			"con": 16,
+			"int": 5,
+			"wis": 10,
+			"cha": 8,
+			"skill": {
+				"stealth": "+3"
+			},
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 10,
+			"languages": [
+				"understands Aquan and Common but can't speak"
+			],
+			"cr": "5",
+			"trait": [
+				{
+					"name": "Limited Amphibiousness (Sahuagin)",
+					"entries": [
+						"The sea spawn can breathe air and water, but it needs to be submerged at least once a day for 1 minute to avoid suffocating."
+					]
+				},
+				{
+					"name": "Underwater Superiority",
+					"entries": [
+						"While completly submerged in water, the sea spawn does not provoke opportunity attacks when swimming out of an enemies reach. Additionally it gains a +8 bonus to its Dexterity and can use Dexterity in place of Strength for its weapon attacks."
+					]
+				},
+				{
+					"name": "Brutal Critical",
+					"entries": [
+						"The sea spawn can roll an additional damage die, when determining the extra damage for a critical hit with its tail stinger."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"The sea spawn makes three attacks: two unarmed strikes and one with its tail stinger."
+					]
+				},
+				{
+					"name": "Unarmed Strike",
+					"entries": [
+						"{@atk mw} {@hit 5} to hit (+7 underwater), reach 5 ft., one target. {@h}4 (1d4 + 2) bludgeoning damage or 6 (1d4+4) if underwater."
+					]
+				},
+				{
+					"name": "Tail Stinger",
+					"entries": [
+						"{@atk mw} +5 (+7 underwater) to hit, reach 5 ft., one creature. {@h}6 (1d8 + 2) piercing damage or 8 (1d8+4) if underwater and the target must succeed on a {@dc 13} Constitution saving throw or become {@condition poisoned}. While {@condition poisoned}, the target is also {@condition paralyzed}. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+					]
+				}
+			],
+			"tokenUrl": "https://i.imgur.com/Kv22tQL.png",
+			"senseTags": [
+				"SD"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"AQ",
+				"C",
+				"CS"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflict": [
+				"paralyzed",
+				"poisoned"
+			]
 		}
 	]
 }
