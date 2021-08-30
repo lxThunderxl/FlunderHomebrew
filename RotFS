@@ -18,7 +18,7 @@
 	},
 	"monster": [
 		{
-			"name": "Goblin",
+			"name": "Goblin Sharpshooter",
 			"source": "IDRotFSupplementCreatures",
 			"page": 166,
 			"size": "S",
