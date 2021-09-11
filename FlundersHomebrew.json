@@ -13,8 +13,8 @@
 				"convertedBy": []
 			}
 		],
-		"dateAdded": 1631374077,
-		"dateLastModified": 1631374077
+		"dateAdded": 1631374808,
+		"dateLastModified": 1631374808
 	},
 	"monster": [
 		{
@@ -7916,6 +7916,67 @@
 			],
 			"damageTags": [
 				"B"
+			]
+		},
+		{
+			"name": "Demonic Soul Monk (Minion)",
+			"source": "FlundersHomebrew",
+			"page": 169,
+			"size": "M",
+			"type": "fiend",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				16
+			],
+			"hp": {
+				"special": "1"
+			},
+			"speed": {
+				"walk": 40,
+				"swim": 40
+			},
+			"str": 10,
+			"dex": 18,
+			"con": 14,
+			"int": 10,
+			"wis": 14,
+			"cha": 10,
+			"passive": 12,
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"The monk makes two attacks with its Demon Bolt or unarmed strikes. It can then use its Demonic Swathe, if available."
+					]
+				},
+				{
+					"name": "Demon Bolt",
+					"entries": [
+						"RSA: {@hit 6} to hit, range 30ft., {@h}6 ({@damage 1d4 + 4}) necrotic damage."
+					]
+				},
+				{
+					"name": "Unarmed Strike",
+					"entries": [
+						"MWA: {@hit 6} to hit, reach 5 ft. {@h}6 ({@damage 1d4 + 4}) bludgeoning damage."
+					]
+				},
+				{
+					"name": "Demonic Swathe",
+					"entries": [
+						"Each creature in a 15 ft. cone originating from the demon must succeed on a DC12 Dex save or take {@damage 4d6} necrotic damage."
+					]
+				}
+			],
+			"tokenUrl": "https://imgur.com/fa1zvxD",
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"B",
+				"N"
 			]
 		}
 	]
