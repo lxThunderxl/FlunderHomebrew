@@ -1,5 +1,5 @@
 {
-	"siteVersion": "1.135.0",
+	"siteVersion": "1.141.2",
 	"_meta": {
 		"sources": [
 			{
@@ -13,8 +13,8 @@
 				"convertedBy": []
 			}
 		],
-		"dateAdded": 1631374808,
-		"dateLastModified": 1631374808
+		"dateAdded": 1636818856,
+		"dateLastModified": 1636818856
 	},
 	"monster": [
 		{
@@ -1261,60 +1261,77 @@
 				"E"
 			],
 			"ac": [
-				12,
 				{
-					"ac": 15,
-					"condition": "with {@spell mage armor}",
-					"braces": true
+					"ac": 17,
+					"condition": "(20 with mage armor)"
 				}
 			],
 			"hp": {
-				"average": 78,
-				"formula": "12d8 + 24"
+				"formula": "15d12 + 60",
+				"average": 157
 			},
 			"speed": {
 				"walk": 30
 			},
-			"str": 10,
-			"dex": 14,
-			"con": 15,
-			"int": 12,
-			"wis": 12,
-			"cha": 18,
+			"str": 12,
+			"dex": 16,
+			"con": 18,
+			"int": 14,
+			"wis": 14,
+			"cha": 22,
 			"save": {
 				"wis": "+5",
 				"cha": "+8"
 			},
 			"skill": {
 				"arcana": "+5",
-				"deception": "+8",
-				"persuasion": "+8",
-				"religion": "+5"
+				"deception": "+14",
+				"persuasion": "+14",
+				"religion": "+5",
+				"intimidation": "+14",
+				"perception": "+6"
 			},
 			"senses": [
 				"darkvision 60 ft."
 			],
-			"passive": 11,
+			"passive": 16,
 			"resist": [
 				{
 					"resist": [
+						"bludgeoning",
+						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks not made with silvered weapons",
-					"cond": true
+					"note": "from non silvered material"
+				},
+				{
+					"resist": [
+						"cold",
+						"fire"
+					]
+				}
+			],
+			"immune": [
+				{
+					"immune": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from non magical projectiles"
 				}
 			],
 			"languages": [
 				"Common",
 				"Abyssal",
-				"Infernal"
+				"Infernal (any with Shield of the Hidden Lord)"
 			],
-			"cr": "7",
+			"cr": "10",
 			"spellcasting": [
 				{
 					"name": "Innate Spellcasting",
 					"headerEntries": [
-						"The warlock's innate spellcasting ability is Charisma. It can innately cast the following spells (spell save {@dc 16}), requiring no material components:"
+						"The warlock's innate spellcasting ability is Charisma. It can innately cast the following spells (spell save {@dc 18}, +10 to hit), requiring no material components:"
 					],
 					"will": [
 						"{@spell alter self}",
@@ -1336,7 +1353,7 @@
 				{
 					"name": "Spellcasting",
 					"headerEntries": [
-						"The warlock is a 17th-level spellcaster. Its spellcasting ability is Charisma (spell save {@dc 16}, {@hit 8} to hit with spell attacks). It regains its expended spell slots when it finishes a short or long rest. It knows the following warlock spells:"
+						"The warlock is a 17th-level spellcaster. Its spellcasting ability is Charisma (spell save {@dc 18}, {@hit 10} to hit with spell attacks). It regains its expended spell slots when it finishes a short or long rest. It knows the following warlock spells:"
 					],
 					"spells": {
 						"0": {
@@ -1356,11 +1373,11 @@
 								"{@spell burning hands}",
 								"{@spell flame strike}",
 								"{@spell hellish rebuke}",
-								"{@spell magic circle}",
 								"{@spell scorching ray}",
 								"{@spell scrying}",
 								"{@spell stinking cloud}",
 								"{@spell suggestion}",
+								"{@spell thunder step|XGE} (fire damage)",
 								"{@spell wall of fire}"
 							],
 							"slots": 4,
@@ -1385,11 +1402,23 @@
 					]
 				}
 			],
-			"action": [
+			"legendary": [
 				{
-					"name": "Mace",
+					"name": "Cantrip (1 Action)",
 					"entries": [
-						"{@atk mw} {@hit 4} to hit, reach 5 ft., one target. {@h}3 ({@damage 1d6}) bludgeoning damage plus 10 ({@damage 3d6}) fire damage."
+						"Ciraffo casts a cantrip"
+					]
+				},
+				{
+					"name": "Cast a Spell (2 Actions)",
+					"entries": [
+						"Ciraffo casts a spell from his Warlock Spellcasting feature."
+					]
+				},
+				{
+					"name": "Shield of the Hidden Lord (3 Actions)",
+					"entries": [
+						"Ciraffo casts Confusion or Fear on all creatures inside a 5 foot cone infront of him. The effects last until the end of his next turn."
 					]
 				}
 			],
@@ -1414,9 +1443,6 @@
 			"spellcastingTags": [
 				"CL",
 				"I"
-			],
-			"miscTags": [
-				"MW"
 			]
 		},
 		{
@@ -1585,7 +1611,8 @@
 			"cha": 10,
 			"save": {
 				"wis": "+7",
-				"str": "+10"
+				"str": "+10",
+				"con": "+9"
 			},
 			"skill": {
 				"perception": "+7"
@@ -1669,7 +1696,7 @@
 				{
 					"name": "Wind Aura (Mythic)",
 					"entries": [
-						"Heavy winds surround the angel. Any ranged weapon attack within 120ft. of the angel is made with disadvantage. Additionally any creature that starts its turn within that area must succeed on a DStrength saving throw {@dc 15} or spend an additional foot of movement for each foot moved inside the aura."
+						"Heavy winds surround the angel. Any ranged weapon attack within 120ft. of the angel is made with disadvantage. Additionally any creature that starts its turn within that area must succeed on a Strength saving throw {@dc 15} or spend an additional foot of movement for each foot moved inside the aura."
 					]
 				}
 			],
@@ -1999,6 +2026,7 @@
 				"D"
 			],
 			"actionTags": [
+				"Breath Weapon",
 				"Multiattack"
 			],
 			"languageTags": [
@@ -6456,14 +6484,14 @@
 				{
 					"name": "Spiked Chain",
 					"entries": [
-						"{@atk mw} {@hit 11} to hit, reach 20 ft., one target. {@h}15 (2d8 + 6) slashing damage, and the target is {@condition grappled} (escape {@dc 16}). While a creature is {@condition grappled} this way, the horned devil can't use one of its spiked chain attacks."
+						"{@atk mw} {@hit 11} to hit, reach 20 ft., one target. {@h}15 ({@damage 2d8 + 6}) slashing damage, and the target is {@condition grappled} (escape {@dc 16}). While a creature is {@condition grappled} this way, the horned devil can't use one of its spiked chain attacks."
 					]
 				},
 				{
 					"name": "Tail",
 					"entries": [
 						"{@atk mw} {@hit 11} to hit, reach 10 ft., one target. Hit:",
-						"10 (1d8 + 6) slashing damage. If the target is a creature other than an undead or a construct, it must succeed on a {@dc 19} Constitution saving throw or lose 10 (3d6) hit points at the start of each of its turns due to an infernal wound. Each time the devil hits the wounded target with this attack, the damage dealt by the wound increases by 10 (3d6). Any creature can take an action to stanch the wound with a successful {@dc 12} Wisdom (Medicine) check. The wound also closes if the target receives magical healing."
+						"10 ({@damage 1d8 + 6}) slashing damage. If the target is a creature other than an undead or a construct, it must succeed on a {@dc 17} Constitution saving throw or lose 10 ({@dice 3d6}) hit points at the start of each of its turns due to an infernal wound. Each time the devil hits the wounded target with this attack, the damage dealt by the wound increases by 10 ({@dice 3d6}). Any creature can take an action to stanch the wound with a successful {@dc 12} Wisdom (Medicine) check. The wound also closes if the target receives magical healing."
 					]
 				},
 				{
@@ -6475,7 +6503,7 @@
 				{
 					"name": "Spiked Chain Slam",
 					"entries": [
-						"The devil slams a Large or smaller creature {@condition grappled} by its spiked chain into another creature or a solid surface within 20 feet. Both creatures must succeed on a {@dc 19} Strength saving throw or take 17 (2d10 + 6) bludgeoning damage and be {@condition stunned} until the end of its next turn. On a successful save, the target takes half the bludgeoning damage and isn't {@condition stunned}."
+						"The devil slams a Large or smaller creature {@condition grappled} by its spiked chain into another creature or a solid surface within 20 feet. Both creatures must succeed on a {@dc 17} Strength saving throw or take 17 ({@damage 2d10 + 6}) bludgeoning damage and be {@condition stunned} until the end of its next turn. On a successful save, the target takes half the bludgeoning damage and isn't {@condition stunned}."
 					]
 				},
 				{
@@ -6836,7 +6864,9 @@
 				"TP"
 			],
 			"damageTags": [
-				"F"
+				"B",
+				"F",
+				"S"
 			],
 			"spellcastingTags": [
 				"I"
@@ -7855,40 +7885,100 @@
 			]
 		},
 		{
-			"name": "Merciful Demon Warrior (Minion)",
+			"name": "Wastrilith (Ruin Encounter)",
 			"source": "FlundersHomebrew",
-			"size": "M",
-			"type": "fiend",
+			"page": 139,
+			"size": "L",
+			"type": {
+				"type": "fiend",
+				"tags": [
+					"demon"
+				]
+			},
 			"alignment": [
-				"N"
+				"C",
+				"E"
 			],
 			"ac": [
-				16
+				{
+					"ac": 18,
+					"from": [
+						"natural armor"
+					]
+				}
 			],
 			"hp": {
-				"special": "1"
+				"average": 157,
+				"formula": "15d10 + 75"
 			},
 			"speed": {
-				"walk": 40,
-				"swim": 40
+				"walk": 30,
+				"swim": 80
 			},
-			"str": 10,
+			"str": 19,
 			"dex": 18,
-			"con": 16,
-			"int": 10,
-			"wis": 14,
-			"cha": 10,
-			"passive": 12,
+			"con": 21,
+			"int": 19,
+			"wis": 12,
+			"cha": 14,
+			"save": {
+				"str": "+9",
+				"con": "+10"
+			},
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 11,
+			"resist": [
+				"cold",
+				"fire",
+				"lightning",
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"poisoned"
+			],
 			"languages": [
 				"Abyssal",
-				"telepathy (60 ft)"
+				"telepathy 120 ft."
 			],
-			"cr": "0",
+			"cr": "13",
 			"trait": [
 				{
-					"name": "Hands of Harm",
+					"name": "Amphibious",
 					"entries": [
-						"If the warrior hits a {@condition poisoned} or {@condition incapacitated} creature with an unarmed strike, it deals an additional {@damage 2d6} necrotic damage."
+						"The wastrilith can breathe air and water."
+					]
+				},
+				{
+					"name": "Corrupt Water",
+					"entries": [
+						"At the start of each of the wastrilith's turns, exposed water within 30 feet of it is befouled. Underwater, this effect lightly obscures the area until a current clears it away. Water in containers remains corrupted until it evaporates.",
+						"A creature that consumes this foul water or swims in it must make a {@dc 16} Constitution saving throw. On a successful save, the creature is immune to the foul water for 24 hours. On a failed save, the creature takes 10 ({@damage 3d6}) poison damage and is {@condition poisoned} for 1 minute. At the end of this time, the {@condition poisoned} creature must repeat the saving throw. On a failure, the creature takes 13 ({@damage 3d8}) poison damage and is {@condition poisoned} until it finishes a long rest.",
+						"If another demon drinks the foul water as an action, it gains 11 ({@dice 2d10}) temporary hit points."
+					]
+				},
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"The wastrilith has advantage on saving throws against spells and other magical effects."
+					]
+				},
+				{
+					"name": "Undertow",
+					"entries": [
+						"As a bonus action when the wastrilith is underwater, it can cause all water within 60 feet of it to be difficult terrain for other creatures until the start of its next turn."
 					]
 				}
 			],
@@ -7896,17 +7986,120 @@
 				{
 					"name": "Multiattack",
 					"entries": [
-						"The warrior makes two unarmed strikes."
+						"The wastrilith uses Grasping Spout and makes three attacks: one with its bite and two with its claws."
 					]
 				},
 				{
-					"name": "Unarmed Strike",
+					"name": "Bite",
 					"entries": [
-						"MWA: {@hit 6} to hit, reach 5ft., {@h}7 ({@damage 1d6 + 4}) bludgeoning damage."
+						"{@atk mw} {@hit 9} to hit, reach 10 ft., one target. {@h}23 ({@damage 3d12 + 4}) piercing damage."
+					]
+				},
+				{
+					"name": "Claws",
+					"entries": [
+						"{@atk mw} {@hit 9} to hit, reach 10 ft., one target. {@h}14 ({@damage 3d6 + 4}) slashing damage."
+					]
+				},
+				{
+					"name": "Grasping Spout",
+					"entries": [
+						"The wastrilith magically launches a spout of water at one creature it can see within 60 feet of it. The target must make a {@dc 15} Strength saving throw, and it has disadvantage if it's underwater. On a failed save, it takes 17 ({@damage 3d8 + 4}) acid damage and is pulled up to 60 feet toward the wastrilith. On a successful save, it takes half as much damage and isn't pulled."
 					]
 				}
 			],
-			"tokenUrl": "https://i.imgur.com/KGzcwSS.png",
+			"legendary": [
+				{
+					"name": "Detect",
+					"entries": [
+						"The Wastrilith makes a perception check."
+					]
+				},
+				{
+					"name": "Claw",
+					"entries": [
+						"The Wastrilith makes one claw attack."
+					]
+				},
+				{
+					"name": "Grasping Spout (2 Actions)",
+					"entries": [
+						"The Wastrilith uses its Grasping Spout"
+					]
+				}
+			],
+			"environment": [
+				"coastal",
+				"swamp",
+				"underdark",
+				"underwater"
+			],
+			"fluff": {
+				"name": "Wastrilith",
+				"source": "MTF",
+				"entries": [
+					{
+						"type": "entries",
+						"entries": [
+							{
+								"type": "entries",
+								"entries": [
+									{
+										"type": "quote",
+										"entries": [
+											"The corruption left behind when a wastrilith visits the world can persist for decades. If left unchecked, it can become a bridge to the Abyss."
+										],
+										"by": "Mordenkainen"
+									},
+									{
+										"type": "entries",
+										"name": "Wastrilith",
+										"entries": [
+											"Found in the waters of the Abyss and other bodies of water contaminated by the plane's fell influence, wastriliths establish themselves as lords of the deep and rule their dominions with cruelty."
+										]
+									},
+									{
+										"name": "Despoilers",
+										"type": "entries",
+										"entries": [
+											"A wastrilith contaminates the waters around it. Its noxious presence even affects nearby sources of water when the demon travels on land. The corrupted water, which contains a measure of the demon's essence, responds to its commands—perhaps hardening to prevent foes from escaping, or erupting in a surge that drags would-be victims into its reach."
+										]
+									},
+									{
+										"name": "Silent Corrupters",
+										"type": "entries",
+										"entries": [
+											"Creatures that ingest water that has been corrupted by a wastrilith risk their very souls. Those who drink the poisonous liquid might wither away until they finally die, or remain alive only to become a thrall of chaos and evil.",
+											"To represent this defilement, you can use the optional rule on {@variantrule planar effects||abyssal corruption} in chapter 2 of the {@book Dungeon Master's Guide|dmg}, causing the {@condition poisoned} creature to be corrupted."
+										]
+									}
+								]
+							}
+						]
+					}
+				],
+				"images": [
+					{
+						"type": "image",
+						"href": {
+							"type": "internal",
+							"path": "bestiary/MTF/Wastrilith.jpg"
+						}
+					}
+				]
+			},
+			"tokenUrl": "https://5e.tools/img/MTF/Wastrilith.png?v=1.134.0",
+			"soundClip": {
+				"type": "external",
+				"url": "https://5e.tools/audio/bestiary/wastrilith.mp3?v=1.134.0"
+			},
+			"traitTags": [
+				"Amphibious",
+				"Magic Resistance"
+			],
+			"senseTags": [
+				"SD"
+			],
 			"actionTags": [
 				"Multiattack"
 			],
@@ -7915,68 +8108,483 @@
 				"TP"
 			],
 			"damageTags": [
-				"B"
-			]
+				"A",
+				"I",
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"MW",
+				"RCH"
+			],
+			"conditionInflict": [
+				"poisoned"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
-			"name": "Demonic Soul Monk (Minion)",
+			"name": "Ubelle Erin",
+			"source": "FlundersHomebrew",
+			"page": 214,
+			"size": "M",
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"any race"
+				]
+			},
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				12,
+				{
+					"ac": 15,
+					"condition": "with {@spell mage armor}",
+					"braces": true
+				}
+			],
+			"hp": {
+				"average": 66,
+				"formula": "12d8 + 12"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 14,
+			"dex": 14,
+			"con": 12,
+			"int": 20,
+			"wis": 12,
+			"cha": 12,
+			"save": {
+				"int": "+9",
+				"wis": "+5"
+			},
+			"skill": {
+				"arcana": "+9",
+				"history": "+9"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 11,
+			"resist": [
+				"fire"
+			],
+			"languages": [
+				"Abyssal",
+				"Common",
+				"Infernal",
+				"Ignan"
+			],
+			"cr": "9",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"The evoker is a 13th-level spellcaster. Its spellcasting ability is Intelligence (spell save {@dc 15}, {@hit 7} to hit with spell attacks). The evoker has the following wizard spells prepared:"
+					],
+					"footerEntries": [
+						"*Evocation spell"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell fire bolt}*",
+								"{@spell light}*",
+								"{@spell prestidigitation}",
+								"{@spell ray of frost}*"
+							]
+						},
+						"1": {
+							"spells": [
+								"{@spell burning hands}*",
+								"{@spell mage armor}",
+								"{@spell magic missile}*"
+							],
+							"slots": 4
+						},
+						"2": {
+							"spells": [
+								"{@spell mirror image}",
+								"{@spell misty step}",
+								"{@spell shatter}*"
+							],
+							"slots": 3
+						},
+						"3": {
+							"spells": [
+								"{@spell counterspell}",
+								"{@spell fireball}*",
+								"{@spell lightning bolt}*"
+							],
+							"slots": 3
+						},
+						"4": {
+							"spells": [
+								"{@spell ice storm}*",
+								"{@spell stoneskin}"
+							],
+							"slots": 3
+						},
+						"5": {
+							"spells": [
+								"{@spell Bigby's hand}*",
+								"{@spell cone of cold}*"
+							],
+							"slots": 2
+						},
+						"6": {
+							"spells": [
+								"{@spell chain lightning}",
+								"{@spell wall of ice}*"
+							],
+							"slots": 1
+						},
+						"7": {
+							"spells": [
+								"{@spell teleport}"
+							],
+							"slots": 1
+						}
+					},
+					"ability": "int",
+					"type": "spellcasting"
+				}
+			],
+			"trait": [
+				{
+					"name": "Sculpt Spells",
+					"entries": [
+						"When the evoker casts an evocation spell that forces other creatures it can see to make a saving throw, it can choose a number of them equal to 1 + the spell's level. These creatures automatically succeed on their saving throws against the spell. If a successful save means a chosen creature would take half damage from the spell, it instead takes no damage from it."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Quarterstaff",
+					"entries": [
+						"{@atk mw} {@hit 5} to hit, reach 5 ft., one target. {@h}5 ({@damage 1d6 + 1}) bludgeoning damage, or 6 ({@damage 1d8 - 1}) bludgeoning damage if used with two hands."
+					]
+				}
+			],
+			"environment": [
+				"urban"
+			],
+			"fluff": {
+				"name": "Evoker",
+				"source": "VGM",
+				"entries": [
+					{
+						"type": "entries",
+						"entries": [
+							{
+								"type": "entries",
+								"entries": [
+									{
+										"type": "entries",
+										"entries": [
+											"Evokers are specialist wizards who harness magical energy and elemental forces to destroy. Many tend to be hotheaded and aggressive. Others are cold and reserved, unleashing their power at just the right moment to exploit an opponent's weakness."
+										]
+									}
+								]
+							}
+						]
+					}
+				]
+			},
+			"tokenUrl": "https://i.imgur.com/Qx6B2eu.png",
+			"soundClip": {
+				"type": "external",
+				"url": "https://5e.tools/audio/bestiary/evoker.mp3"
+			},
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"AB",
+				"C",
+				"I",
+				"IG"
+			],
+			"damageTags": [
+				"B"
+			],
+			"spellcastingTags": [
+				"CW"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"hasFluff": true
+		},
+		{
+			"name": "Vilderavn",
 			"source": "FlundersHomebrew",
 			"page": 169,
 			"size": "M",
-			"type": "fiend",
+			"type": {
+				"type": "fey",
+				"tags": [
+					"shapechanger"
+				]
+			},
 			"alignment": [
-				"U"
+				"N",
+				"E"
 			],
 			"ac": [
-				16
+				{
+					"ac": 20,
+					"from": [
+						"{@item plate armor|phb}"
+					]
+				}
 			],
 			"hp": {
-				"special": "1"
+				"formula": "24d8 + 144",
+				"average": 252
 			},
 			"speed": {
-				"walk": 40,
-				"swim": 40
+				"walk": {
+					"number": 40,
+					"condition": "(60 in wolf or hybrid from)"
+				},
+				"fly": {
+					"number": 120,
+					"condition": "(raven and hybrid form only)"
+				},
+				"canHover": false
 			},
-			"str": 10,
-			"dex": 18,
-			"con": 14,
-			"int": 10,
-			"wis": 14,
-			"cha": 10,
-			"passive": 12,
+			"str": 22,
+			"dex": 20,
+			"con": 22,
+			"int": 19,
+			"wis": 20,
+			"cha": 21,
+			"save": {
+				"str": "+11",
+				"dex": "+10",
+				"wis": "+10",
+				"cha": "+10"
+			},
+			"skill": {
+				"history": "+9",
+				"deception": "+15",
+				"insight": "+10",
+				"intimidation": "+10",
+				"persuasion": "+15",
+				"stealth": "+10"
+			},
+			"senses": [
+				"truesight 120 ft."
+			],
+			"passive": 15,
+			"resist": [
+				{
+					"resist": [
+						"cold"
+					]
+				},
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical weapons"
+				}
+			],
+			"immune": [
+				"necrotic"
+			],
+			"conditionImmune": [
+				"charmed",
+				"frightened",
+				"unconscious"
+			],
+			"languages": [
+				"all",
+				"telepathy (120 ft.)"
+			],
+			"cr": "16",
+			"spellcasting": [
+				{
+					"name": "Innate Spellcasting",
+					"headerEntries": [
+						"The vilderavn's spellcasting ability is Charisma (spell save {@dc 18}). The vilderavn can innately cast the following spells, requiring no material components:"
+					],
+					"will": [
+						"{@spell bestow curse}",
+						"{@spell detect thoughts}",
+						"{@spell dispel magic}",
+						"{@spell dream}",
+						"{@spell fear}",
+						"{@spell pass without trace}",
+						"{@spell scrying}",
+						"{@spell suggestion}",
+						"{@spell wrathful smite}"
+					],
+					"daily": {
+						"1": [
+							"{@spell circle of death}",
+							"{@spell etherealness}",
+							"{@spell geas}",
+							"{@spell harm}",
+							"{@spell mass suggestion}",
+							"{@spell modify memory}"
+						]
+					},
+					"ability": "cha",
+					"type": "spellcasting"
+				}
+			],
+			"trait": [
+				{
+					"name": "Legendary Resistance (3/day)",
+					"entries": [
+						"If the Vilderavn fails a saving throw, it can choose to succeed instead."
+					]
+				},
+				{
+					"name": "Shapechanger",
+					"entries": [
+						"The Vilderavn can use its action to polymorph into a wolf, a raven, a wolf-raven-hybrid, any Small or Medium humanoid slain by its Soul Eater ability, or back to its true form. Its statistics, other than its size, are the same in each form. Any equipment it is wearing or carrying is transformed with it. It reverts to its true form if it dies."
+					]
+				},
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"The Vilderavn has advantage on saving throws against spells and other magical effects."
+					]
+				},
+				{
+					"name": "Shatter Loyalties",
+					"entries": [
+						"Any creature that is {@condition frightened} by the Vilderavn becomes paranoid that their allies will betray them. They cannot benefit from, or use, the Help action and do not gain flanking boni. In addition whenever the creature is subject to a beneficial magical effect it must make a {@dc 17} Wisdom saving throw. On a success the spell is cast normally, on a failure the spell has no effect."
+					]
+				},
+				{
+					"name": "Soul Eater",
+					"entries": [
+						"Whenever the Vilderavn reduces a humanoid to 0 hit points it can use a bonus action to tear out the humanoid's heart and consume its soul. The creature is immediately slain and the false life spell is cast on the Vilderavn at a level equal to 1/3rd (rounded down) of the creatures total hit dice. A creature slain in this manner can only return to life by slaying the vilderavn or by means of a wish spell. Any creature that can see this are immediately subject to the Vilderavn's Frightful Presence ability, even if they are immune from a previous successful save."
+					]
+				},
+				{
+					"name": "Swift Winds of Death (true only)",
+					"entries": [
+						"The Vilderavn has advantage on Dexterity saving throws, and it gains an additional action on each of its turns. That action can be used only to take the Attack (one weapon attack only), Dash, Disengage, Hide, or Use an Object action."
+					]
+				}
+			],
 			"action": [
 				{
 					"name": "Multiattack",
 					"entries": [
-						"The monk makes two attacks with its Demon Bolt or unarmed strikes. It can then use its Demonic Swathe, if available."
+						"The Vilderavn makes three weapon attacks, and uses its Misfortune ability if it can."
 					]
 				},
 				{
-					"name": "Demon Bolt",
+					"name": "Greatsword (true only)",
 					"entries": [
-						"RSA: {@hit 6} to hit, range 30ft., {@h}6 ({@damage 1d4 + 4}) necrotic damage."
+						"{@atk mw} {@hit 11} to hit, reach 5 ft., {@h}13 ({@damage 2d6 + 6}) slashing damage plus 14 ({@damage 4d6}) necrotic damage."
 					]
 				},
 				{
-					"name": "Unarmed Strike",
+					"name": "Bite (wolf only)",
 					"entries": [
-						"MWA: {@hit 6} to hit, reach 5 ft. {@h}6 ({@damage 1d4 + 4}) bludgeoning damage."
+						"{@atk mw} {@hit 11} to hit, reach 5 ft., {@h}13 ({@damage 2d6 + 6}) piercing damage plus 14 ({@damage 4d6}) necrotic damage. If the target is a creature, it must make a {@dc 16} Strength saving throw or be knocked {@condition prone}."
 					]
 				},
 				{
-					"name": "Demonic Swathe",
+					"name": "Rend (raven and hybrid only)",
 					"entries": [
-						"Each creature in a 15 ft. cone originating from the demon must succeed on a DC12 Dex save or take {@damage 4d6} necrotic damage."
+						"{@atk mw} {@hit 11} to hit, reach 5 ft., {@h}11 ({@damage 2d4 + 6}) piercing damage plus 14 ({@damage 4d6}) necrotic damage. The target must succeed on a {@dc 18} Constitution saving throw or have its hit point maximum reduced by an ammount equal to the necrotic damage taken. This reduction lasts until the creature finishes a long rest. The creature dies if this damage reduces its hit point maximum below 0."
+					]
+				},
+				{
+					"name": "Frightful Presence",
+					"entries": [
+						"Each creature of the Vilderavn's choice that is within 120 feet of the Vilderavn and aware of it must succeed on a {@dc 18} Wisdom saving throw or become {@condition frightened} for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, the creature is immune to the Vilderavn's Frightful Presence for the next 24 hours."
+					]
+				},
+				{
+					"name": "Misfortune {@recharge 5}",
+					"entries": [
+						"The Vilderavn can cause a creature to suffer grave misfortune. The creature must succeed on a {@dc 18} Wisdom saving throw. On a failure the target has disadvantage on all ability checks, attack rolls, and saving throws until the end of its next turn."
 					]
 				}
 			],
-			"tokenUrl": "https://imgur.com/fa1zvxD",
+			"legendary": [
+				{
+					"name": "Attack",
+					"entries": [
+						"The Vilderavn makes one weapon attack."
+					]
+				},
+				{
+					"name": "Shapechange",
+					"entries": [
+						"The Vilderavn uses its Shapechanging feature."
+					]
+				},
+				{
+					"name": "Frighten Foe (Costs 2 Actions; wolf and raven only)",
+					"entries": [
+						"The Vilderavn targets one enemy it can see within 30 feet of it. The target must succeed on a {@dc 18} Wisdom saving throw or be {@condition frightened} until the end of the Vilderavn's next turn."
+					]
+				},
+				{
+					"name": "Storm of Feathers (Costs 2 Actions; true and hybrid only)",
+					"entries": [
+						"Each creature within 10 feet of the Vilderavn must make a {@dc 18} Dexterity saving throw. On a failure the creature takes 27 ({@damage 5d10}) slashing damage, or half as much on a failed one."
+					]
+				},
+				{
+					"name": "Cast A Spell (Costs 3 Actions)",
+					"entries": [
+						"The Vilderavn casts a spell."
+					]
+				}
+			],
+			"legendaryGroup": {
+				"name": "Vilderavn",
+				"source": "FlundersHomebrew"
+			},
+			"tokenUrl": "https://i.imgur.com/rC2Mi31.png",
+			"traitTags": [
+				"Legendary Resistances",
+				"Magic Resistance",
+				"Shapechanger"
+			],
+			"senseTags": [
+				"U"
+			],
 			"actionTags": [
+				"Frightful Presence",
 				"Multiattack"
 			],
+			"languageTags": [
+				"TP",
+				"XX"
+			],
 			"damageTags": [
-				"B",
-				"N"
+				"N",
+				"P",
+				"S"
+			],
+			"spellcastingTags": [
+				"I"
+			],
+			"miscTags": [
+				"AOE",
+				"MW"
+			],
+			"conditionInflict": [
+				"frightened",
+				"prone"
 			]
 		}
 	]
