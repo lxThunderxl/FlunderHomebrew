@@ -1,5 +1,5 @@
 {
-	"siteVersion": "1.141.2",
+	"siteVersion": "1.142.0",
 	"_meta": {
 		"sources": [
 			{
@@ -13,8 +13,8 @@
 				"convertedBy": []
 			}
 		],
-		"dateAdded": 1636818856,
-		"dateLastModified": 1636818856
+		"dateAdded": 1638637256,
+		"dateLastModified": 1638637256
 	},
 	"monster": [
 		{
@@ -122,18 +122,13 @@
 			]
 		},
 		{
-			"name": "Barba Riccia (Berserker Armour)",
+			"name": "Barba Riccia (Dragonslayer Armour)",
 			"group": "Brennender Abgrund",
 			"isNpc": true,
 			"source": "FlundersHomebrew",
 			"page": 0,
 			"size": "M",
-			"type": {
-				"type": "humanoid",
-				"tags": [
-					"Half Orc"
-				]
-			},
+			"type": "undead",
 			"alignment": [
 				"L",
 				"E"
@@ -148,8 +143,8 @@
 				}
 			],
 			"hp": {
-				"formula": "12d8 + 36",
-				"average": 90
+				"formula": "15d12 + 45",
+				"average": 142
 			},
 			"speed": {
 				"walk": {
@@ -157,16 +152,20 @@
 					"condition": "(50ft. in Berserkers Frenzy)"
 				}
 			},
-			"str": 16,
-			"dex": 10,
+			"str": 20,
+			"dex": 12,
 			"con": 17,
 			"int": 9,
-			"wis": 11,
+			"wis": 9,
 			"cha": 9,
+			"skill": {
+				"athletics": "+9",
+				"acrobatics": "+5"
+			},
 			"senses": [
 				"Darkvision 60ft"
 			],
-			"passive": 10,
+			"passive": 9,
 			"resist": [
 				{
 					"resist": [
@@ -193,9 +192,8 @@
 				}
 			],
 			"languages": [
-				"Common",
-				"Orc",
-				"Abyssal"
+				"Understands Common and Orc",
+				"but can't speak"
 			],
 			"cr": "9",
 			"trait": [
@@ -203,12 +201,6 @@
 					"name": "Reckless",
 					"entries": [
 						"At the start of its turn, the barbarian can gain advantage on all melee weapon attack rolls during that turn, but attack rolls against it have advantage until the start of its next turn."
-					]
-				},
-				{
-					"name": "Beyond Death (3/Day)",
-					"entries": [
-						"When Barba is reduced to 0 hit points by an attack that isn't a critical hit, and is not killed outright, it can choose to fall to 1 hit point instead."
 					]
 				},
 				{
@@ -226,7 +218,7 @@
 				{
 					"name": "Berserkers Frenzy",
 					"entries": [
-						"As an action, the wearer of the armor can don the Berserker Armors helmet. Upon doing so the wearer gains +2 Strength, -2 Wisdom, +3 AC, +5 to melee attack and damage rolls, +20 ft. of movement, immunity to being {@condition frightened} or {@condition charmed}, advantage on Dexterity and Constitution Saving Throws.",
+						"As an action, the wearer of the armor can don the Berserker Armors helmet. Upon doing so the wearer gains +2 Strength, -2 Wisdom, +3 AC, +5 to melee attack and damage rolls and advantage advantage on Dexterity and Constitution Saving Throws.",
 						"Also the wearer must move toward a creature and attack it with every opportunity. They can not speak or understand any languages, and any creatures that attempt to telepathically communicate with them must succeed on a {@dc 14} Charisma Saving Throw or be {@condition frightened} for 1 minute. They can repeat the Saving Throw at the end of each of their turns.",
 						"If the wearers hit points fall to 0 while under the effect of Berserkers Fury, they can not fall unconcious. When the wearers negative hit points is equal to or greatuer than their maximum hit point total they die immediately.",
 						"On the first round of combat or when they become {@condition frightened}, the wearer must succeed on a DC12 Wisdom Saving Throw or have Berserkers Frenzy activate. To remove the Helmet and end the Berserkers Frenzy effects, the wearer must use a Bonus Action to make a DC19 Wisdom Saving Throw, kill all creatures within a 100ft radius of the wearer, be magically put to sleep, or die. A creature under the effects of astral projection or similar effect may grant a creature under the effects of Berserkers Frenzy within 5ft. advantage on the Saving Throw to escape Berserkers Frenzy. "
@@ -243,13 +235,33 @@
 				{
 					"name": "Dawn Blade",
 					"entries": [
-						"{@atk mw} {@hit 7} to hit, reach 5 ft., one target. {@h}10({@damage 2d6 + 3}) slashing damage, plus {@h}7({@damage 2d6}) necrotic damage. Additionally, if the target is a creature it must succeed on a DC10 Charisma saving throw or begin glooming in purple light (dim light, 10ft.). The light grants advantage on attack rolls agains the target, and it lasts until the start of the target's next turn. "
+						"{@atk mw} {@hit 9} to hit, reach 5 ft., one target. {@h}10({@damage 2d6 + 5}) slashing damage, plus {@h}7({@damage 2d6}) necrotic damage."
 					]
 				},
 				{
 					"name": "Dawn Blade (Berserkers Frenzy)",
 					"entries": [
-						"{@atk mw} {@hit 14} to hit, reach 5 ft., one target. {@h}17({@damage 2d6 + 10}) slashing damage, plus {@h}7({@damage 2d6}) necrotic damage. Additionally, if the target is a creature it must succeed on a DC10 Charisma saving throw or begin glooming in purple light (dim light, 10ft.). The light grants advantage on attack rolls agains the target, and it lasts until the start of the target's next turn. "
+						"{@atk mw} {@hit 10} to hit, reach 5 ft., one target. {@h}17({@damage 2d6 + 6}) slashing damage, plus {@h}7({@damage 2d6}) necrotic damage. "
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Attack",
+					"entries": [
+						"Barba makes one weapon attack"
+					]
+				},
+				{
+					"name": "Acrobatics",
+					"entries": [
+						"Barba moves for half of his movement without provoking opportunity attacks."
+					]
+				},
+				{
+					"name": "Cleave (Costs 2 Actions)",
+					"entries": [
+						"Every creature within 5ft. must make a {@dc 15} (17 in Berserkers Frenzy) Dexterity saving throw. On a failed save they take {@damage 4d6} slashing damage on a failed save or half as much on a successful one."
 					]
 				}
 			],
@@ -279,8 +291,8 @@
 				"Multiattack"
 			],
 			"languageTags": [
-				"AB",
 				"C",
+				"CS",
 				"O"
 			],
 			"damageTags": [
@@ -311,24 +323,24 @@
 				"E"
 			],
 			"ac": [
-				13,
+				14,
 				{
-					"ac": 16,
+					"ac": 17,
 					"condition": "with {@spell mage armor}",
 					"braces": true
 				}
 			],
 			"hp": {
-				"formula": "16d8 + 32",
-				"average": 104
+				"formula": "16d8 + 48",
+				"average": 120
 			},
 			"speed": {
 				"walk": 30
 			},
-			"str": 9,
+			"str": 6,
 			"dex": 16,
-			"con": 14,
-			"int": 18,
+			"con": 16,
+			"int": 20,
 			"wis": 12,
 			"cha": 11,
 			"save": {
@@ -336,8 +348,9 @@
 				"wis": "+6"
 			},
 			"skill": {
-				"arcana": "+9",
-				"history": "+9"
+				"arcana": "+13",
+				"history": "+9",
+				"investigation": "+9"
 			},
 			"senses": [
 				"Darkvision 60ft"
@@ -357,7 +370,7 @@
 				{
 					"name": "Spellcasting",
 					"headerEntries": [
-						"Skarm is a 16th-level spellcaster. Its spellcasting ability is Intelligence (spell save {@dc 17}, {@hit 9} to hit with spell attacks). The necromancer has the following wizard spells prepared:"
+						"Skarm is a 16th-level spellcaster. Its spellcasting ability is Intelligence (spell save {@dc 19}, {@hit 9} to hit with spell attacks). The necromancer has the following wizard spells prepared:"
 					],
 					"footerEntries": [
 						"*Necromancy spell of 1st level or higher",
@@ -448,6 +461,12 @@
 					"entries": [
 						"Skarm has advantage on saving throws against spells and other magical effects."
 					]
+				},
+				{
+					"name": "Command Evil (1/Day)",
+					"entries": [
+						"Skarm can use an action to cast the dominate monster spell on an evil target (save {@dc 18})."
+					]
 				}
 			],
 			"action": [
@@ -490,14 +509,14 @@
 			]
 		},
 		{
-			"name": "Alichino Harlequin (Dragon Lair)",
+			"name": "Alichino Harlequin (Undead)",
 			"group": "Brennender Abgrund",
 			"isNpc": true,
 			"source": "FlundersHomebrew",
 			"page": 0,
 			"size": "M",
 			"type": {
-				"type": "humanoid",
+				"type": "undead",
 				"tags": [
 					"Half Elf"
 				]
@@ -508,98 +527,83 @@
 			],
 			"ac": [
 				{
-					"ac": 15,
+					"ac": 17,
 					"from": [
 						"{@item studded leather armor|phb}"
 					]
 				}
 			],
 			"hp": {
-				"formula": "14d8 + 28",
-				"average": 140
+				"formula": "11d8 + 33",
+				"average": 82
 			},
 			"speed": {
 				"walk": 30
 			},
-			"str": 10,
-			"dex": 16,
-			"con": 14,
-			"int": 16,
-			"wis": 13,
-			"cha": 15,
+			"str": 15,
+			"dex": 20,
+			"con": 16,
+			"int": 9,
+			"wis": 9,
+			"cha": 9,
 			"save": {
-				"dex": "+5",
-				"int": "+5"
+				"dex": "+8",
+				"con": "+6"
 			},
 			"skill": {
-				"sleight of hand": "+7",
-				"stealth": "+5",
-				"deception": "+4",
-				"acrobatics": "+5",
-				"perception": "+3"
+				"sleight of hand": "+11",
+				"stealth": "+8",
+				"deception": "+2",
+				"acrobatics": "+8",
+				"perception": "+2"
 			},
 			"senses": [
 				"Darkvision 60ft."
 			],
-			"passive": 13,
+			"passive": 12,
+			"resist": [
+				"necrotic"
+			],
+			"immune": [
+				"cold"
+			],
+			"conditionImmune": [
+				"charmed",
+				"frightened"
+			],
 			"languages": [
 				"Common",
 				"Elf",
 				"Abyssal",
 				"Thieves Cant"
 			],
-			"cr": "4",
+			"cr": "8",
 			"spellcasting": [
 				{
 					"name": "Spellcasting",
 					"headerEntries": [
-						"Alichino is a 8th-level spellcaster. Its spellcasting ability is Intelligence (spell save {@dc 13}, +5 to hit with spell attacks). It has the following wizard spells prepared."
+						"Alichino is a 8th-level spellcaster. Its spellcasting ability is Constitution (spell save {@dc 14}, +6 to hit with spell attacks). It can innately cast the following spells, requiring no material components:"
 					],
-					"spells": {
-						"0": {
-							"spells": [
-								"{@spell fire bolt}",
-								"{@spell mage hand}",
-								"{@spell prestidigitation}"
-							]
-						},
-						"1": {
-							"spells": [
-								"{@spell charm person}",
-								"{@spell disguise self}",
-								"{@spell sleep}"
-							],
-							"slots": 4
-						},
-						"2": {
-							"spells": [
-								"{@spell invisibility}",
-								"{@spell phantasmal force}",
-								"{@spell rope trick}"
-							],
-							"slots": 2
-						}
+					"will": [
+						"{@spell find steed}",
+						"{@spell hunter's mark}"
+					],
+					"daily": {
+						"1": [
+							"{@spell conjure volley}",
+							"{@spell passwall}"
+						],
+						"3": [
+							"{@spell haste}",
+							"{@spell misty step}",
+							"{@spell pass without trace}"
+						]
 					},
-					"ability": "int",
+					"ability": "con",
 					"type": "spellcasting"
 				}
 			],
 			"trait": [
-				{
-					"name": "Invisible Hand",
-					"entries": [
-						"Alichino gains additional benefits when it casts mage hand. For a creature to notice the hand or the tasks the hand is performing, it must succeed on a Wisdom (Perception) check.",
-						"The hand created by the spell is {@condition invisible}.",
-						"The thief can use the hand to stow or retrieve one object into or from a container worn or carried by another creature, or to use its Thieves' Tools.",
-						"The thief can use its bonus action to control the hand, or to distract a creature within range of the spell. If it distracts a creature, it gains advantage on attack rolls against the target until the end of the thief's turn."
-					]
-				},
-				{
-					"name": "Sneak Attack (1/turn)",
-					"entries": [
-						"Once per turn, Alichino deals an extra 10 ({@damage 4d6}) damage when it hits a target with a weapon attack and has advantage on the attack roll, or when the target is within 5 feet of an ally of Alichino that isn't {@condition incapacitated} and Alichino doesn't have disadvantage on the attack roll."
-					]
-				},
 				{
 					"name": "Uncanny Action",
 					"entries": [
@@ -615,15 +619,27 @@
 			],
 			"action": [
 				{
-					"name": "Rapier",
+					"name": "Multiattack",
 					"entries": [
-						"{@atk mw,rw} {@hit 5} to hit, reach 5 ft., one target. {@h}8 ({@damage 1d8 + 3}) piercing damage."
+						"Alichino makes 2 melee attacks or 2 ranged attacks."
 					]
 				},
 				{
-					"name": "Hand Crossbow",
+					"name": "Shortsword",
 					"entries": [
-						"{@atk rw} {@hit 5} to hit, range 30/120 ft., one target. {@h}7 ({@damage 1d6 + 3}) piercing damage."
+						"{@atk mw} {@hit 8} to hit, reach 5 ft., one target. {@h}8 ({@damage 1d6 + 5}) piercing damage plus 9 ({@damage 2d8}) cold damage."
+					]
+				},
+				{
+					"name": "Longbow",
+					"entries": [
+						"{@atk rw} {@hit 8} to hit, range 150/600 ft., one target. {@h}9 ({@damage 1d8 + 5}) piercing damage plus 9 ({@damage 2d8}) cold damage."
+					]
+				},
+				{
+					"name": "Eldritch Shot {@recharge 5}",
+					"entries": [
+						"{@atk rw} {@hit 8} to hit, range 150/600 ft., one target. {@h}18 ({@damage 3d8 + 5}) force damage plus 18 ({@damage 3d8}) cold damage and the target must succeed on a {@dc 15} Constitution saving throw or have its speed reduced to 0 until the end of its next turn."
 					]
 				}
 			],
@@ -633,29 +649,25 @@
 				]
 			},
 			"tokenUrl": "https://i.imgur.com/1s9f4GY.png",
-			"traitTags": [
-				"Sneak Attack"
-			],
 			"senseTags": [
 				"D"
+			],
+			"actionTags": [
+				"Multiattack"
 			],
 			"languageTags": [
 				"AB",
 				"C"
 			],
 			"damageTags": [
+				"C",
+				"O",
 				"P"
-			],
-			"spellcastingTags": [
-				"CW"
 			],
 			"miscTags": [
 				"MW",
 				"RNG",
 				"RW"
-			],
-			"conditionInflict": [
-				"incapacitated"
 			]
 		},
 		{
@@ -1091,7 +1103,7 @@
 			]
 		},
 		{
-			"name": "Farfarello (CR9)",
+			"name": "Farfarello (Level 2 Lich)",
 			"group": "Brennender Abgrund",
 			"isNpc": true,
 			"source": "FlundersHomebrew",
@@ -1100,7 +1112,8 @@
 			"type": {
 				"type": "humanoid",
 				"tags": [
-					"any race"
+					"Tiefling",
+					"Undead"
 				]
 			},
 			"alignment": [
@@ -1115,27 +1128,27 @@
 				}
 			],
 			"hp": {
-				"average": 66,
-				"formula": "12d8 + 12"
+				"formula": "12d8 + 36",
+				"average": 90
 			},
 			"speed": {
 				"walk": 30
 			},
 			"str": 9,
 			"dex": 14,
-			"con": 12,
-			"int": 17,
-			"wis": 12,
+			"con": 16,
+			"int": 22,
+			"wis": 14,
 			"cha": 11,
 			"save": {
-				"int": "+7",
-				"wis": "+5"
+				"int": "+10",
+				"wis": "+6"
 			},
 			"skill": {
-				"arcana": "+7",
-				"history": "+7"
+				"arcana": "+10",
+				"history": "+10"
 			},
-			"passive": 11,
+			"passive": 12,
 			"resist": [
 				"necrotic"
 			],
@@ -1147,7 +1160,10 @@
 				{
 					"name": "Spellcasting",
 					"headerEntries": [
-						"The necromancer is a 12th-level spellcaster. Its spellcasting ability is Intelligence (spell save {@dc 15}, {@hit 7} to hit with spell attacks). The necromancer has the following wizard spells prepared:"
+						"The necromancer is a 12th-level spellcaster. Its spellcasting ability is Intelligence (spell save {@dc 18}, {@hit 10} to hit with spell attacks). The necromancer has the following wizard spells prepared:"
+					],
+					"footerEntries": [
+						"*Necromancy spell of 1st level or higher"
 					],
 					"spells": {
 						"0": {
@@ -1159,54 +1175,52 @@
 							]
 						},
 						"1": {
-							"slots": 4,
 							"spells": [
 								"{@spell false life}*",
 								"{@spell mage armor}",
 								"{@spell ray of sickness}*"
-							]
+							],
+							"slots": 4
 						},
 						"2": {
-							"slots": 3,
 							"spells": [
 								"{@spell blindness/deafness}*",
 								"{@spell ray of enfeeblement}*",
 								"{@spell web}"
-							]
+							],
+							"slots": 3
 						},
 						"3": {
-							"slots": 3,
 							"spells": [
 								"{@spell animate dead}*",
 								"{@spell bestow curse}*",
 								"{@spell vampiric touch}*"
-							]
+							],
+							"slots": 3
 						},
 						"4": {
-							"slots": 3,
 							"spells": [
 								"{@spell blight}*",
 								"{@spell dimension door}",
 								"{@spell stoneskin}"
-							]
+							],
+							"slots": 3
 						},
 						"5": {
-							"slots": 2,
 							"spells": [
 								"{@spell Bigby's hand}",
 								"{@spell cloudkill}"
-							]
+							],
+							"slots": 2
 						},
 						"6": {
-							"slots": 1,
 							"spells": [
-								"{@spell circle of death}*"
-							]
+								"{@spell circle of death}*",
+								"{@spell create undead}*"
+							],
+							"slots": 1
 						}
 					},
-					"footerEntries": [
-						"*Necromancy spell of 1st level or higher"
-					],
 					"ability": "int",
 					"type": "spellcasting"
 				}
@@ -1215,7 +1229,43 @@
 				{
 					"name": "Grim Harvest (1/Turn)",
 					"entries": [
-						"When necromancer kills a creature that is neither a construct nor undead with a spell of 1st level or higher, the necromancer regains hit points equal to twice the spell's level, or three times if it is a necromancy spell."
+						"When necromancer kills a creature that is neither a construct nor undead with a spell of 1st level or higher, the necromancer regains temporary hit points equal to twice the spell's level, or three times if it is a necromancy spell."
+					]
+				},
+				{
+					"name": "Undead Form",
+					"entries": [
+						"Whenever the lich would regain any hit points it instead gains an equal amount of temporary hit points. The necromancer does not require air, food drink or sleep and cannot age."
+					]
+				},
+				{
+					"name": "Harvester of Souls",
+					"entries": [
+						"Whenever the necromancer reduces a creature to 0 HP its soul is captured and the lich's phylactery becomes charged. The phylactery contains {@dice 3d4} charges at the start of a combat. On its turn as an action, the lich can consume any number of charge levels from its phylactery to regain a single spell slot of a level equal to a third of the charges consumed, rounded down."
+					]
+				},
+				{
+					"name": "Phylactery",
+					"entries": [
+						"Farfarello wears his phylactery as a necklace around his neck, which can be attacked if it is detected. The Phylactery has the following statistics: AC 18. HP 90. Immune to poison, psychich; bludgeoning piercing and slashing from non-magical sources. Resistant to necrotic, cold, thunder, lightning, force, fire. If the phylactery is destroyed the lich crumbles to dust. A captured soul gives the phylactery charges equal to its level/CR."
+					]
+				},
+				{
+					"name": "Puppetmaster",
+					"entries": [
+						"Undead creatures the lich animates with spells or abilities become permanently under his control. In addition, other creatures cannot gain control of undead the lich raised."
+					]
+				},
+				{
+					"name": "Rift to the Dreadscapes (1/Day)",
+					"entries": [
+						"As an action on your turn the lich can choose a point within 5ft. of itself to open a rift. Once opened the rift stretches out from that point to a 20-ft.-radius sphere. When another creature enters the rifts area for the first time on its turn, or starts its turn there it must make a Constitution saving throw against the Liches Spellsave DC. On a failed save the creature suffers {@damage 10d10} necrotic damage or half as much on a successful one. Undead are immune to the damage from this ability. The rift remains open for 1 minute, but closes if the lich drops unconcious."
+					]
+				},
+				{
+					"name": "Legendary Resistance (1/Day)",
+					"entries": [
+						"."
 					]
 				}
 			],
@@ -1227,12 +1277,47 @@
 					]
 				}
 			],
+			"legendary": [
+				{
+					"name": "Animate Dead",
+					"entries": [
+						"Farfarello casts Animate Dead"
+					]
+				},
+				{
+					"name": "Create Undead (Costs 3 Actions)",
+					"entries": [
+						"Farfarello uses the Create Undead spell to create a stronger undead (CR 5+). "
+					]
+				},
+				{
+					"name": "Cast a spell",
+					"entries": [
+						"Farfarello casts a cantrip or a spell of 1st level."
+					]
+				},
+				{
+					"name": "Command Undead",
+					"entries": [
+						"Farfarello commands up to 2 undead of CR 3 or lower to use their reaction to make a single melee or ranged weapon attack."
+					]
+				},
+				{
+					"name": "Command Greater Undead (Costs 2 Actions)",
+					"entries": [
+						"Farfarello commands one undead of CR 4 or higher to use their reaction to make a single melee or ranged weapon attack."
+					]
+				}
+			],
 			"fluff": {
 				"entries": [
 					"Necromancer des Brennenden Abgrunds"
 				]
 			},
 			"tokenUrl": "https://5e.tools/img/VGM/Necromancer.png?v=1.110.3",
+			"traitTags": [
+				"Legendary Resistances"
+			],
 			"languageTags": [
 				"X"
 			],
@@ -1471,34 +1556,38 @@
 				}
 			],
 			"hp": {
-				"formula": "7d8 + 14",
-				"average": 45
+				"formula": "10d10 + 20",
+				"average": 75
 			},
 			"speed": {
 				"walk": 30,
 				"swim": 30
 			},
 			"str": 10,
-			"dex": 17,
+			"dex": 20,
 			"con": 14,
 			"int": 10,
 			"wis": 15,
 			"cha": 8,
+			"save": {
+				"str": "+3",
+				"dex": "+8",
+				"con": "+5"
+			},
 			"skill": {
-				"perception": "+4",
-				"stealth": "+5",
-				"survival": "+4"
+				"perception": "+5",
+				"stealth": "+8",
+				"survival": "+5"
 			},
 			"senses": [
 				"Darkvision 120ft"
 			],
-			"passive": 14,
+			"passive": 15,
 			"languages": [
 				"Common",
-				"Dragonic",
-				"Undercommon"
+				"Draconic"
 			],
-			"cr": "4",
+			"cr": "6",
 			"trait": [
 				{
 					"name": "Surprise Attack (Recharges on a Short or Long Rest)",
@@ -1535,7 +1624,7 @@
 				{
 					"name": "Dart",
 					"entries": [
-						"{@atk mw,rw} {@hit 5} to hit, range 20/60 ft., one target. {@h}5 ({@damage 1d4 + 3}) piercing damage plus 5 ({@damage 2d4}) poison damage, and the target must succeed on a {@dc 13} Constitution saving throw or become {@condition poisoned} by the darts for 1 hour. If the target fails this save by 5 or more, it is also {@condition unconscious} while {@condition poisoned} in this way. The target wakes up if it takes damage or another creature takes an action to shake it awake."
+						"{@atk mw,rw} {@hit 8} to hit, range 20/60 ft., one target. {@h}5 ({@damage 1d4 + 5}) piercing damage plus 5 ({@damage 2d4}) poison damage, and the target must succeed on a {@dc 13} Constitution saving throw or become {@condition poisoned} by the darts for 1 hour. If the target fails this save by 5 or more, it is also {@condition unconscious} while {@condition poisoned} in this way. The target wakes up if it takes damage or another creature takes an action to shake it awake."
 					]
 				}
 			],
@@ -1561,7 +1650,7 @@
 			],
 			"languageTags": [
 				"C",
-				"U"
+				"DR"
 			],
 			"damageTags": [
 				"I",
@@ -1573,6 +1662,7 @@
 				"THW"
 			],
 			"conditionInflict": [
+				"invisible",
 				"poisoned"
 			]
 		},
@@ -8146,8 +8236,8 @@
 				}
 			],
 			"hp": {
-				"average": 66,
-				"formula": "12d8 + 12"
+				"formula": "13d8 + 13",
+				"average": 71
 			},
 			"speed": {
 				"walk": 30
@@ -8159,12 +8249,13 @@
 			"wis": 12,
 			"cha": 12,
 			"save": {
-				"int": "+9",
-				"wis": "+5"
+				"int": "+10",
+				"wis": "+6"
 			},
 			"skill": {
-				"arcana": "+9",
-				"history": "+9"
+				"arcana": "+10",
+				"history": "+10",
+				"religion": "+10"
 			},
 			"senses": [
 				"darkvision 60 ft."
@@ -8194,6 +8285,7 @@
 							"spells": [
 								"{@spell fire bolt}*",
 								"{@spell light}*",
+								"{@spell mending}",
 								"{@spell prestidigitation}",
 								"{@spell ray of frost}*"
 							]
@@ -8201,6 +8293,7 @@
 						"1": {
 							"spells": [
 								"{@spell burning hands}*",
+								"{@spell chromatic orb}",
 								"{@spell mage armor}",
 								"{@spell magic missile}*"
 							],
@@ -8224,6 +8317,7 @@
 						},
 						"4": {
 							"spells": [
+								"{@spell fire shield}",
 								"{@spell ice storm}*",
 								"{@spell stoneskin}"
 							],
@@ -8250,6 +8344,13 @@
 							"slots": 1
 						}
 					},
+					"will": [
+						"{@spell alarm}",
+						"{@spell comprehend languages}",
+						"{@spell detect magic}",
+						"{@spell identify}",
+						"{@spell Leomund's tiny hut}"
+					],
 					"ability": "int",
 					"type": "spellcasting"
 				}
@@ -8489,19 +8590,19 @@
 				{
 					"name": "Greatsword (true only)",
 					"entries": [
-						"{@atk mw} {@hit 11} to hit, reach 5 ft., {@h}13 ({@damage 2d6 + 6}) slashing damage plus 14 ({@damage 4d6}) necrotic damage."
+						"{@atk mw} {@hit 11} to hit, reach 5 ft., {@h}13 ({@damage 2d6 + 6}) slashing damage plus 7 ({@damage 2d6}) necrotic damage."
 					]
 				},
 				{
 					"name": "Bite (wolf only)",
 					"entries": [
-						"{@atk mw} {@hit 11} to hit, reach 5 ft., {@h}13 ({@damage 2d6 + 6}) piercing damage plus 14 ({@damage 4d6}) necrotic damage. If the target is a creature, it must make a {@dc 16} Strength saving throw or be knocked {@condition prone}."
+						"{@atk mw} {@hit 11} to hit, reach 5 ft., {@h}13 ({@damage 2d6 + 6}) piercing damage plus 7 ({@damage 2d6}) necrotic damage. If the target is a creature, it must make a {@dc 16} Strength saving throw or be knocked {@condition prone}."
 					]
 				},
 				{
 					"name": "Rend (raven and hybrid only)",
 					"entries": [
-						"{@atk mw} {@hit 11} to hit, reach 5 ft., {@h}11 ({@damage 2d4 + 6}) piercing damage plus 14 ({@damage 4d6}) necrotic damage. The target must succeed on a {@dc 18} Constitution saving throw or have its hit point maximum reduced by an ammount equal to the necrotic damage taken. This reduction lasts until the creature finishes a long rest. The creature dies if this damage reduces its hit point maximum below 0."
+						"{@atk mw} {@hit 11} to hit, reach 5 ft., {@h}11 ({@damage 2d4 + 6}) piercing damage plus 7 ({@damage 2d6}) necrotic damage. The target must succeed on a {@dc 18} Constitution saving throw or have its hit point maximum reduced by an ammount equal to the necrotic damage taken. This reduction lasts until the creature finishes a long rest. The creature dies if this damage reduces its hit point maximum below 0."
 					]
 				},
 				{
