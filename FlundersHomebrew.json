@@ -1,5 +1,5 @@
 {
-	"siteVersion": "1.142.0",
+	"siteVersion": "1.147.14",
 	"_meta": {
 		"sources": [
 			{
@@ -13,8 +13,8 @@
 				"convertedBy": []
 			}
 		],
-		"dateAdded": 1638637419,
-		"dateLastModified": 1638637419
+		"dateAdded": 1642272288,
+		"dateLastModified": 1642272288
 	},
 	"monster": [
 		{
@@ -158,6 +158,10 @@
 			"int": 9,
 			"wis": 9,
 			"cha": 9,
+			"save": {
+				"str": "+9",
+				"con": "+7"
+			},
 			"skill": {
 				"athletics": "+9",
 				"acrobatics": "+5"
@@ -229,19 +233,19 @@
 				{
 					"name": "Multiattack",
 					"entries": [
-						"Barba makes two attacks with Dawn Blade"
+						"Barba makes two attacks with the Dark Blade"
 					]
 				},
 				{
-					"name": "Dawn Blade",
+					"name": "Dark Blade",
 					"entries": [
 						"{@atk mw} {@hit 9} to hit, reach 5 ft., one target. {@h}10({@damage 2d6 + 5}) slashing damage, plus {@h}7({@damage 2d6}) necrotic damage."
 					]
 				},
 				{
-					"name": "Dawn Blade (Berserkers Frenzy)",
+					"name": "Dark Blade (Berserkers Frenzy)",
 					"entries": [
-						"{@atk mw} {@hit 10} to hit, reach 5 ft., one target. {@h}17({@damage 2d6 + 6}) slashing damage, plus {@h}7({@damage 2d6}) necrotic damage. "
+						"{@atk mw} {@hit 15} to hit, reach 5 ft., one target. {@h}17({@damage 2d6 + 6}) slashing damage, plus {@h}7({@damage 2d6}) necrotic damage. "
 					]
 				}
 			],
@@ -1667,11 +1671,11 @@
 			]
 		},
 		{
-			"name": "Cherub, der Ebenholz-Engel",
+			"name": "Cherub, the Ebon Angel",
 			"group": "Brennender Abgrund",
 			"isNamedCreature": true,
 			"source": "FlundersHomebrew",
-			"page": 216,
+			"page": 217,
 			"size": "H",
 			"type": "fiend",
 			"alignment": [
@@ -1767,7 +1771,7 @@
 				{
 					"name": "Regeneration (Cow)",
 					"entries": [
-						"The angel regains 10 hit points at the start of its turn. If the angel takes radiant damage or damage from a magic weapon, this trait doesn't function at the start of the angel's next turn. The angel dies only if it starts its turn with 0 hit points and doesn't regenerate."
+						"The angel regains 10 hit points at the start of its turn. If the angel takes radiant damage, this trait doesn't function at the start of the angel's next turn. The angel dies only if it starts its turn with 0 hit points and doesn't regenerate."
 					]
 				},
 				{
@@ -1821,7 +1825,7 @@
 				{
 					"name": "Wing Attack",
 					"entries": [
-						"The angel beats its wings. Each creature within 10 feet of the deep crow must succeed on a {@dc 17} Dexterity saving throw or take 10 ({@damage 3d6}) bludgeoning damage and be knocked {@condition prone}. The angel can then fly up to half its flying speed."
+						"The angel beats its wings. Each creature within 10 feet of the deep crow must succeed on a {@dc 17} Dexterity saving throw or take 10 ({@damage 3d6}) bludgeoning damage and be knocked {@condition prone}. The angel can then fly up to half its flying speed without provoking opportunity attacks."
 					]
 				},
 				{
@@ -1845,14 +1849,14 @@
 				}
 			],
 			"mythicHeader": [
-				"The angels mythic trait activates, if it starts its turn with 0 Hit Points and does not regenerate. Instead it uses the absorbed magical energy absorbed by spells cast around it.",
-				"It regains hitpoints equal to rolls of its hit dice times twice the level of all spells previously cast in the range of its Weave Absorption (Cantrips count as 1; minimum of 10)."
+				"The angels mythic trait activates, if it starts its turn with 0 Hit Points and does not regenerate. Instead it uses the absorbed magical energy absorbed by spells cast around it, activating its mythic trait. It regains hitpoints equal to rolls of its hit dice times twice the level of all spells previously cast in the range of its Weave Absorption (Cantrips count as 1; minimum of 10).",
+				"Additionally Cherub can use the following Mythic Actions as Legendary Actions"
 			],
 			"mythic": [
 				{
-					"name": "Mythic Action 1",
+					"name": "Cast a Spell",
 					"entries": [
-						"lore ipsum dolor"
+						"Cherub casts one spell absorbed by its Weave Absorption ability."
 					]
 				}
 			],
@@ -8687,6 +8691,322 @@
 				"frightened",
 				"prone"
 			]
+		},
+		{
+			"name": "Yuan-ti Anathema",
+			"source": "FlundersHomebrew",
+			"page": 202,
+			"size": "H",
+			"type": {
+				"type": "monstrosity",
+				"tags": [
+					"shapechanger",
+					"yuan-ti"
+				]
+			},
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 189,
+				"formula": "18d12 + 72"
+			},
+			"speed": {
+				"walk": 40,
+				"climb": 30,
+				"swim": 30
+			},
+			"str": 23,
+			"dex": 13,
+			"con": 19,
+			"int": 19,
+			"wis": 17,
+			"cha": 20,
+			"skill": {
+				"perception": "+7",
+				"stealth": "+5"
+			},
+			"senses": [
+				"darkvision 60 ft.",
+				"blindsight 30 ft."
+			],
+			"passive": 17,
+			"resist": [
+				"acid",
+				"fire",
+				"lightning"
+			],
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"poisoned"
+			],
+			"languages": [
+				"Abyssal",
+				"Common",
+				"Draconic"
+			],
+			"cr": "12",
+			"spellcasting": [
+				{
+					"name": "Innate Spellcasting (Anathema Form Only)",
+					"headerEntries": [
+						"The anathema's innate spellcasting ability is Charisma (spell save {@dc 17}). It can innately cast the following spells, requiring no material components:"
+					],
+					"will": [
+						"{@spell animal friendship} (snakes only)"
+					],
+					"daily": {
+						"1": [
+							"{@spell divine word}"
+						],
+						"3e": [
+							"{@spell darkness}",
+							"{@spell entangle}",
+							"{@spell fear}",
+							"{@spell haste}",
+							"{@spell suggestion}",
+							"{@spell polymorph}"
+						]
+					},
+					"ability": "cha",
+					"type": "spellcasting"
+				}
+			],
+			"trait": [
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"The anathema has advantage on saving throws against spells and other magical effects."
+					]
+				},
+				{
+					"name": "Ophidiophobia Aura",
+					"entries": [
+						"Any creature of the anathema's choice, other than a snake or a yuan-ti, that starts its turn within 30 feet of the anathema and can see or hear it must succeed on a {@dc 17} Wisdom saving throw or become {@condition frightened} of snakes and yuan-ti. A {@condition frightened} target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a target's saving throw is successful or the effect ends for it, the target is immune to this aura for the next 24 hours."
+					]
+				},
+				{
+					"name": "Shapechanger",
+					"entries": [
+						"The anathema can use its action to polymorph into a Huge giant constrictor snake, or back into its true form. its statistics are the same in each form. Any equipment it is wearing or carrying isn't transformed."
+					]
+				},
+				{
+					"name": "Six Heads",
+					"entries": [
+						"The anathema has advantage on Wisdom ({@skill Perception}) checks and on saving throws against being {@condition blinded}. {@condition charmed}, {@condition deafened}, {@condition frightened}, {@condition stunned}, or knocked {@condition unconscious}."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack (Anathema Form Only)",
+					"entries": [
+						"The anathema makes two claw attacks, one constrict attack, and one Flurry of Bites attack."
+					]
+				},
+				{
+					"name": "Claw (Anathema Form Only)",
+					"entries": [
+						"{@atk mw} {@hit 10} to hit, reach 10 ft., one target. {@h}13 ({@damage 2d6 + 6}) slashing damage."
+					]
+				},
+				{
+					"name": "Constrict",
+					"entries": [
+						"{@atk mw} {@hit 10} to hit, reach 15 ft., one Large or smaller creature. {@h}16 ({@damage 3d6 + 6}) bludgeoning damage plus 7 ({@damage 2d6}) acid damage, and the target is {@condition grappled} (escape {@dc 16}). Until this grapple ends, the target is {@condition restrained} and takes 16 ({@damage 3d6 + 6}) bludgeoning damage plus 7 ({@damage 2d6}) acid damage at the start of each of its turns, and the anathema can't constrict another target."
+					]
+				},
+				{
+					"name": "Flurry of Bites",
+					"entries": [
+						"{@atk mw} {@hit 10} to hit, reach 10 ft., one creature. {@h}27 ({@damage 4d6 + 6}) piercing damage plus 14 ({@damage 4d6}) poison damage."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Detect",
+					"entries": [
+						"The Yuan-Ti makes a perception check."
+					]
+				},
+				{
+					"name": "Move",
+					"entries": [
+						"The Yuan-Ti moves up to its movement speed."
+					]
+				},
+				{
+					"name": "Claw",
+					"entries": [
+						"The Yuan-Ti makes one claw attack"
+					]
+				},
+				{
+					"name": "Shed Skin (Costs 2 Actions; 1/day)",
+					"entries": [
+						"The Yuan-Ti sheds its skin to end one condition effecting it. It can take this Legendary Action even if it is {@condition incapacitated}."
+					]
+				}
+			],
+			"mythicHeader": [
+				"The Crystal in the Yuan-Ti Chamber has the following statistics:",
+				"HP: 75",
+				"AC: 16",
+				"resistance to all damage except magical weapons and force damage.",
+				"On initiative count 20, as long as the crystal is not destroyed, the Yuan-Ti can take one of the following Lair actions."
+			],
+			"mythic": [
+				{
+					"name": "Poisonous Gas",
+					"entries": [
+						"Poisonous gases erupt from underneath, covering a 15-feet-radius area centered on 2 points the Yuan-Ti can see within 120 feet of it until initiative count 20 on the next round. No creature inside the area can regain hit points until the effect ends."
+					]
+				},
+				{
+					"name": "Caustic Bile",
+					"entries": [
+						"The Yuanti fires 2 lines of Tasha's Caustic Brew spell (save {@dc 17}). The Yuan-Ti doesn't need to concentrate on the spells, which end on initiative count 20 of the next round."
+					]
+				},
+				{
+					"name": "Stinking Cloud",
+					"entries": [
+						"The Yuan-Ti casts the Stinking Cloud spell (save {@dc 17}), centered on a point she can see within 120 feet from her. It doesn't need to concentrate on the spell, which end on initiative count 20 of the next round."
+					]
+				}
+			],
+			"variant": [
+				{
+					"name": "Acid Slime",
+					"entries": [
+						"As a bonus action, the yuan-ti can coat its body in a slimy acid that lasts for 1 minute. A creature that touches the yuan-ti, hits it with a melee attack while within 5 feet of it, or is hit by its constrict attack takes 5 ({@damage 1d10}) acid damage."
+					],
+					"type": "variant"
+				}
+			],
+			"environment": [
+				"desert",
+				"forest",
+				"underdark"
+			],
+			"fluff": {
+				"name": "Yuan-ti Anathema",
+				"source": "VGM",
+				"entries": [
+					{
+						"type": "entries",
+						"entries": [
+							{
+								"type": "entries",
+								"entries": [
+									{
+										"type": "entries",
+										"entries": [
+											"Yuan-ti malisons who become priestly devotees of a particular god-be it Sseth, Dendar the Night Serpent, or Merrshaulk-often rise through the ranks to become spiritual leaders among the serpent folk. These priests perform sacrificial rites to appease their vile gods."
+										]
+									},
+									{
+										"type": "entries",
+										"name": "Yuan-ti Anathema",
+										"entries": [
+											"A yuan-ti abomination's quest for godhood might lead it to perform a ritual that, if successful, transforms it into an even greater form: a yuan-ti anathema. This ritual demands the sacrifice of hundreds of snakes and requires the abomination to bathe in the blood of its enemies. The transformation is quick yet painful.",
+											"Not all yuan-ti are eager to see one of their own become an anathema, since anathemas brutally subjugate their lessers for their own evil ends.",
+											{
+												"name": "Not Quite Divine",
+												"entries": [
+													" An anathema considers itself a demigod on the path to greater divinity. It demands obeisance from weaker yuan-ti and uses every resource at its disposal to launch small-scale wars against its neighbors. Each conquest brings new slaves and sacrifices, as well as glory and riches, that the anathema thinks it needs to achieve true divinity.",
+													"An anathema's most loyal yuan-ti followers see it as the pinnacle of the serpentine form, an unbelievable improvement on the nearly perfect abomination. Its devoted human followers think of it as \"divine flesh in a mortal body,\" and cultists serving an anathema tend to be more bloodthirsty and self-sacrificing in its presence."
+												],
+												"type": "entries"
+											},
+											{
+												"name": "Immortal",
+												"entries": [
+													" Anathemas don't age, allowing them to pursue their goals until the end of days. Truly powerful ones can grow to rule multiple yuan-ti cities and bring entire regions, including humanoid realms, under yuan-ti control."
+												],
+												"type": "entries"
+											}
+										]
+									}
+								]
+							}
+						]
+					}
+				],
+				"images": [
+					{
+						"type": "image",
+						"href": {
+							"type": "internal",
+							"path": "bestiary/VGM/Yuan-ti Anathema.jpg"
+						}
+					}
+				]
+			},
+			"tokenUrl": "https://5e.tools/img/VGM/Yuan-ti Anathema.png",
+			"soundClip": {
+				"type": "external",
+				"url": "https://5e.tools/audio/bestiary/yuan-ti-anathema.mp3"
+			},
+			"traitTags": [
+				"Magic Resistance",
+				"Shapechanger"
+			],
+			"senseTags": [
+				"B",
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"AB",
+				"C",
+				"DR"
+			],
+			"damageTags": [
+				"A",
+				"B",
+				"I",
+				"P",
+				"S"
+			],
+			"spellcastingTags": [
+				"F",
+				"I"
+			],
+			"miscTags": [
+				"MW",
+				"RCH"
+			],
+			"conditionInflict": [
+				"frightened",
+				"grappled",
+				"restrained"
+			],
+			"conditionInflictSpell": [
+				"blinded",
+				"charmed",
+				"deafened",
+				"frightened",
+				"restrained",
+				"stunned"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
 		}
 	]
 }
