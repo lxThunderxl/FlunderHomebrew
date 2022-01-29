@@ -1,5 +1,5 @@
 {
-	"siteVersion": "1.147.14",
+	"siteVersion": "1.147.16",
 	"_meta": {
 		"sources": [
 			{
@@ -13,8 +13,8 @@
 				"convertedBy": []
 			}
 		],
-		"dateAdded": 1642272288,
-		"dateLastModified": 1642272288
+		"dateAdded": 1643474454,
+		"dateLastModified": 1643474454
 	},
 	"monster": [
 		{
@@ -9007,6 +9007,383 @@
 			],
 			"hasFluff": true,
 			"hasFluffImages": true
+		},
+		{
+			"name": "Legendary Najarala",
+			"group": [
+				"Snake Wyverns"
+			],
+			"source": "FlundersHomebrew",
+			"page": 0,
+			"size": "G",
+			"type": {
+				"type": "wyvern",
+				"tags": [
+					"snake"
+				]
+			},
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 19,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"formula": "16d20 + 80",
+				"average": 248
+			},
+			"speed": {
+				"walk": 50,
+				"burrow": 50,
+				"climb": 50
+			},
+			"str": 16,
+			"dex": 22,
+			"con": 21,
+			"int": 10,
+			"wis": 18,
+			"cha": 9,
+			"save": {
+				"wis": "+9",
+				"cha": "+4"
+			},
+			"skill": {
+				"perception": "+14",
+				"stealth": "+11"
+			},
+			"senses": [
+				"blindsight 60 ft.",
+				"darkvision 120 ft."
+			],
+			"passive": 24,
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"poisoned"
+			],
+			"cr": "16",
+			"trait": [
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"The najarala has advantage on saving throws against spells and other magical effects."
+					]
+				},
+				{
+					"name": "Surround",
+					"entries": [
+						"The najarala can freely enter a large or smaller creatures space. If the creature is within the inner space of the najarala it is surrounded. A surrounded creature is trapped (escape {@dc 19}) by the najarala's body. A creature can also escape by flying or burrowing out of the area."
+					]
+				},
+				{
+					"name": "Squeeze",
+					"entries": [
+						"As a bonus action, the najarala can use its constrict against a {@condition grappled} creature or one within the najarala's space."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"The najarala makes two attacks. one with its bite and one with its tail. It can't make both attacks against the same target. Or it makes two sonic scale attacks."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 11} to hit, reach 10 ft., one target. {@damage 4d8 + 6} piercing damage, and the target must make a {@dc 18} Constitution saving throw, or become {@condition paralyzed} for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+					]
+				},
+				{
+					"name": "Tail",
+					"entries": [
+						"{@atk mw} {@hit 11} to hit, reach 15 ft., one target{@damage 4d10 + 6} bludgeoning damage."
+					]
+				},
+				{
+					"name": "Constrict",
+					"entries": [
+						"{@atk mw} {@hit 9} to hit, reach 0 ft., one creature.{@damage 4d8 + 4} bludgeoning damage, and the target is {@condition grappled} (escape {@dc 18}). Until this grapple ends, the creature is {@condition restrained}, and the najarala can't constrict another target."
+					]
+				},
+				{
+					"name": "Sonic Scale",
+					"entries": [
+						"{@atk rw} {@hit 11} to hit, range 80/320 ft., one target {@damage 4d6 + 6} thunder damage and the target must make a {@dc 18} Constitution saving throw or become {@condition deafened} for 1 minute."
+					]
+				},
+				{
+					"name": "Sonic Blast {@recharge 5}",
+					"entries": [
+						"The najarala releases a sonic blast in a 60-line. Each creature in the line must make a {@dc 16} Constitution saving throw, taking {@damage 9d6} thunder damage on a failed save, or half as much damage on a successful one. If the blast hits one of its scales, it bounces off it (destroying the scale) in a random direction for another 60 ft. and deals an extra {@damage 4d6} thunder damage for each scale it bounces off of (1 is north, clockwise)."
+					]
+				}
+			],
+			"legendaryActions": 2,
+			"legendary": [
+				{
+					"name": "Scales",
+					"entries": [
+						"The najarala flings three scales into unoccupied spaces within 60 feet of it. Each scale must land in a space at least 10 feet away from another scale and fills a 5-foot-squared cube. Each scale can be attacked and destroyed (AC 15; 10 hit points; immunity to poison and psychic damage)."
+					]
+				},
+				{
+					"name": "Tail",
+					"entries": [
+						"The najarala makes one tail attack."
+					]
+				},
+				{
+					"name": "Slither (Costs 2 Actions)",
+					"entries": [
+						"The najarala moves up to its speed on its belly without provoking attacks of opportunity. During this move it can move through other creatures. Each creature the najarala moves through is knocked {@condition prone} and must succeed on a {@dc 17} Dexterity saving throw or take 24 ({@damage 4d8 + 6}) bludgeoning damage on a failed save."
+					]
+				}
+			],
+			"environment": [
+				"desert",
+				"hill",
+				"swamp"
+			],
+			"fluff": {
+				"entries": [
+					{
+						"type": "entries",
+						"entries": [
+							"Najarala is a large Snake Wyvern with bright green skin adorned with large orange-yellow plates on its back and tail. It has a long serpentine body with small though fully functional fore- and hindlimbs that aid it in moving around on uneven ground. Najarala are stealthy hunters that ruthlessly ambush their targets. It has a large beak-like mouth similar to that of a parrot. This beak is used to rip chunks of flesh from its prey and then swallow said chunks whole. While feeding on prey, it will use its arms to hold on to its prey while ripping off chunks of flesh.",
+							"The length of a Najarala surpasses some of the largest leviathans such as {@creature Agnaktor|MHMM} or {@creature Lagiacrus|MHMM}. As many would notice these creatures have short, yet powerful arms and legs. At first glance these limbs appear to be useless but in reality they enable the creatures to support itself when rearing up. Another fascinating feature is that the creature has a specialized organ on its back that is vibrated by air and creates unique sound waves. This auditory organ has a biological effect in the surrounding area. Najarala have beautiful plates on both its neck and tail that will rattle when upset, giving unwelcome creatures an early warning. The plates on its tail can be thrown at its enemies and will explode creating a loud burst of sound like a sonic bomb. This will stun both prey and enemies alike.",
+							{
+								"type": "inset",
+								"name": "Najarala",
+								"entries": [
+									{
+										"type": "table",
+										"colStyles": [
+											"col-1 bold",
+											"col-1",
+											"col-2 bold text-right",
+											"col-1 text-center"
+										],
+										"rows": [
+											[
+												"Challenge Rating",
+												"9",
+												"Carves/Capture",
+												"3"
+											]
+										]
+									},
+									{
+										"type": "table",
+										"colLabels": [
+											"Carve Chance",
+											"Capture Chance",
+											"Material",
+											"Slots"
+										],
+										"colStyles": [
+											"col-1 text-center",
+											"col-1 text-center",
+											"col-2 text-center",
+											"col-1 text-center"
+										],
+										"rows": [
+											[
+												"1-7",
+												"1-4",
+												"Najarala Shell",
+												"(A,W)"
+											],
+											[
+												"8-11",
+												"5-9",
+												"Najarala Fang",
+												"(W)"
+											],
+											[
+												"12-14",
+												"10-12",
+												"Najarala Hide",
+												"(A)"
+											],
+											[
+												"15-18",
+												"13-15",
+												"Najarala Sounder",
+												"(W)"
+											],
+											[
+												"-",
+												"16-17",
+												"N.Paralysis Sac",
+												"(A,W)"
+											],
+											[
+												"19",
+												"18-19",
+												"Najarala Marrow",
+												"(W)"
+											],
+											[
+												"20",
+												"20",
+												"Chilling Beak",
+												"(A,W)"
+											]
+										]
+									},
+									{
+										"type": "list",
+										"style": "list-hang",
+										"name": "ARMOR MATERIAL EFFECTS",
+										"items": [
+											{
+												"type": "entries",
+												"name": "Najarala Shell",
+												"entries": [
+													"While you are wearing this armor, you can use your reaction or bonus action to gain resistance to fire damage until the end of your next turn. You can use this property twice, regaining all uses when you finish a long rest."
+												]
+											},
+											{
+												"type": "entries",
+												"name": "Najarala Hide",
+												"entries": [
+													"{@i Earplugs.} While you are attuned to this armor, you can use a bonus action to conjure two earplugs in the shape of your choice. While using these earplugs, you are considered {@condition deafened} and you have advantage on saving throws against thunder damage. You can dispel the ear plugs as a bonus action ending the deafened effect."
+												]
+											},
+											{
+												"type": "entries",
+												"name": "N.Paralysis Sac",
+												"entries": [
+													"You cannot be {@condition paralyzed} while you wear this armor."
+												]
+											},
+											{
+												"type": "entries",
+												"name": "Chilling Beak",
+												"entries": [
+													"You have resistance to necrotic damage while you wear this armor."
+												]
+											}
+										]
+									},
+									{
+										"type": "list",
+										"style": "list-hang",
+										"name": "WEAPON MATERIAL EFFECTS",
+										"items": [
+											{
+												"type": "entries",
+												"name": "Najarala Shell",
+												"entries": [
+													"{@i Capturer.} When you capture a creature, you gain one additional material from it."
+												]
+											},
+											{
+												"type": "entries",
+												"name": "Najarala Fang",
+												"entries": [
+													"Your weapon deals an extra 1d4 slashing damage."
+												]
+											},
+											{
+												"type": "entries",
+												"name": "Najarala Sounder",
+												"entries": [
+													"Your weapon deals an extra 1d6 slashing damage."
+												]
+											},
+											{
+												"type": "entries",
+												"name": "N.Paralysis Sac",
+												"entries": [
+													"This weapon has 3 runes which are regained every day at dawn. When you hit a creature with this weapon, you may expend a rune to have the target make a {@dc 14} Constitution saving throw. On a fail the creature is {@condition incapacitated} and has its movement speed is reduced to 0 for 1 minute. The creature may repeat its saving throw at the end of its turn, ending the effect on a success."
+												]
+											},
+											{
+												"type": "entries",
+												"name": "Najarala Marrow",
+												"entries": [
+													"{@i Capture Expert.} {@item Tranq bomb|AGMH}s & {@item tranq ammo (1)|AGMH|ammo} roll an extra 3d8 when they hit a creature."
+												]
+											},
+											{
+												"type": "entries",
+												"name": "Chilling Beak",
+												"entries": [
+													"{@i (Melee Weapon only)} When you hit a creature with this weapon, you can choose to reduce the damage you deal by half to {@action grapple} the target."
+												]
+											}
+										]
+									}
+								]
+							}
+						]
+					}
+				]
+			},
+			"tokenUrl": "https://i.imgur.com/XcXdOls.png",
+			"traitTags": [
+				"Magic Resistance"
+			],
+			"senseTags": [
+				"B",
+				"SD"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"B"
+			],
+			"miscTags": [
+				"MW",
+				"RCH",
+				"RW"
+			],
+			"conditionInflict": [
+				"deafened",
+				"grappled",
+				"paralyzed",
+				"prone",
+				"restrained"
+			]
+		},
+		{
+			"name": "Najarala Scale",
+			"source": "FlundersHomebrew",
+			"page": 169,
+			"size": "M",
+			"type": "construct",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				15
+			],
+			"hp": {
+				"special": "10"
+			},
+			"speed": {},
+			"str": 0,
+			"dex": 0,
+			"con": 0,
+			"int": 0,
+			"wis": 0,
+			"cha": 0,
+			"passive": 0,
+			"immune": [
+				"poison",
+				"psychic"
+			],
+			"tokenUrl": "https://i.imgur.com/L96f6bT.png"
 		}
 	]
 }
