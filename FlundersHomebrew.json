@@ -1,5 +1,5 @@
 {
-	"siteVersion": "1.147.16",
+	"siteVersion": "1.149.1",
 	"_meta": {
 		"sources": [
 			{
@@ -13,8 +13,8 @@
 				"convertedBy": []
 			}
 		],
-		"dateAdded": 1643474454,
-		"dateLastModified": 1643474454
+		"dateAdded": 1644689531,
+		"dateLastModified": 1644689531
 	},
 	"monster": [
 		{
@@ -9384,6 +9384,566 @@
 				"psychic"
 			],
 			"tokenUrl": "https://i.imgur.com/L96f6bT.png"
+		},
+		{
+			"name": "Ruthless Fire Apprentice",
+			"source": "FlundersHomebrew",
+			"page": 221,
+			"size": "M",
+			"sizeNote": "or small",
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"druid"
+				]
+			},
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"{@item scale mail|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 44,
+				"formula": "8d8 + 8"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 10,
+			"dex": 14,
+			"con": 13,
+			"int": 12,
+			"wis": 15,
+			"cha": 11,
+			"save": {
+				"con": "+3",
+				"wis": "+4"
+			},
+			"skill": {
+				"medicine": "+4",
+				"nature": "+5",
+				"perception": "+6"
+			},
+			"passive": 16,
+			"resist": [
+				"fire"
+			],
+			"languages": [
+				"Common plus any two languages"
+			],
+			"cr": "2",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"The apprentice casts one of the following spells, requiring no material components and using Wisdom as the spellcasting ability:"
+					],
+					"will": [
+						"{@spell druidcraft}",
+						"{@spell spare the dying}"
+					],
+					"daily": {
+						"1e": [
+							"{@spell pass without trace}"
+						]
+					},
+					"ability": "wis",
+					"displayAs": "action",
+					"type": "spellcasting"
+				}
+			],
+			"trait": [
+				{
+					"name": "Regeneration",
+					"entries": [
+						"The apprentice regains 5 hit points at the start of its turn if it has at least 1 hit point."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Flaming Vine",
+					"entries": [
+						"{@atk ms} {@hit 4} to hit, reach 15 ft., one target. {@h}7 ({@damage 1d10 + 2}) piercing damage plus 9 ({@damage 2d8}) fire damage. If the target is a Large or smaller creature, the apprentice can pull it up to 10 feet closer to itself."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Firey Spark",
+					"entries": [
+						"When the apprentice sees a creature within 30 feet of itself drop to 0 hit points, the apprentice channels the expended life essence and targets another creature it can see within 30 feet of itself. The target must succeed on a {@dc 12} Constitution saving throw or become sheathed in flame for 1 minute. While covered in flames the target has disadvantage on attack rolls and ability checks. Also the target takes 3 ({@damage 1d6}) fire damage at the start of each of its turns. The target can repeat the save at the end of each of its turns, ending the effect on itself on a success."
+					]
+				}
+			],
+			"fluff": {
+				"name": "Witherbloom Apprentice",
+				"source": "SCC",
+				"entries": [
+					{
+						"type": "entries",
+						"entries": [
+							"Deep in the fog and muck of the swamp, the students of Witherbloom College—first as apprentices and then as pledgemages—study the cycle of life and death. Their magic is fueled by what they call life essence: the ubiquitous energy that runs through living things.",
+							"Witherbloom students learn how to concoct magical potions and talismans, in addition to their spellcasting studies. Their magic ranges from necrotic shadows and withering bursts of poison to flourishing bursts of plant life."
+						]
+					},
+					{
+						"type": "section",
+						"entries": [
+							{
+								"type": "entries",
+								"name": "Witherbloom Scholars",
+								"entries": [
+									"Witherbloom College studies the magic inherent in the natural cycle of life and death. Witherbloom professors approach the philosophy from different directions, with one methodology focusing on decay and the other dealing with growth."
+								]
+							}
+						]
+					}
+				],
+				"images": [
+					{
+						"type": "image",
+						"href": {
+							"type": "internal",
+							"path": "bestiary/SCC/Witherbloom Apprentice.webp"
+						}
+					}
+				]
+			},
+			"tokenUrl": "https://i.imgur.com/3qQPr2t.png",
+			"traitTags": [
+				"Regeneration"
+			],
+			"languageTags": [
+				"C",
+				"X"
+			],
+			"damageTags": [
+				"F",
+				"P"
+			],
+			"miscTags": [
+				"RCH"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Ruthless Fire Pledgemage",
+			"source": "FlundersHomebrew",
+			"page": 205,
+			"size": "M",
+			"sizeNote": "or small",
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"druid"
+				]
+			},
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"{@item scale mail|phb}"
+					]
+				}
+			],
+			"hp": {
+				"average": 66,
+				"formula": "12d8 + 12"
+			},
+			"speed": {
+				"walk": 35
+			},
+			"str": 10,
+			"dex": 15,
+			"con": 13,
+			"int": 12,
+			"wis": 17,
+			"cha": 14,
+			"save": {
+				"dex": "+4",
+				"wis": "+5"
+			},
+			"skill": {
+				"acrobatics": "+4",
+				"athletics": "+4",
+				"nature": "+5"
+			},
+			"passive": 13,
+			"resist": [
+				"cold",
+				"fire"
+			],
+			"languages": [
+				"Common plus any two languages"
+			],
+			"cr": "4",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"The pledgemage casts one of the following spells, requiring no material components and using Charisma as the spellcasting ability (spell save {@dc 13}):"
+					],
+					"will": [
+						"{@spell minor illusion}"
+					],
+					"daily": {
+						"2e": [
+							"{@spell gust of wind}",
+							"{@spell silent image}"
+						],
+						"1e": [
+							"{@spell ashardalon's stride|FTD}",
+							"{@spell water walk}"
+						]
+					},
+					"ability": "cha",
+					"type": "spellcasting"
+				}
+			],
+			"trait": [
+				{
+					"name": "Evasion",
+					"entries": [
+						"If the pledgemage is subjected to an effect that allows it to make a Dexterity saving throw to take only half damage, the pledgemage instead takes no damage if it succeeds on the saving throw and only half damage if it fails, provided it isn't {@condition incapacitated}."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"The pledgemage makes two Elemental Strike attacks."
+					]
+				},
+				{
+					"name": "Elemental Strike",
+					"entries": [
+						"{@atk ms,rs} {@hit 5} to hit, reach 5 ft. or range 60 ft., one target. {@h}12 ({@damage 3d6 + 2}) fire damage"
+					]
+				},
+				{
+					"name": "Showstopper (1/Day)",
+					"entries": [
+						"The pledgemage shines with elemental magic, targeting one creature it can see within 60 feet of itself. The target must make a {@dc 13} Wisdom saving throw. On a failed save, the target takes 28 ({@damage 8d6}) fire damage and is {@condition stunned} until the start of the pledgemage's next turn. On a successful save, the target takes half as much damage and isn't {@condition stunned}."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Surge of Artistry (Recharge 4-6)",
+					"entries": [
+						"The pledgemage moves up to its speed, surrounding itself with elemental magic as it moves. Until the end of its turn, the pledgemage can move through the space of other creatures. The first time the pledgemage enters a creature's space on a turn, that creature must succeed on a {@dc 13} Dexterity saving throw or be knocked {@condition prone}. If the pledgemage ends its turn in another creature's space, the pledgemage takes 5 ({@damage 1d10}) force damage and is pushed into the nearest unoccupied space."
+					]
+				}
+			],
+			"fluff": {
+				"name": "Prismari Pledgemage",
+				"source": "SCC",
+				"entries": [
+					{
+						"type": "entries",
+						"entries": [
+							"The students of Prismari College—first as apprentices and then as pledgemages—see no distinction between magic and art. No two Prismari students have the same style of spellcasting; each wields the elemental magic taught by the college in a way that expresses their personality. In the hands of Prismari students, spells that conjure fire or bend water to one's will become vibrant and expressive showcases, thrumming with creative energy.",
+							"Harnessing the elemental forces of their magic requires precision and grace, and some students dedicate themselves to chasing the ideal of perfect control, hoping that by doing so, they can accurately express what is churning within their minds."
+						]
+					},
+					{
+						"type": "section",
+						"entries": [
+							{
+								"type": "entries",
+								"name": "Prismari Scholars",
+								"entries": [
+									"The scholars of Prismari College believe that art is the truest form of spellcraft. They use magic to make splendid art, and they employ artistry to make their magic spectacular."
+								]
+							}
+						]
+					}
+				]
+			},
+			"tokenUrl": "https://i.imgur.com/BPocwJJ.png",
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"X"
+			],
+			"damageTags": [
+				"F",
+				"O"
+			],
+			"conditionInflict": [
+				"prone",
+				"stunned"
+			],
+			"hasFluff": true
+		},
+		{
+			"name": "Ruthless Fire Leader",
+			"source": "FlundersHomebrew",
+			"page": 206,
+			"size": "M",
+			"sizeNote": "or small",
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"druid"
+				]
+			},
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"{@item scale mail|phb}"
+					]
+				}
+			],
+			"hp": {
+				"average": 97,
+				"formula": "15d8 + 30"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 14,
+			"dex": 16,
+			"con": 15,
+			"int": 13,
+			"wis": 19,
+			"cha": 15,
+			"save": {
+				"dex": "+6",
+				"int": "+4",
+				"wis": "+7",
+				"cha": "+5"
+			},
+			"skill": {
+				"acrobatics": "+6",
+				"arcana": "+4",
+				"athletics": "+5",
+				"perception": "+7",
+				"nature": "+7"
+			},
+			"passive": 17,
+			"resist": [
+				"cold"
+			],
+			"immune": [
+				"fire"
+			],
+			"languages": [
+				"Common plus any four languages"
+			],
+			"cr": "7",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"The professor casts one of the following spells, requiring no material components and using Charisma as the spellcasting ability (spell save {@dc 15}):"
+					],
+					"will": [
+						"{@spell control flames|XGE}",
+						"{@spell minor illusion}"
+					],
+					"daily": {
+						"1": [
+							"{@spell wall of fire}"
+						],
+						"2e": [
+							"{@spell control water}",
+							"{@spell create or destroy water}",
+							"{@spell heat metal}",
+							"{@spell stone shape}"
+						]
+					},
+					"ability": "cha",
+					"type": "spellcasting"
+				}
+			],
+			"trait": [
+				{
+					"name": "Lava Walking",
+					"entries": [
+						"The professor can walk across water, lava and other liquids as if they were solid ground."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"The Leader makes two Firey Strike attacks."
+					]
+				},
+				{
+					"name": "Firey Strike",
+					"entries": [
+						"{@atk ms,rs} {@hit 7} to hit, reach 5 ft. or range 60 ft., one target. {@h}13 ({@damage 2d8 + 4}) fire damage."
+					]
+				}
+			],
+			"fluff": {
+				"name": "Prismari Professor of Perfection",
+				"source": "SCC",
+				"entries": [
+					{
+						"type": "entries",
+						"entries": [
+							"Professors of perfection combine elemental magic with precise, forceful physical motion. Their sweeping gestures and dance-like steps gather the power of crashing waves, conjure the protection of unyielding stone, and shape great structures of ice. Binding and channeling these natural elements allow the professors to mold their environment to their needs, both for breathtaking performances and to control the fabric of a battlefield against their foes.",
+							"These teachers stress attention to fine details, drilling their students on the most minuscule points. The perfect foundation ultimately leads to a flawless work of art, and the professors of perfection produce sculptural and architectural marvels."
+						]
+					},
+					{
+						"type": "section",
+						"entries": [
+							{
+								"type": "entries",
+								"name": "Prismari Scholars",
+								"entries": [
+									"The scholars of Prismari College believe that art is the truest form of spellcraft. They use magic to make splendid art, and they employ artistry to make their magic spectacular."
+								]
+							}
+						]
+					}
+				]
+			},
+			"tokenUrl": "https://i.imgur.com/9VUqVGf.png",
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"X"
+			],
+			"damageTags": [
+				"F"
+			],
+			"hasFluff": true
+		},
+		{
+			"name": "Ruthless Fire Spirit",
+			"source": "FlundersHomebrew",
+			"page": 194,
+			"size": "L",
+			"type": "elemental",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 13,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 68,
+				"formula": "8d10 + 24"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 20,
+			"dex": 10,
+			"con": 17,
+			"int": 4,
+			"wis": 13,
+			"cha": 7,
+			"skill": {
+				"perception": "+3",
+				"acrobatics": "+4"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 13,
+			"resist": [
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical weapons"
+				}
+			],
+			"immune": [
+				"fire"
+			],
+			"cr": "4",
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"The Spirit makes one Bite attack and one Swamp Claw attack."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 7} to hit, reach 5 ft., one target. {@h}9 ({@damage 1d8 + 5}) fire damage."
+					]
+				},
+				{
+					"name": "Swamp Claw",
+					"entries": [
+						"{@atk mw} {@hit 7} to hit, reach 5 ft., one target. {@h}8 ({@damage 1d6 + 5}) fire damage. If the target is a Medium or smaller creature, it must succeed on a {@dc 15} Strength saving throw or become engulfed by the Spirit. While engulfed, the target can't breathe, is {@condition restrained}, and takes 10 ({@damage 3d6}) fire damage at the start of each of its turns. When the Spirit moves, the engulfed target moves with it. The Spirit can have only one target engulfed at a time.",
+						"An engulfed target can repeat the saving throw at the end of its turns. On a success, the target escapes and enters the nearest unoccupied space."
+					]
+				}
+			],
+			"fluff": {
+				"name": "Groff",
+				"source": "SCC",
+				"entries": [
+					{
+						"type": "entries",
+						"entries": [
+							"Many a Strixhaven student wandering the bayou has stepped on a seemingly mundane patch of moss—only to discover that it was the back of a hungry groff lurking beneath the surface. These shaggy swamp creatures have canine faces and glowing blue eyes, and they are ravenous carnivores—with pest mascots being their favorite food. A handful of more intrepid Witherbloom mages have learned to follow groffs in order to track down pest mascots, but most of these mages have yet to find a way to capture the pests before the groff eats someone."
+						]
+					}
+				],
+				"images": [
+					{
+						"type": "image",
+						"href": {
+							"type": "internal",
+							"path": "bestiary/SCC/Groff.webp"
+						}
+					}
+				]
+			},
+			"tokenUrl": "https://i.imgur.com/Hd9eSgj.png",
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"F"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
 		}
 	]
 }
