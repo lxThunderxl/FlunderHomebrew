@@ -1,5 +1,5 @@
 {
-	"siteVersion": "1.160.1",
+	"siteVersion": "1.165.1",
 	"_meta": {
 		"sources": [
 			{
@@ -13,8 +13,8 @@
 				"convertedBy": []
 			}
 		],
-		"dateAdded": 1656185379,
-		"dateLastModified": 1656185379
+		"dateAdded": 1659203708,
+		"dateLastModified": 1659203708
 	},
 	"monster": [
 		{
@@ -2158,6 +2158,225 @@
 			],
 			"conditionInflict": [
 				"prone"
+			]
+		},
+		{
+			"name": "Cir - Avatar of Gargauth",
+			"source": "FlundersHomebrew",
+			"page": 0,
+			"size": [
+				"L"
+			],
+			"type": {
+				"type": "fiend",
+				"tags": [
+					"Devil"
+				]
+			},
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 21,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"formula": "26d12 + 156",
+				"average": 325
+			},
+			"speed": {
+				"walk": 30,
+				"fly": {
+					"number": 80,
+					"condition": "90 in his realm"
+				},
+				"canHover": false
+			},
+			"str": 16,
+			"dex": 20,
+			"con": 22,
+			"int": 16,
+			"wis": 16,
+			"cha": 28,
+			"save": {
+				"wis": "+19",
+				"cha": "+19"
+			},
+			"skill": {
+				"deception": "+19",
+				"perception": "+11",
+				"persuasion": "+17",
+				"religion": "+11",
+				"intimidation": "+17",
+				"arcana": "+11"
+			},
+			"senses": [
+				"darkvision 120 ft.",
+				"truesight 60 ft."
+			],
+			"passive": 21,
+			"resist": [
+				{
+					"resist": [
+						"lightning"
+					]
+				},
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from non silvered/artifact weapons"
+				}
+			],
+			"immune": [
+				"cold",
+				"fire",
+				"poison",
+				{
+					"immune": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from non magical projectiles not fired from artifacts"
+				}
+			],
+			"vulnerable": [
+				{
+					"vulnerable": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from silvered weapons"
+				}
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"poisoned"
+			],
+			"languages": [
+				"all",
+				"telepathy 120 ft."
+			],
+			"cr": "25",
+			"trait": [
+				{
+					"name": "Aura of Submission",
+					"entries": [
+						"While Asmodeus is wielding the Ruby Rod, a creature that starts his turn within 20 feet of Asmodeus must succeed on a {@dc 27} Wisdom saving throw, unless Asmodeus is {@condition incapacitated}. On a failed save, the creature must kneel and bow before Asmodeus until the start of its next turn. Until this kneeling and bowing ends, the target can't take actions or reactions, and its speed is 0 and can't be increased. If a creature's saving throw is successful, the creature is immune to Asmodeus's Aura of Submission for the next 24 hours."
+					]
+				},
+				{
+					"name": "Limited Magic Immunity",
+					"entries": [
+						"Unless he wishes to be affected, Asmodeus is immune to spells of 4th level or lower. He has advantage on saving throws against all other spells and magical effects."
+					]
+				},
+				{
+					"name": "Legendary Resistance (5/Day)",
+					"entries": [
+						"If Asmodeus fails a saving throw, he can choose to succeed instead."
+					]
+				},
+				{
+					"name": "Regeneration",
+					"entries": [
+						"If Asmodeus has at least 1 hit point, he regains 30 hit points at the start of his turn."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Chill Gaze",
+					"entries": [
+						"Asmodeus turns his magical gaze toward one creature he can see within 120 feet of it. The target must succeed on a {@dc 24} Constitution saving throw. On a failed save, the creature takes 31 ({@damage 6d6 + 10}) cold damage, can't use reactions, its speed is halved, and it can't make more than one attack on its turn. In addition, the creature can use either an action or a bonus action on its turn, but not both. These effects last for 1 minute. The creature can repeat the saving throw at the end of each of its turns, ending the effect on itself with a successful save. On a successful save, the target takes half as much damage."
+					]
+				}
+			],
+			"legendaryActions": 4,
+			"legendary": [
+				{
+					"name": "Chill Gaze",
+					"entries": [
+						"Asmodeus uses his Chill Gaze."
+					]
+				},
+				{
+					"name": "Command Submissive",
+					"entries": [
+						"Asmodeus targets one creature that is kneeling and bowing he can see within 60 feet of him. The target uses its reaction to move up to half its speed and make one weapon attack against a creature of Asmodeus's choice that he can see."
+					]
+				},
+				{
+					"name": "Master Strategist (Costs 2 Actions)",
+					"entries": [
+						"Roll {@dice d10} for Asmodeus. Depending on Asmodeus's choice, the number rolled on the die is  subtracted from an attack roll made against Asmodeus or an ally of his choice or a saving throw roll made against Asmodeus within the next minute. Alternatively, the number rolled can be added to Asmodeus's next ability check, attack roll or saving throw within the next minute, if he so chooses. Asmodeus can keep up to 3 Master Strategist dies at a time."
+					]
+				},
+				{
+					"name": "Cast a Spell (Costs 1-4 Actions)",
+					"entries": [
+						"Asmodeus expends a spell slot to cast a 1st-, 2nd-, 3rd-level, or 4th-level spell that he has prepared. Doing so costs 1 legendary action per level of the spell."
+					]
+				}
+			],
+			"fluff": {
+				"images": [
+					{
+						"type": "image",
+						"href": {
+							"type": "external",
+							"url": "https://raw.githubusercontent.com/TheGiddyLimit/homebrew/master/_img/MonsterManualExpanded2/asmodeus.webp"
+						}
+					}
+				]
+			},
+			"tokenUrl": "https://i.imgur.com/JFPQ9r0.png",
+			"traitTags": [
+				"Legendary Resistances",
+				"Regeneration"
+			],
+			"senseTags": [
+				"SD",
+				"U"
+			],
+			"languageTags": [
+				"TP",
+				"XX"
+			],
+			"damageTags": [
+				"C"
+			],
+			"damageTagsSpell": [
+				"F",
+				"N",
+				"R",
+				"S",
+				"Y"
+			],
+			"conditionInflictSpell": [
+				"blinded",
+				"charmed",
+				"deafened",
+				"frightened",
+				"incapacitated",
+				"invisible",
+				"paralyzed",
+				"petrified",
+				"prone",
+				"restrained",
+				"stunned",
+				"unconscious"
 			]
 		},
 		{
@@ -4957,7 +5176,7 @@
 			"source": "FlundersHomebrew",
 			"page": 169,
 			"size": [
-				"L"
+				"H"
 			],
 			"type": "monstrosity",
 			"alignment": [
@@ -4965,19 +5184,19 @@
 				"E"
 			],
 			"ac": [
-				15
+				16
 			],
 			"hp": {
-				"formula": "12d10 + 90",
-				"average": 210
+				"formula": "15d20 + 84",
+				"average": 241
 			},
 			"speed": {
 				"walk": 50
 			},
 			"str": 20,
 			"dex": 16,
-			"con": 22,
-			"int": 14,
+			"con": 24,
+			"int": 16,
 			"wis": 14,
 			"cha": 6,
 			"save": {
@@ -4995,6 +5214,16 @@
 				"blindsight 120 ft."
 			],
 			"passive": 16,
+			"resist": [
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical weapon attacks"
+				}
+			],
 			"immune": [
 				"acid"
 			],
@@ -5002,12 +5231,12 @@
 				"charmed",
 				"frightened"
 			],
-			"cr": "12",
+			"cr": "15",
 			"spellcasting": [
 				{
 					"name": "Spellcasting",
 					"headerEntries": [
-						"The laboratory horror can cast the following Spells innately requiring no components. Constitution is its spellcasting ability (save {@dc 18}, +10 to hit)."
+						"The laboratory horror can cast the following Spells innately requiring no components. Constitution is its spellcasting ability (save {@dc 20}, +12 to hit)."
 					],
 					"will": [
 						"{@spell chaos bolt|XGE} 2d8+2d6",
@@ -5056,7 +5285,7 @@
 					]
 				},
 				{
-					"name": "Legendary Resistance (3/Day)",
+					"name": "Legendary Resistance (2/Day)",
 					"entries": [
 						"If the laboratory horror fails a saving throw, it can choose to succeed instead."
 					]
@@ -5109,6 +5338,9 @@
 					]
 				}
 			],
+			"legendaryHeader": [
+				"The laboratory horror can take 4 legendary actions, choosing from the options below. Only one legendary action can be used at a time and only at the end of another creature's turn. The laboratory horror regains spent legendary actions at the start of its turn."
+			],
 			"legendary": [
 				{
 					"name": "Spellcasting (Cost: Cantrip - 1 Action; 2/day - 2 Actions; 1/day - 3 Actions)",
@@ -5127,9 +5359,34 @@
 					"entries": [
 						"The laboratory horror makes one attack."
 					]
+				},
+				{
+					"name": "Confusion - Lord of the Jungle (3 Actions; 1/day)",
+					"entries": [
+						"The laboratory horror grows many peacock-like eyes all over its body, glimmering in dark red, casting the {@spell confusion} spell centered on itself (save {@dc 17}). "
+					]
+				},
+				{
+					"name": "Quake - Rajang (3 Actions; 1/day)",
+					"entries": [
+						"The laboratory horror's arms start to bubble and become gorilla-like. It then slams the ground, causing it to shake violently. Every creature within 30 ft. of it must make a {@dc 19} Strength saving throw or become knocked {@condition prone}. Any creature that fails this save by 5 or more is also {@condition stunned} until the end of their next turn."
+					]
+				},
+				{
+					"name": "Paralyzing Spit - Great Girros (2 Actions; 1/day)",
+					"entries": [
+						"Range Weapon Attack: {@hit 7} to hit, range",
+						"30/120 ft., one target. {@h}The creature is {@condition poisoned} for 1 minute. While {@condition poisoned} in this way the target is {@condition paralyzed}. A creature can make a {@dc 15} Constitution saving throw at the end of each of its turns, ending the effect on itself on a success."
+					]
+				},
+				{
+					"name": "Razor Wind - Nargacuga (3 Actions; 1/day)",
+					"entries": [
+						"The laboratory horror grows a long, spiked tail and smashes it into the ground, releasing cutting winds from one point within 10 feet of it. The winds travel in in 3 60 ft long, 10 ft wide lines away from the laboratory horror. Each creature caugh within the winds must make a {@dc 19} saving throw taking {@damage 6d6} slashing damage on a failed save and start bleeding. On a successful save a creature takes half damage and does not start bleeding. A bleeding creature loses {@dice 1d10} hit points at the start of its turn. A creature hit by more than 1 line of Razor Wind is bleeding heavily, losing an additional {@dice 1d10} hit points at the start of each of its turns. Anyone can steam the healing with a {@dc 13} (15 for heavy bleeding) Medicine check. The bleeding also stops if it receive magical healing.  "
+					]
 				}
 			],
-			"tokenUrl": "https://i.imgur.com/YbIJkKV.png",
+			"tokenUrl": "https://i.imgur.com/PQ1sHDY.png",
 			"traitTags": [
 				"Legendary Resistances",
 				"Spider Climb"
@@ -5138,6 +5395,7 @@
 				"B"
 			],
 			"actionTags": [
+				"Breath Weapon",
 				"Multiattack"
 			],
 			"damageTags": [
@@ -5145,11 +5403,26 @@
 				"P",
 				"S"
 			],
+			"damageTagsSpell": [
+				"A",
+				"C",
+				"F",
+				"I",
+				"L",
+				"N",
+				"O",
+				"T",
+				"Y"
+			],
 			"miscTags": [
 				"AOE",
 				"MW",
 				"RCH",
 				"RW"
+			],
+			"conditionInflict": [
+				"paralyzed",
+				"poisoned"
 			]
 		},
 		{
@@ -5929,6 +6202,140 @@
 			"miscTags": [
 				"RCH"
 			]
+		},
+		{
+			"name": "Lost Children Swarm",
+			"source": "FlundersHomebrew",
+			"page": 306,
+			"size": [
+				"L"
+			],
+			"type": {
+				"type": "fey",
+				"swarmSize": "T"
+			},
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"formula": "8d10 + 16",
+				"average": 60
+			},
+			"speed": {
+				"walk": 10,
+				"fly": 40,
+				"canHover": false
+			},
+			"str": 6,
+			"dex": 20,
+			"con": 14,
+			"int": 10,
+			"wis": 10,
+			"cha": 16,
+			"save": {
+				"wis": "+3",
+				"cha": "+6"
+			},
+			"skill": {
+				"deception": "+6",
+				"persuasion": "+6",
+				"stealth": "+8",
+				"intimidation": "+6"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 10,
+			"resist": [
+				"bludgeoning",
+				"piercing",
+				"slashing"
+			],
+			"conditionImmune": [
+				"charmed",
+				"frightened",
+				"grappled",
+				"paralyzed",
+				"petrified",
+				"prone",
+				"restrained",
+				"stunned"
+			],
+			"languages": [
+				"Common",
+				"Elvish",
+				"Sylvan"
+			],
+			"cr": "6",
+			"trait": [
+				{
+					"name": "Anything but a child",
+					"entries": [
+						"On first inspection, a Lost Child, or Lost Children swarm appear to be child-like fairies. A {@dc 20} Investigation check reveals that these whimsical fey-like creatures are actually terrifying insectoid abominations. Other abilities like true seeing reveals this on first glance."
+					]
+				},
+				{
+					"name": "Blood Frenzy",
+					"entries": [
+						"The swarm has advantage on melee attack rolls against any creature that doesn't have all its hit points."
+					]
+				},
+				{
+					"name": "Child-like Glee",
+					"entries": [
+						"When the swarm of lost children reduce a creature to 0 hit points, they conduct a morbid display of child-like glee on the corpse. Giggling, laughing, or recreating certain games a child would play; utilizing parts of the corpse in doing so. Creatures that see this display must make a {@dc 14} wisdom saving throw, or become {@condition frightened} of the swarm for 1 minute. They can repeat this save at the end of their turn."
+					]
+				},
+				{
+					"name": "Innocence of a Child",
+					"entries": [
+						"When speaking to children, the swarm has advantage on all Charisma (Persuasion) and Charisma (Deception) rolls."
+					]
+				},
+				{
+					"name": "Swarm",
+					"entries": [
+						"The swarm can occupy another creature's space and vice versa, and it can move through any opening large enough for a Tiny creature. The swarm can't regain hit points or gain temporary hit points."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 8} to hit, reach 0 ft., one creature in the swarm's space. {@h}21 ({@damage 6d6}) piercing damage, or 10 ({@damage 3d6}) piercing damage if the swarm has half of its hit points or fewer. Any creature hit by this attack must make a {@dc 13} Consitution saving throw or be cursed (Mindfire + Arcane Wasting)."
+					]
+				}
+			],
+			"tokenUrl": "https://i.imgur.com/600zbOm.png",
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"C",
+				"E",
+				"S"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflict": [
+				"frightened"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Midir the Shadow Dragon",
@@ -7605,6 +8012,230 @@
 			"hasFluffImages": true
 		},
 		{
+			"name": "Saroise, Queen of the Lost Children",
+			"shortName": "Saroise",
+			"isNamedCreature": true,
+			"source": "FlundersHomebrew",
+			"page": 169,
+			"size": [
+				"M"
+			],
+			"type": "fey",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				18
+			],
+			"hp": {
+				"formula": "21d10 + 42",
+				"average": 157
+			},
+			"speed": {
+				"walk": 30,
+				"fly": 90,
+				"canHover": false
+			},
+			"str": 14,
+			"dex": 22,
+			"con": 14,
+			"int": 10,
+			"wis": 10,
+			"cha": 18,
+			"save": {
+				"dex": "+10",
+				"wis": "+4",
+				"cha": "+8"
+			},
+			"skill": {
+				"insight": "+4",
+				"persuasion": "+8",
+				"perception": "+8",
+				"intimidation": "+8",
+				"stealth": "+10"
+			},
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 18,
+			"resist": [
+				"acid",
+				"cold"
+			],
+			"immune": [
+				{
+					"immune": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical weapon attacks that aren't silvered"
+				}
+			],
+			"conditionImmune": [
+				"charmed",
+				"paralyzed",
+				"poisoned"
+			],
+			"languages": [
+				"Common",
+				"Elvish",
+				"Sylvan"
+			],
+			"cr": "12",
+			"trait": [
+				{
+					"name": "Flyby",
+					"entries": [
+						"Saroise doesn't provoke opportunity attacks when it flies out of an enemy's reach."
+					]
+				},
+				{
+					"name": "Legendary Resistance (3/Day)",
+					"entries": [
+						"If saroise fails a saving throw, it can choose to succeed instead."
+					]
+				},
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"Saroise has advantage on saving throws against spells and other magical effects."
+					]
+				},
+				{
+					"name": "Metamorphosis (Mythic Trait; 1/Long or Short rest)",
+					"entries": [
+						"If Saroise is reduced to 0 hit points, she doesn't die or fall {@condition unconscious}. Instead, she envelops herself in a cocoon, regains 105 hit points, and transforms. Her body is encased in a translucent cocoon as a nightmarish moth-like form forms around her. Her size becomes Huge and her flying speed increases to 120 ft."
+					]
+				},
+				{
+					"name": "Poison Dust",
+					"entries": [
+						"Each creature that enters, or starts its turn within 20ft of Sarioise must make a {@dc 16} Constitution saving throw or become {@condition poisoned} for 1 minute. While {@condition poisoned} in this way, they are considered under the effects of the Confusion spell and take 5 ({@damage 1d10}) poison damage at the start of their turns. A {@condition poisoned} creature can repeat this saving throw at the end of their turn."
+					]
+				},
+				{
+					"name": "Skewer",
+					"entries": [
+						"If Rosine moves at least 40 feet straight toward a target and then hits it with a proboscis attack on the same turn, the target takes an extra 9 ({@damage 2d8}) piercing damage. If the target is a creature, it must succeed on a {@dc 18} Dexterity saving throw or be skewered. A skewered creature is {@condition grappled} (Escape {@dc 16}) and travels with Rosine. While a creature is skewered, Rosine can't make a proboscis attack against another creature."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Rosine makes three attacks. One with her Proboscis and two with her Mandible Claws"
+					]
+				},
+				{
+					"name": "Proboscis",
+					"entries": [
+						"{@atk mw} {@hit 10} to hit, reach 10 ft., one target. {@h}17 ({@damage 2d10 + 6}) piercing or slashing damage plus 7 ({@damage 2d6}) poison damage."
+					]
+				},
+				{
+					"name": "Mandible Claws",
+					"entries": [
+						"{@atk mw} {@hit 10} to hit, reach 5 ft., one target. {@h}13 ({@damage 2d6 + 6}) slashing damage"
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Flittering Escape",
+					"entries": [
+						"Rosine moves up to half her flying speed without provoking opportunity attacks."
+					]
+				},
+				{
+					"name": "Proboscis Attack",
+					"entries": [
+						"Rosine makes a proboscis attack."
+					]
+				},
+				{
+					"name": "Wing Attack (Costs 2 Actions)",
+					"entries": [
+						"Rosine beats her wings. Each creature within 10 feet of Rosine must succeed on a {@dc 18} Dexterity saving throw or take 12 ({@damage 2d6 + 6}) bludgeoning damage and be knocked {@condition prone}. Rosine can then fly up to half her flying speed."
+					]
+				}
+			],
+			"mythic": [
+				{
+					"name": "Crippling Claws",
+					"entries": [
+						"Rosine makes two attacks with her mandible claws. If both attacks hit the same creature, it takes an extra 7 ({@damage 2d6}) necrotic damage and must succeed on a {@dc 16} Constitution saving throw or have its movement speed reduced to 0 until the start of its next turn."
+					]
+				},
+				{
+					"name": "Stop it! (Costs 3 Actions)",
+					"entries": [
+						"Rosine lets loose an inhuman screech of fear made in desperation. Each hostile creature within 60ft of Rosine must make a {@dc 16} Constitution saving throw or become {@condition paralyzed} until the end of their next turn."
+					]
+				}
+			],
+			"variant": [
+				{
+					"name": "Lair Actions",
+					"entries": [
+						"Rosine briefly animates the dead trees around her lair to aid her in battle. Each tree attacks one creature within 10 feet of it, with a +10 bonus to hit and dealing 10 ({@damage 3d6}) bludgeoning damage on a hit. If a Medium or smaller creature takes this damage, it is also {@condition grappled} (escape {@dc 15}).",
+						"\b",
+						"Rosine flaps her wings and causes a gust of wind to carry her poison to a location within 150 feet. Each creature within a 20 foot radius of the point picked must make a {@dc 16} Constitution saving throw, taking 10 ({@damage 4d4}) poison damage on a failed saving throw and being effected by the Slow spell until initiative count 20. On a successful save, the creature takes half damage and isn't effected by the other effects."
+					],
+					"type": "variant"
+				},
+				{
+					"name": "Regional Effects",
+					"entries": [
+						"Fey and Plant creatures are more common amongst the forest surrounding her lair.",
+						"\b",
+						"Plant life is much more vibrant and alien within 1 mile of her lair, as portions of the feywild bleed in around her domain.",
+						"\b",
+						"Small bodies of water within 1 mile of the lair become poisonous. They may look lovely and vibrant, but the surface is coated with the poison of Rosines wings. A creature that drinks the water must succeed on a {@dc 16} Constitution saving throw or become {@condition poisoned} for 8 hours. An affected creature can repeat the saving throw at the end of each hour.",
+						"\b",
+						"The entirety of the forest of Rosine's domain is shrouded in thick mist, which lightly obscures the vision of travelers at the best of times and is considered heavily obscured at the worst of times."
+					],
+					"type": "variant"
+				}
+			],
+			"tokenUrl": "https://5e.tools/img/DMG/Giant Fly.png",
+			"traitTags": [
+				"Flyby",
+				"Legendary Resistances",
+				"Magic Resistance"
+			],
+			"senseTags": [
+				"SD"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"E",
+				"S"
+			],
+			"damageTags": [
+				"B",
+				"I",
+				"N",
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"AOE",
+				"MW",
+				"RCH"
+			],
+			"conditionInflict": [
+				"grappled",
+				"paralyzed",
+				"poisoned",
+				"prone"
+			]
+		},
+		{
 			"name": "Sea Spawn Shocker",
 			"source": "FlundersHomebrew",
 			"page": 169,
@@ -7923,7 +8554,8 @@
 						"2": {
 							"spells": [
 								"{@spell fiend flesh|ghpg}#*",
-								"{@spell hold person}*~",
+								"{@spell hold person}~",
+								"{@spell mirror image}#*",
 								"{@spell misty step}*",
 								"{@spell rime's binding ice|FTD}*",
 								"{@spell shatter}*",
