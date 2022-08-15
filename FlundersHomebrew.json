@@ -1,5 +1,5 @@
 {
-	"siteVersion": "1.165.1",
+	"siteVersion": "1.166.2",
 	"_meta": {
 		"sources": [
 			{
@@ -13,8 +13,8 @@
 				"convertedBy": []
 			}
 		],
-		"dateAdded": 1659807787,
-		"dateLastModified": 1659807787
+		"dateAdded": 1660583147,
+		"dateLastModified": 1660583147
 	},
 	"monster": [
 		{
@@ -196,7 +196,7 @@
 				"E"
 			],
 			"ac": [
-				15
+				13
 			],
 			"hp": {
 				"formula": "12d8 + 60",
@@ -2998,7 +2998,8 @@
 			]
 		},
 		{
-			"name": "Cir - Avatar of Gargauth",
+			"name": "Cir, Avatar of Gargauth",
+			"isNamedCreature": true,
 			"source": "FlundersHomebrew",
 			"page": 0,
 			"size": [
@@ -3060,7 +3061,7 @@
 			"resist": [
 				{
 					"resist": [
-						"lightning"
+						"cold"
 					]
 				},
 				{
@@ -3073,7 +3074,6 @@
 				}
 			],
 			"immune": [
-				"cold",
 				"fire",
 				"poison",
 				{
@@ -3099,84 +3099,232 @@
 				"charmed",
 				"exhaustion",
 				"frightened",
-				"poisoned"
+				"poisoned",
+				{
+					"special": "Enchantment Spells"
+				}
 			],
 			"languages": [
 				"all",
 				"telepathy 120 ft."
 			],
 			"cr": "25",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"Cir's spellcasting ability is Charisma (spell save {@dc 25}, +17to hit with spell attacks). He can innately cast the following spells, requiring no material components:"
+					],
+					"will": [
+						"{@spell alter self} (can become Medium when changing his appearance)",
+						"{@spell cone of cold}",
+						"{@spell dispel magic}",
+						"{@spell hellish rebuke} (6th level)",
+						"{@spell mislead}",
+						"{@spell telekinesis}"
+					],
+					"daily": {
+						"1": [
+							"{@spell meteor swarm}"
+						],
+						"3e": [
+							"{@spell delayed blast fireball}",
+							"{@spell dominate monster}",
+							"{@spell eyebite}",
+							"{@spell mass suggestion}",
+							"{@spell symbol}"
+						]
+					},
+					"ability": "cha",
+					"type": "spellcasting"
+				},
+				{
+					"name": "Pact Magic",
+					"headerEntries": [
+						"Cir is a 17th-level spellcaster. His spellcasting ability is Charisma (spell save {@dc 25}, +17 to hit with spell attacks).He regains his expended spell slots when he finishes a short or long rest. He knows the following warlock spells:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell eldritch blast}",
+								"{@spell mage hand}",
+								"{@spell minor illusion}",
+								"{@spell shocking grasp}"
+							]
+						},
+						"5": {
+							"spells": [
+								"{@spell banishment}",
+								"{@spell burning hands}",
+								"{@spell flame strike}",
+								"{@spell pyrotechnics|XGE}",
+								"{@spell scorching ray}",
+								"{@spell stinking cloud}",
+								"{@spell suggestion}",
+								"{@spell wall of fire}"
+							],
+							"slots": 4,
+							"lower": 1
+						}
+					},
+					"ability": "cha",
+					"type": "spellcasting"
+				}
+			],
 			"trait": [
 				{
-					"name": "Aura of Submission",
+					"name": "Legendary Resistance (4/Day)",
 					"entries": [
-						"While Asmodeus is wielding the Ruby Rod, a creature that starts his turn within 20 feet of Asmodeus must succeed on a {@dc 27} Wisdom saving throw, unless Asmodeus is {@condition incapacitated}. On a failed save, the creature must kneel and bow before Asmodeus until the start of its next turn. Until this kneeling and bowing ends, the target can't take actions or reactions, and its speed is 0 and can't be increased. If a creature's saving throw is successful, the creature is immune to Asmodeus's Aura of Submission for the next 24 hours."
-					]
-				},
-				{
-					"name": "Limited Magic Immunity",
-					"entries": [
-						"Unless he wishes to be affected, Asmodeus is immune to spells of 4th level or lower. He has advantage on saving throws against all other spells and magical effects."
-					]
-				},
-				{
-					"name": "Legendary Resistance (5/Day)",
-					"entries": [
-						"If Asmodeus fails a saving throw, he can choose to succeed instead."
+						"If Cir fails a saving throw, he can choose to succeed instead."
 					]
 				},
 				{
 					"name": "Regeneration",
 					"entries": [
-						"If Asmodeus has at least 1 hit point, he regains 30 hit points at the start of his turn."
+						"If Cir has at least 1 hit point, he regains 15 hit points at the start of his turn. If Cir made contact with silver, this trait doesn't function at the start of his next turn."
+					]
+				},
+				{
+					"name": "Spell Turning",
+					"entries": [
+						"Cir has advantage on a saving throw against any spell that targets only him (not an area). If his saving throw is successful and the spell is of 3th level or lower, the spell has no effect on the chimera and instead targets the caster."
+					]
+				},
+				{
+					"name": "Enspelling Aura",
+					"entries": [
+						"Any Creature that starts its turn within 20ft. of Cir must succeed on a {@dc 25} Wisdom saving throw, unless Cir is {@condition incapacitated}. On  a failed save the creature is {@condition charmed} until the start of its next turn or it is harmed by Cir. If a creature's saving throw is successful, the creature is immune to Cir's Enspelling Aura for the next 24h."
+					]
+				},
+				{
+					"name": "Touch of Gold",
+					"entries": [
+						"Any non silver metal which comes into contact with Cir is turned to pure gold, leaving it in its original shape but brittle and soft. Any nonmagical weapon made of metal that hits Cir takes a permanent, cumulative -1 pentalty to damage rolls after dealing damage. Magical weapons can resist this effect. Its wielder rolls a {@dice d20}. Consult the table below to determine if the weapon takes a penalty. If its penalty drops to -5 the weapon is destroyed. Artifacts are immune to this effect.",
+						"<table>",
+						"<tr>",
+						"<th>Rarity</th>",
+						"<th>{@dice d20}</th>",
+						"</tr>",
+						"<tr>",
+						"<td>Common</td>",
+						"<td>13</td>",
+						"</tr>",
+						"<tr>",
+						"<td>Uncommon</td>",
+						"<td>12</td>",
+						"</tr>",
+						"<tr>",
+						"<td>Rare</td>",
+						"<td>10</td>",
+						"</tr>",
+						"<tr>",
+						"<td>Very Rare</td>",
+						"<td>9</td>",
+						"</tr>",
+						"<tr>",
+						"<td>Legendary</td>",
+						"<td>7</td>",
+						"</tr>",
+						"</table>"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Chill Gaze",
+					"name": "Eldritch Blast",
 					"entries": [
-						"Asmodeus turns his magical gaze toward one creature he can see within 120 feet of it. The target must succeed on a {@dc 24} Constitution saving throw. On a failed save, the creature takes 31 ({@damage 6d6 + 10}) cold damage, can't use reactions, its speed is halved, and it can't make more than one attack on its turn. In addition, the creature can use either an action or a bonus action on its turn, but not both. These effects last for 1 minute. The creature can repeat the saving throw at the end of each of its turns, ending the effect on itself with a successful save. On a successful save, the target takes half as much damage."
+						"{@atk rs} {@hit 17} to hit, range 120., 4 targets. {@h}10 ({@damage 1d10 + 5}) force damage."
+					]
+				},
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Cir makes 3 Dagger attacks."
+					]
+				},
+				{
+					"name": "Dagger (Fire/M)",
+					"entries": [
+						"{@atk mw} {@hit 13} to hit, reach 5 ft., one target. {@h}9 ({@damage 1d8 + 5}) piercing damage, plus 3 ({@damage 1d6}) fire damage."
+					]
+				},
+				{
+					"name": "Dagger (Poison/M)",
+					"entries": [
+						"{@atk mw} {@hit 13} to hit, reach 5 ft., one target. {@h}9 ({@damage 1d8 + 5}) piercing damage, plus 3 ({@damage 1d6}) poison damage."
+					]
+				},
+				{
+					"name": "Dagger (Fire/R)",
+					"entries": [
+						"{@atk rw} {@hit 17} to hit, range 40/120 ft., one target. {@h}9 ({@damage 1d8 + 9}) piercing damage, plus 3 ({@damage 1d6}) fire damage."
+					]
+				},
+				{
+					"name": "Dagger (Poison/R)",
+					"entries": [
+						"{@atk rw} {@hit 17} to hit, range 40/120 ft., one target. {@h}9 ({@damage 1d8 + 9}) piercing damage, plus 3 ({@damage 1d6}) poison damage."
+					]
+				},
+				{
+					"name": "Unlimited Blades (1/day)",
+					"entries": [
+						"Cir summons seemingly infinite copies of his daggers, concentrating on this feature as if concentrating on a spell. While active, he can either use a bonus action on his turn to hurl a volley of daggers or use his reaction to surround himself with daggers."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Unlimited Blades - Volley",
+					"entries": [
+						"Cir hurls his Daggers in a 10 feet wide, 10 feet high, 1000 feet long line. Every creature in that area must make a {@dc 25} Dexterity saving throw, taking {@dice 2d8} piercing, {@dice 1d6} fire and {@damage 1d6} poison damage on a failed save, or half as much on a successful one. Cir can't use his Unlimited Blades - Cloud the round he uses this feature."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Unlimited Blades - Cloud",
+					"entries": [
+						"Cir shrounds himself in a cloud of his spinning blades. A creature that enters the area for the first time on its turn or starts its turn in that area takes {@dice 2d8} slashing, {@dice 1d6} fire and {@damage 1d6} poison damage. Cir can't use his Unlimited Blades - Volley the round he uses this feature."
 					]
 				}
 			],
 			"legendaryActions": 4,
 			"legendary": [
 				{
-					"name": "Chill Gaze",
+					"name": "Poison Mind",
 					"entries": [
-						"Asmodeus uses his Chill Gaze."
+						"Cir targets one creature he can see within 60 feet which is {@condition charmed} by him. The target uses its reaction to move up to half its speed and make one weapon attack against a creature of Cir's choice that he can see."
 					]
 				},
 				{
-					"name": "Command Submissive",
+					"name": "Tides of Chaos (Costs 2 Actions)",
 					"entries": [
-						"Asmodeus targets one creature that is kneeling and bowing he can see within 60 feet of him. The target uses its reaction to move up to half its speed and make one weapon attack against a creature of Asmodeus's choice that he can see."
+						"Roll {@dice d10} for Cir. Depending on Cir's choice, the number rolled on the die is  subtracted from an attack roll made against him or an ally of his choice or a saving throw roll made against Cir within the next minute. Alternatively, the number rolled can be added to Cir's next ability check, attack roll or saving throw within the next minute, if he so chooses. Cir can keep up to 3 Master Strategist dies at a time."
 					]
 				},
 				{
-					"name": "Master Strategist (Costs 2 Actions)",
+					"name": "Cast a Spell (Costs 2 Actions)",
 					"entries": [
-						"Roll {@dice d10} for Asmodeus. Depending on Asmodeus's choice, the number rolled on the die is  subtracted from an attack roll made against Asmodeus or an ally of his choice or a saving throw roll made against Asmodeus within the next minute. Alternatively, the number rolled can be added to Asmodeus's next ability check, attack roll or saving throw within the next minute, if he so chooses. Asmodeus can keep up to 3 Master Strategist dies at a time."
+						"CIr expends a spell slot to cast a spell using his Pact Magic."
 					]
 				},
 				{
-					"name": "Cast a Spell (Costs 1-4 Actions)",
+					"name": "Breath of the Hidden Lord (Costs 3 Actions)",
 					"entries": [
-						"Asmodeus expends a spell slot to cast a 1st-, 2nd-, 3rd-level, or 4th-level spell that he has prepared. Doing so costs 1 legendary action per level of the spell."
+						"Cir breathes out mist in a 10 ft. cone. Any creature in the area must make a Wisdom saving throw or be affected by the {@spell Confusion} or {@spell Fear} Spell (Cir's choice when taking this action)."
+					]
+				},
+				{
+					"name": "Monument of Nonexistence (Costs 4 Actions)",
+					"entries": [
+						"Cir rolls on his Lair Action table according to the current level. The level is not increased, but the respective effect is applied."
 					]
 				}
 			],
-			"fluff": {
-				"images": [
-					{
-						"type": "image",
-						"href": {
-							"type": "external",
-							"url": "https://raw.githubusercontent.com/TheGiddyLimit/homebrew/master/_img/MonsterManualExpanded2/asmodeus.webp"
-						}
-					}
-				]
+			"legendaryGroup": {
+				"name": "Cir",
+				"source": "FlundersHomebrew"
 			},
 			"tokenUrl": "https://i.imgur.com/JFPQ9r0.png",
 			"traitTags": [
@@ -3187,19 +3335,50 @@
 				"SD",
 				"U"
 			],
+			"actionTags": [
+				"Multiattack"
+			],
 			"languageTags": [
 				"TP",
 				"XX"
 			],
 			"damageTags": [
-				"C"
+				"F",
+				"I",
+				"O",
+				"P"
 			],
-			"damageTagsSpell": [
+			"damageTagsLegendary": [
+				"A",
+				"C",
 				"F",
 				"N",
+				"O",
 				"R",
-				"S",
+				"T",
 				"Y"
+			],
+			"damageTagsSpell": [
+				"B",
+				"C",
+				"F",
+				"L",
+				"N",
+				"O",
+				"P",
+				"R",
+				"S"
+			],
+			"spellcastingTags": [
+				"CL"
+			],
+			"miscTags": [
+				"MW",
+				"RW",
+				"THW"
+			],
+			"conditionInflict": [
+				"charmed"
 			],
 			"conditionInflictSpell": [
 				"blinded",
