@@ -1,5 +1,5 @@
 {
-	"siteVersion": "1.166.2",
+	"siteVersion": "1.167.9",
 	"_meta": {
 		"sources": [
 			{
@@ -13,8 +13,8 @@
 				"convertedBy": []
 			}
 		],
-		"dateAdded": 1660583147,
-		"dateLastModified": 1660583147
+		"dateAdded": 1663949437,
+		"dateLastModified": 1663949437
 	},
 	"monster": [
 		{
@@ -1435,6 +1435,170 @@
 			],
 			"conditionInflict": [
 				"prone"
+			]
+		},
+		{
+			"name": "Bjornhild Solvigsdottir",
+			"shortName": "gladiator",
+			"source": "FlundersHomebrew",
+			"page": 261,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"any race"
+				]
+			},
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"{@item studded leather armor|phb|studded leather}",
+						"{@item shield|phb}"
+					]
+				}
+			],
+			"hp": {
+				"average": 120,
+				"formula": "16d8 + 48"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 19,
+			"dex": 16,
+			"con": 16,
+			"int": 10,
+			"wis": 12,
+			"cha": 15,
+			"save": {
+				"str": "+8",
+				"dex": "+7",
+				"con": "+7"
+			},
+			"skill": {
+				"athletics": "+12",
+				"intimidation": "+6"
+			},
+			"passive": 11,
+			"languages": [
+				"any one language (usually Common)"
+			],
+			"cr": "11",
+			"trait": [
+				{
+					"name": "Brave",
+					"entries": [
+						"The gladiator has advantage on saving throws against being {@condition frightened}."
+					]
+				},
+				{
+					"name": "Brute",
+					"entries": [
+						"A melee weapon deals one extra die of its damage when the gladiator hits with it (included in the attack)."
+					]
+				},
+				{
+					"name": "Legendary Resistance (3/Day)",
+					"entries": [
+						"If the gladiator fails a saving throw, it can choose to succeed instead."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"The gladiator makes three melee attacks or two ranged attacks."
+					]
+				},
+				{
+					"name": "Spear",
+					"entries": [
+						"{@atk mw,rw} {@hit 8} to hit, reach 5 ft. and range 20/60 ft., one target. {@h}11 ({@damage 2d6 + 4}) piercing damage, or 13 ({@damage 2d8 + 4}) piercing damage if used with two hands to make a melee attack."
+					]
+				},
+				{
+					"name": "Shortsword",
+					"entries": [
+						"{@atk mw} {@hit 8} to hit, reach 5 ft., one target. {@h}11 ({@damage 2d6 + 4}) piercing damage."
+					]
+				},
+				{
+					"name": "Shield Bash",
+					"entries": [
+						"{@atk mw} {@hit 8} to hit, reach 5 ft., one creature. {@h}9 ({@damage 2d4 + 4}) bludgeoning damage. If the target is a Medium or smaller creature, it must succeed on a {@dc 16} Strength saving throw or be knocked {@condition prone}."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Parry and Counter",
+					"entries": [
+						"The gladiator adds 3 to its AC against one melee or ranged weapon attack that would hit it. To do so, it must be able to see the attacker and be wielding a melee weapon. If the attack misses, the gladiator can make one melee attack against the attacker if it is within its reach."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Move",
+					"entries": [
+						"The gladiator moves up to half its speed without provoking {@action opportunity attack|PHB|opportunity attacks}."
+					]
+				},
+				{
+					"name": "Attack",
+					"entries": [
+						"The gladiator makes a melee or ranged weapon attack."
+					]
+				},
+				{
+					"name": "Cheap Shot",
+					"entries": [
+						"Melee Weapon {@action Attack}: {@hit 8} to hit, reach 5 ft., one creature. {@h}The target must succeed on a {@dc 16} Constitution saving throw or be {@condition stunned} until the end of its next turn."
+					]
+				},
+				{
+					"name": "Intimidating Presence",
+					"entries": [
+						"The gladiator targets one creature it can see within 30 feet of it. If the target can see and hear the gladiator, it must succeed on a {@dc 14} Wisdom saving throw or become {@condition frightened} of the gladiator for 1 minute. A creature can repeat the saving throw at the end of each of its turns ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, the creature is immune to gladiator's Intimidating Presence for the next 24 hours."
+					]
+				}
+			],
+			"environment": [
+				"urban"
+			],
+			"fluff": {},
+			"tokenUrl": "https://5e.tools/img/IDRotF/Bjornhild%20Solvigsdottir.png",
+			"traitTags": [
+				"Brute",
+				"Legendary Resistances"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"X"
+			],
+			"damageTags": [
+				"B",
+				"P"
+			],
+			"miscTags": [
+				"MW",
+				"RW",
+				"THW"
+			],
+			"conditionInflict": [
+				"frightened",
+				"prone",
+				"stunned"
 			]
 		},
 		{
@@ -4420,9 +4584,6 @@
 					"headerEntries": [
 						"The conjurer is a 9th-level spellcaster. Its spellcasting ability is intelligence (spell save {@dc 14}, {@hit 6} to hit with spell attacks). The conjurer has the following wizard spells prepared:"
 					],
-					"footerEntries": [
-						"*Conjuration spell of 1st level or higher"
-					],
 					"spells": {
 						"0": {
 							"spells": [
@@ -4470,6 +4631,9 @@
 							"slots": 2
 						}
 					},
+					"footerEntries": [
+						"*Conjuration spell of 1st level or higher"
+					],
 					"ability": "int",
 					"type": "spellcasting"
 				}
@@ -4597,9 +4761,6 @@
 					"headerEntries": [
 						"The necromancer is a 12th-level spellcaster. Its spellcasting ability is Intelligence (spell save {@dc 18}, {@hit 10} to hit with spell attacks). The necromancer has the following wizard spells prepared:"
 					],
-					"footerEntries": [
-						"*Necromancy spell of 1st level or higher"
-					],
 					"spells": {
 						"0": {
 							"spells": [
@@ -4656,6 +4817,9 @@
 							"slots": 1
 						}
 					},
+					"footerEntries": [
+						"*Necromancy spell of 1st level or higher"
+					],
 					"ability": "int",
 					"type": "spellcasting"
 				}
@@ -6044,13 +6208,10 @@
 			"cr": "16",
 			"spellcasting": [
 				{
-					"type": "spellcasting",
 					"name": "Innate Spellcasting",
 					"headerEntries": [
 						"The blackguard casts one of the following spells using Charisma as the spellcasting ability (spell save {@dc 17}, {@hit 9} to hit with spell attacks):"
 					],
-					"ability": "cha",
-					"displayAs": "action",
 					"daily": {
 						"1e": [
 							"{@spell animate dead}",
@@ -6062,7 +6223,10 @@
 							"{@spell hellish rebuke}",
 							"{@spell staggering smite}"
 						]
-					}
+					},
+					"ability": "cha",
+					"displayAs": "action",
+					"type": "spellcasting"
 				}
 			],
 			"trait": [
@@ -8460,6 +8624,150 @@
 			]
 		},
 		{
+			"name": "Reghed Gladiator",
+			"source": "FlundersHomebrew",
+			"page": 346,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"any race"
+				]
+			},
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"{@item studded leather armor|phb|studded leather}",
+						"{@item shield|phb}"
+					]
+				}
+			],
+			"hp": {
+				"average": 112,
+				"formula": "15d8 + 45"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 18,
+			"dex": 15,
+			"con": 16,
+			"int": 10,
+			"wis": 12,
+			"cha": 15,
+			"save": {
+				"str": "+7",
+				"dex": "+5",
+				"con": "+6"
+			},
+			"skill": {
+				"athletics": "+10",
+				"intimidation": "+5"
+			},
+			"passive": 11,
+			"languages": [
+				"any one language (usually Common)"
+			],
+			"cr": "5",
+			"trait": [
+				{
+					"name": "Brave",
+					"entries": [
+						"The gladiator has advantage on saving throws against being {@condition frightened}."
+					]
+				},
+				{
+					"name": "Brute",
+					"entries": [
+						"A melee weapon deals one extra die of its damage when the gladiator hits with it (included in the attack)."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"The gladiator makes three melee attacks or two ranged attacks."
+					]
+				},
+				{
+					"name": "Spear",
+					"entries": [
+						"{@atk mw,rw} {@hit 7} to hit, reach 5 ft. and range 20/60 ft., one target. {@h}11 ({@damage 2d6 + 4}) piercing damage, or 13 ({@damage 2d8 + 4}) piercing damage if used with two hands to make a melee attack."
+					]
+				},
+				{
+					"name": "Shield Bash",
+					"entries": [
+						"{@atk mw} {@hit 7} to hit, reach 5 ft., one creature. {@h}9 ({@damage 2d4 + 4}) bludgeoning damage. If the target is a Medium or smaller creature, it must succeed on a {@dc 15} Strength saving throw or be knocked {@condition prone}."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Parry",
+					"entries": [
+						"The gladiator adds 3 to its AC against one melee attack that would hit it. To do so, the gladiator must see the attacker and be wielding a melee weapon."
+					]
+				}
+			],
+			"environment": [
+				"urban"
+			],
+			"fluff": {
+				"name": "Gladiator",
+				"source": "MM",
+				"entries": [
+					{
+						"type": "entries",
+						"entries": [
+							{
+								"type": "entries",
+								"entries": [
+									"Gladiators battle for the entertainment of raucous crowds. Some gladiators are brutal pit fighters who treat each match as a life-or-death struggle, while others are professional duelists who command huge fees but rarely fight to the death."
+								]
+							}
+						]
+					}
+				]
+			},
+			"tokenUrl": "https://i.imgur.com/reLClAe.png",
+			"soundClip": {
+				"type": "external",
+				"url": "https://5e.tools/audio/bestiary/gladiator.mp3"
+			},
+			"traitTags": [
+				"Brute"
+			],
+			"actionTags": [
+				"Multiattack",
+				"Parry"
+			],
+			"languageTags": [
+				"C",
+				"X"
+			],
+			"damageTags": [
+				"B",
+				"P"
+			],
+			"miscTags": [
+				"MW",
+				"RW",
+				"THW"
+			],
+			"conditionInflict": [
+				"prone"
+			],
+			"hasFluff": true
+		},
+		{
 			"name": "Ruthless Fire Apprentice",
 			"source": "FlundersHomebrew",
 			"page": 221,
@@ -9536,11 +9844,6 @@
 					"headerEntries": [
 						"Skarm is a 19th-level spellcaster. His spellcasting ability is Intelligence (spell save {@dc 18}, {@hit 10} to hit with spell attacks). His Spellbook contains the following spells:"
 					],
-					"footerEntries": [
-						"*Skarm has these spells prepared",
-						"#Skarm casts some these before combat using time stop.",
-						"~Skarm can cast this spell by using an action to read a spellscroll to cast it at 1 level higher."
-					],
 					"spells": {
 						"0": {
 							"spells": [
@@ -9646,6 +9949,11 @@
 							"slots": 1
 						}
 					},
+					"footerEntries": [
+						"*Skarm has these spells prepared",
+						"#Skarm casts some these before combat using time stop.",
+						"~Skarm can cast this spell by using an action to read a spellscroll to cast it at 1 level higher."
+					],
 					"ability": "int",
 					"type": "spellcasting"
 				},
@@ -10834,8 +11142,12 @@
 					"headerEntries": [
 						"The evoker is a 13th-level spellcaster. Its spellcasting ability is Intelligence (spell save {@dc 18}, {@hit 10} to hit with spell attacks). The evoker has the following wizard spells prepared:"
 					],
-					"footerEntries": [
-						"*Evocation spell"
+					"will": [
+						"{@spell alarm}",
+						"{@spell comprehend languages}",
+						"{@spell detect magic}",
+						"{@spell identify}",
+						"{@spell Leomund's tiny hut}"
 					],
 					"spells": {
 						"0": {
@@ -10901,12 +11213,8 @@
 							"slots": 1
 						}
 					},
-					"will": [
-						"{@spell alarm}",
-						"{@spell comprehend languages}",
-						"{@spell detect magic}",
-						"{@spell identify}",
-						"{@spell Leomund's tiny hut}"
+					"footerEntries": [
+						"*Evocation spell"
 					],
 					"ability": "int",
 					"type": "spellcasting"
@@ -11469,6 +11777,10 @@
 			"spellcasting": [
 				{
 					"name": "Innate Spellcasting",
+					"will": [
+						"{@spell darkness}",
+						"{@spell detect magic}"
+					],
 					"daily": {
 						"1": [
 							"{@spell programmed illusion}"
@@ -11482,10 +11794,6 @@
 							"{@spell magic circle} (against good creatures)"
 						]
 					},
-					"will": [
-						"{@spell darkness}",
-						"{@spell detect magic}"
-					],
 					"type": "spellcasting"
 				}
 			],
